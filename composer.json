@@ -1,23 +1,23 @@
 {
-    "name": "isengine/isengine",
-    "type": "project",
-    "description": "This is what you need to start the system.",
-    "version": "0.13-dev",
-    "keywords": [ "php", "cms", "framework", "isengine" ],
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Max Nikonov",
-            "email": "mail@isengine.org"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {
-        "php" : "^5.6.0|^7.0|^8.0",
-        "isengine/install": "*",
-        "isengine/framework": "*",
-        "isengine/core": "*"
-    },
-    "autoload": {
-    }
+	"name": "isengine/isengine",
+	"type": "project",
+	"description": "This is what you need to start the system.",
+	"version": "0.13-dev",
+	"keywords": [ "php", "cms", "framework", "isengine" ],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Max Nikonov",
+			"email": "mail@isengine.org"
+		}
+	],
+	"minimum-stability": "dev",
+	"require": {
+		"php" : "^5.6.0|^7.0|^8.0",
+		"isengine/install": "*",
+		"isengine/framework": "*",
+		"isengine/core": "*"
+	},
+	"autoload": {
+	}
 }

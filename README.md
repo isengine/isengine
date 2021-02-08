@@ -38,7 +38,7 @@ We want to do everything possible to make life easier for developers. And your h
 
 1. Install via composer:
 
-1.1. Use "composer create-project --stability dev --prefer-dist isengine/isengine NAME" in the root folder of the site (as "yoursite.com"), where NAME is the working folder of your project (as "public_html").
+1.1. Use "composer create-project --stability dev --prefer-dist isengine/isengine FOLDER" in the hosting root folder, where FOLDER is the working folder of your project (as "yourdomain.com").
 
 2. Install manually:
 
@@ -46,22 +46,25 @@ We want to do everything possible to make life easier for developers. And your h
 
 2.2. As result, you should get the following:
 
-* yoursite.com/
+* yourdomain.com/
 * /vendor/
 * /vendor/isengine/
 * /vendor/isengine/core/
 * /vendor/isengine/framework/
 * /vendor/isengine/install/
+* /vendor/public/
 
-3. Launch your site in browser.
+3. If necessary, rename the "public" folder to the index folder with files of your web application or site (as "public_html").
 
-4. After the installation is complete, we strongly recommend that you delete the "vendor/isengine/install" folder in your project. If you started deleting the folder through the installer, check if everything is deleted.
+4. Launch your site in browser.
+
+5. After the installation is complete, we strongly recommend that you delete the "vendor/isengine/install" folder in your project. If you started deleting the folder through the installer, check if everything is deleted.
 
 # Способы установки
 
 1. Установка через composer:
 
-1.1. Используйте "composer create-project --stability dev --prefer-dist isengine/isengine NAME" в корневой папке сайта (например, "yoursite.com"), где NAME - рабочая папка Вашего проекта (например, "public_html").
+1.1. Используйте "composer create-project --stability dev --prefer-dist isengine/isengine FOLDER" в корневой папке хостинга, где FOLDER - рабочая папка вашего проекта (например, "yourdomain.com").
 
 2. Установка вручную:
 
@@ -69,22 +72,25 @@ We want to do everything possible to make life easier for developers. And your h
 
 2.2. В результате у вас должна получиться следующая структура:
 
-* yoursite.com/
+* yourdomain.com/
 * /vendor/
 * /vendor/isengine/
 * /vendor/isengine/core/
 * /vendor/isengine/framework/
 * /vendor/isengine/install/
+* /vendor/public/
 
-3. Запустите ваш сайт в браузере.
+3. При необходимости, переименуйте папку "public" в индексную папку файлов вашего веб-приложения или сайта (например, "public_html").
 
-4. После завершения установки, мы настоятельно рекомендуем вам удалить папку "vendor/isengine/install" в вашем проекте. Если вы запустили удаление папки через установщик, проверьте, все ли удалилось.
+4. Запустите ваш сайт в браузере.
+
+5. После завершения установки, мы настоятельно рекомендуем вам удалить папку "vendor/isengine/install" в вашем проекте. Если вы запустили удаление папки через установщик, проверьте, все ли удалилось.
 
 # Update methods
 
 1. Update via composer:
 
-1.1. Use "composer update" in the root folder of the your project (as "yoursite.com/public_html").
+1.1. Use "composer update" in the root folder of the your project (as "yourdomain.com").
 
 2. Update manually:
 
@@ -100,7 +106,7 @@ We want to do everything possible to make life easier for developers. And your h
 
 1. Через composer:
 
-1.1. Используйте "composer update" в корневой папке проекта (например, "yoursite.com/public_html").
+1.1. Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
 
 2. Вручную:
 

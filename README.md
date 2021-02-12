@@ -44,7 +44,7 @@ We want to do everything possible to make life easier for developers. And your h
 
 ## Installation methods
 
-#### Install via composer:
+### Install via composer:
 
 Use
 
@@ -52,7 +52,7 @@ Use
 
 in the hosting root folder, where FOLDER is the working folder of your project (as "yourdomain.com").
 
-#### Install manually:
+### Install manually:
 
 Download the "isengine" required branches and manually unpack them in "vendor/isengine" subfolder of your project.
 
@@ -74,7 +74,7 @@ After the installation is complete, we strongly recommend that you delete the "v
 
 ## Способы установки
 
-#### Установка через composer:
+### Установка через composer:
 
 Используйте
 
@@ -82,7 +82,7 @@ After the installation is complete, we strongly recommend that you delete the "v
 
 в корневой папке хостинга, где FOLDER - рабочая папка вашего проекта (например, "yourdomain.com").
 
-#### Установка вручную:
+### Установка вручную:
 
 Загрузите все необходимые для работы ветки проекта "isengine" и распакуйте их в подпапку "vendor/isengine" своего проекта.
 
@@ -104,11 +104,11 @@ After the installation is complete, we strongly recommend that you delete the "v
 
 ## Update methods
 
-#### Update via composer:
+### Update via composer:
 
 Use "composer update" in the root folder of the your project (as "yourdomain.com").
 
-#### Update manually:
+### Update manually:
 
 Download the "isengine" required branches and manually unpack them into the correct folders in your project.
 
@@ -120,11 +120,11 @@ If you are upgrading the system, old system files will be saved in "backup" fold
 
 ## Способы обновления
 
-#### Через composer:
+### Через composer:
 
 Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
 
-#### Вручную:
+### Вручную:
 
 Загрузите используемые ветки "isengine" и вручную распакуйте их в нужные папки своего проекта.
 

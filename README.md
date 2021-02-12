@@ -117,3 +117,15 @@ We want to do everything possible to make life easier for developers. And your h
 4. Остальные действия такие же, как при установке через composer.
 
 5. Если вы обновляете систему, резервные копии старых файлов будут сохранены в папке "backup".
+
+# Early PHP versions support
+
+The minimum version is now "7.0".
+
+Yes, the engine can still be run on version "5.6", but this will require a number of changes to the names of some helper functions, such as "print", "session", etc. These words are reserved by the system and should not be used.
+
+# Поддержка предыдущих версий PHP
+
+Теперь минимальной версией является "7.0".
+
+Да, движок по-прежнему можно запустить на версии "5.6", но для этого придется внести ряд изменений в названия некоторых функций-хелперов, таких как "print", "session" и т.п. Эти слова являются зарезервированными системой и недопустимыми к использованию.

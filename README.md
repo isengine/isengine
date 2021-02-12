@@ -1,4 +1,12 @@
-# isEngine
+<p align="center"><a href="https://isengine.org" target="_blank"><img src="https://raw.githubusercontent.com/isengine/docs/master/logo/poster.svg" width="400"></a></p>
+
+<p align="center">
+<a href="https://packagist.org/packages/isengine/isengine"><img src="https://img.shields.io/packagist/dt/isengine/isengine" alt="Total Downloads"></a>
+<a href="https://packagist.org/packages/isengine/isengine"><img src="https://img.shields.io/packagist/v/isengine/isengine" alt="Latest Stable Version"></a>
+<a href="https://packagist.org/packages/isengine/isengine"><img src="https://img.shields.io/packagist/l/isengine/isengine" alt="License"></a>
+</p>
+
+## isEngine
 
 Is official repository of isEngine.
 
@@ -10,7 +18,7 @@ Status is in development
 Последняя версия - 0.13<br>
 Статус - в разработке
 
-# Project's links
+## Project's links
 
 * [Official site](https://isengine.org);
 * [Official instagram](https://instagram.com/is.engine);
@@ -18,7 +26,7 @@ Status is in development
 * [Packages for composer](https://packagist.org/packages/isengine/);
 * [Project on Github](https://github.com/isengine).
 
-# About
+## About
 
 This is cool engine with automated processes for light and speed creating websites.
 
@@ -26,7 +34,7 @@ Now we are creating a new framework based on the engine to make it even more con
 
 We want to do everything possible to make life easier for developers. And your help in the development of this project can be invaluable!
 
-# О системе
+## О системе
 
 Это классный движок с автоматизированными процессами для легкого и быстрого создания сайтов.
 
@@ -34,17 +42,21 @@ We want to do everything possible to make life easier for developers. And your h
 
 Мы хотим сделать все возможное, чтобы облегчить жизнь разработчикам. И ваша помощь в развитии этого проекта может быть неоценимой!
 
-# Installation methods
+## Installation methods
 
 1. Install via composer:
 
-1.1. Use "composer create-project --stability dev --prefer-dist isengine/isengine FOLDER" in the hosting root folder, where FOLDER is the working folder of your project (as "yourdomain.com").
+1. 1. Use
+
+    composer create-project --stability dev --prefer-dist isengine/isengine FOLDER
+
+in the hosting root folder, where FOLDER is the working folder of your project (as "yourdomain.com").
 
 2. Install manually:
 
-2.1. Download the "isengine" required branches and manually unpack them in "vendor/isengine" subfolder of your project.
+2. 1. Download the "isengine" required branches and manually unpack them in "vendor/isengine" subfolder of your project.
 
-2.2. As result, you should get the following:
+2. 2. As result, you should get the following:
 
 * yourdomain.com/
 * /vendor/
@@ -60,17 +72,21 @@ We want to do everything possible to make life easier for developers. And your h
 
 5. After the installation is complete, we strongly recommend that you delete the "vendor/isengine/install" folder in your project. If you started deleting the folder through the installer, check if everything is deleted.
 
-# Способы установки
+## Способы установки
 
 1. Установка через composer:
 
-1.1. Используйте "composer create-project --stability dev --prefer-dist isengine/isengine FOLDER" в корневой папке хостинга, где FOLDER - рабочая папка вашего проекта (например, "yourdomain.com").
+1. 1. Используйте
+
+    composer create-project --stability dev --prefer-dist isengine/isengine FOLDER
+
+в корневой папке хостинга, где FOLDER - рабочая папка вашего проекта (например, "yourdomain.com").
 
 2. Установка вручную:
 
-2.1. Загрузите все необходимые для работы ветки проекта "isengine" и распакуйте их в подпапку "vendor/isengine" своего проекта.
+2. 1. Загрузите все необходимые для работы ветки проекта "isengine" и распакуйте их в подпапку "vendor/isengine" своего проекта.
 
-2.2. В результате у вас должна получиться следующая структура:
+2. 2. В результате у вас должна получиться следующая структура:
 
 * yourdomain.com/
 * /vendor/
@@ -86,15 +102,15 @@ We want to do everything possible to make life easier for developers. And your h
 
 5. После завершения установки, мы настоятельно рекомендуем вам удалить папку "vendor/isengine/install" в вашем проекте. Если вы запустили удаление папки через установщик, проверьте, все ли удалилось.
 
-# Update methods
+## Update methods
 
 1. Update via composer:
 
-1.1. Use "composer update" in the root folder of the your project (as "yourdomain.com").
+1. 1. Use "composer update" in the root folder of the your project (as "yourdomain.com").
 
 2. Update manually:
 
-2.1. Download the "isengine" required branches and manually unpack them into the correct folders in your project.
+2. 1. Download the "isengine" required branches and manually unpack them into the correct folders in your project.
 
 3. Look at the index file at the root of your project and uncomment the installation code.
 
@@ -102,15 +118,15 @@ We want to do everything possible to make life easier for developers. And your h
 
 5. If you are upgrading the system, old system files will be saved in "backup" folder.
 
-# Способы обновления
+## Способы обновления
 
 1. Через composer:
 
-1.1. Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
+1. 1. Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
 
 2. Вручную:
 
-2.1. Загрузите используемые ветки "isengine" и вручную распакуйте их в нужные папки своего проекта.
+2. 1. Загрузите используемые ветки "isengine" и вручную распакуйте их в нужные папки своего проекта.
 
 3. Посмотрите индексный файл в корне вашего проекта и раскомментируйте код установки.
 
@@ -118,13 +134,13 @@ We want to do everything possible to make life easier for developers. And your h
 
 5. Если вы обновляете систему, резервные копии старых файлов будут сохранены в папке "backup".
 
-# Early PHP versions support
+## Early PHP versions support
 
 The minimum version is now "7.0".
 
 Yes, the engine can still be run on version "5.6", but this will require a number of changes to the names of some helper functions, such as "print", "session", etc. These words are reserved by the system and should not be used.
 
-# Поддержка предыдущих версий PHP
+## Поддержка предыдущих версий PHP
 
 Теперь минимальной версией является "7.0".
 

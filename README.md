@@ -44,19 +44,19 @@ We want to do everything possible to make life easier for developers. And your h
 
 ## Installation methods
 
-1. Install via composer:
+#### Install via composer:
 
-1. 1. Use
+Use
 
     composer create-project --stability dev --prefer-dist isengine/isengine FOLDER
 
 in the hosting root folder, where FOLDER is the working folder of your project (as "yourdomain.com").
 
-2. Install manually:
+#### Install manually:
 
-2. 1. Download the "isengine" required branches and manually unpack them in "vendor/isengine" subfolder of your project.
+Download the "isengine" required branches and manually unpack them in "vendor/isengine" subfolder of your project.
 
-2. 2. As result, you should get the following:
+As result, you should get the following:
 
 * yourdomain.com/
 * /vendor/
@@ -66,27 +66,27 @@ in the hosting root folder, where FOLDER is the working folder of your project (
 * /vendor/isengine/install/
 * /vendor/public/
 
-3. If necessary, rename the "public" folder to the index folder with files of your web application or site (as "public_html").
+If necessary, rename the "public" folder to the index folder with files of your web application or site (as "public_html").
 
-4. Launch your site in browser.
+Launch your site in browser.
 
-5. After the installation is complete, we strongly recommend that you delete the "vendor/isengine/install" folder in your project. If you started deleting the folder through the installer, check if everything is deleted.
+After the installation is complete, we strongly recommend that you delete the "vendor/isengine/install" folder in your project. If you started deleting the folder through the installer, check if everything is deleted.
 
 ## Способы установки
 
-1. Установка через composer:
+#### Установка через composer:
 
-1. 1. Используйте
+Используйте
 
     composer create-project --stability dev --prefer-dist isengine/isengine FOLDER
 
 в корневой папке хостинга, где FOLDER - рабочая папка вашего проекта (например, "yourdomain.com").
 
-2. Установка вручную:
+#### Установка вручную:
 
-2. 1. Загрузите все необходимые для работы ветки проекта "isengine" и распакуйте их в подпапку "vendor/isengine" своего проекта.
+Загрузите все необходимые для работы ветки проекта "isengine" и распакуйте их в подпапку "vendor/isengine" своего проекта.
 
-2. 2. В результате у вас должна получиться следующая структура:
+В результате у вас должна получиться следующая структура:
 
 * yourdomain.com/
 * /vendor/
@@ -96,43 +96,43 @@ in the hosting root folder, where FOLDER is the working folder of your project (
 * /vendor/isengine/install/
 * /vendor/public/
 
-3. При необходимости, переименуйте папку "public" в индексную папку файлов вашего веб-приложения или сайта (например, "public_html").
+При необходимости, переименуйте папку "public" в индексную папку файлов вашего веб-приложения или сайта (например, "public_html").
 
-4. Запустите ваш сайт в браузере.
+Запустите ваш сайт в браузере.
 
-5. После завершения установки, мы настоятельно рекомендуем вам удалить папку "vendor/isengine/install" в вашем проекте. Если вы запустили удаление папки через установщик, проверьте, все ли удалилось.
+После завершения установки, мы настоятельно рекомендуем вам удалить папку "vendor/isengine/install" в вашем проекте. Если вы запустили удаление папки через установщик, проверьте, все ли удалилось.
 
 ## Update methods
 
-1. Update via composer:
+#### Update via composer:
 
-1. 1. Use "composer update" in the root folder of the your project (as "yourdomain.com").
+Use "composer update" in the root folder of the your project (as "yourdomain.com").
 
-2. Update manually:
+#### Update manually:
 
-2. 1. Download the "isengine" required branches and manually unpack them into the correct folders in your project.
+Download the "isengine" required branches and manually unpack them into the correct folders in your project.
 
-3. Look at the index file at the root of your project and uncomment the installation code.
+Look at the index file at the root of your project and uncomment the installation code.
 
-4. The rest of the steps are the same as when installing via composer.
+The rest of the steps are the same as when installing via composer.
 
-5. If you are upgrading the system, old system files will be saved in "backup" folder.
+If you are upgrading the system, old system files will be saved in "backup" folder.
 
 ## Способы обновления
 
-1. Через composer:
+#### Через composer:
 
-1. 1. Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
+Используйте "composer update" в корневой папке проекта (например, "yourdomain.com").
 
-2. Вручную:
+#### Вручную:
 
-2. 1. Загрузите используемые ветки "isengine" и вручную распакуйте их в нужные папки своего проекта.
+Загрузите используемые ветки "isengine" и вручную распакуйте их в нужные папки своего проекта.
 
-3. Посмотрите индексный файл в корне вашего проекта и раскомментируйте код установки.
+Посмотрите индексный файл в корне вашего проекта и раскомментируйте код установки.
 
-4. Остальные действия такие же, как при установке через composer.
+Остальные действия такие же, как при установке через composer.
 
-5. Если вы обновляете систему, резервные копии старых файлов будут сохранены в папке "backup".
+Если вы обновляете систему, резервные копии старых файлов будут сохранены в папке "backup".
 
 ## Early PHP versions support
 

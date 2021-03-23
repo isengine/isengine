@@ -16,8 +16,12 @@
 		"php" : "^7.0|^8.0",
 		"isengine/install": "*",
 		"isengine/framework": "*",
-		"isengine/core": "*"
+		"isengine/core": "*",
+		"shuchkin/simplexlsx": "^0.8.21"
 	},
 	"autoload": {
+		"psr-4": {
+			"is\\": "app/framework/"
+		}
 	}
 }

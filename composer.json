@@ -16,13 +16,7 @@
 		"php" : "^5.6|^7.0|^8.0",
 		"isengine/install": "*",
 		"isengine/framework": "*",
-		"isengine/core": "*",
-		"shuchkin/simplexlsx": "^0.8.21",
-		"mobiledetect/mobiledetectlib": "^2.8.0",
-		"chrisjean/php-ico": "^1.0.0",
-		"claviska/simpleimage": "^3.6.0",
-		"leafo/scssphp": "^0.8.0",
-		"leafo/lessphp": "^0.5.0"
+		"isengine/core": "*"
 	},
 	"autoload": {
 		"psr-4": {

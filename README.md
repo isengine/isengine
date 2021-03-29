@@ -118,6 +118,10 @@ The rest of the steps are the same as when installing via composer.
 
 If you are upgrading the system, old system files will be saved in "backup" folder.
 
+### Update dump only:
+
+Use "composer dump-autoload" in the root folder of the your project (as "yourdomain.com").
+
 ## Способы обновления
 
 ### Через composer:
@@ -133,6 +137,10 @@ If you are upgrading the system, old system files will be saved in "backup" fold
 Остальные действия такие же, как при установке через composer.
 
 Если вы обновляете систему, резервные копии старых файлов будут сохранены в папке "backup".
+
+### Только дамп:
+
+Используйте "composer dump-autoload" в корневой папке проекта (например, "yourdomain.com").
 
 ## Early PHP versions support
 

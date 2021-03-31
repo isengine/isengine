@@ -15,7 +15,17 @@
 	"require": {
 		"php" : "^5.6|^7.0|^8.0",
 		"isengine/core": "*",
-		"isengine/install": "*"
+		"isengine/install": "*",
+		"npm-asset/bootstrap": ">=4.0",
+		"bower-asset/jquery-2.1.0": "2.1.0"
+	},
+	"config": {
+		"fxp-asset": {
+			"installer-paths": {
+				"bower-asset-library": "public/libraries",
+				"npm-asset-library": "public/libraries"
+			}
+		}
 	},
 	"autoload": {
 		"psr-4": {

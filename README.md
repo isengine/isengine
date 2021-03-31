@@ -156,45 +156,18 @@ Yes, the engine can still be run on version "5.6", but this will require a numbe
 
 ## Packet manager
 
-### Use fxp/composer-asset-plugin
-
-You can install packets from npm or bower use composer-asset-plugin by fxp.
-
-From console:
-
-	composer npm-asset/bootstrap
-
-Add packets to composer.json:
-
-	"npm-asset/bootstrap": ">=4.0",
-	"bower-asset/jquery-2.1.0": "2.1.0"
-
 ### Use bowerphp.phar
 
 You can install bower packets use bowerphp.phar from console:
 
 	php bowerphp.phar install jquery
-	php bowerphp.phar install twbs/bootstrap#4.1.0
-
+	php bowerphp.phar install twbs/bootstrap#^4.1.0
 
 ## Менеджер пакетов
-
-### Используя fxp/composer-asset-plugin
-
-Вы можете установить пакеты из npm или bower используя composer-asset-plugin от fxp.
-
-Из консоли:
-
-	composer npm-asset/bootstrap
-
-Добавить пакеты в composer.json:
-
-	"npm-asset/bootstrap": ">=4.0",
-	"bower-asset/jquery-2.1.0": "2.1.0"
 
 ### Используя bowerphp.phar
 
 Вы можете установить пакеты bower используя bowerphp.phar из консоли:
 
 	php bowerphp.phar install jquery
-	php bowerphp.phar install twbs/bootstrap#4.1.0
+	php bowerphp.phar install twbs/bootstrap#^4.1.0

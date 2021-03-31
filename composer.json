@@ -17,14 +17,6 @@
 		"isengine/core": "*",
 		"isengine/install": "*"
 	},
-	"config": {
-		"fxp-asset": {
-			"installer-paths": {
-				"bower-asset-library": "public/libraries",
-				"npm-asset-library": "public/libraries"
-			}
-		}
-	},
 	"autoload": {
 		"psr-4": {
 			"is\\": "app/"

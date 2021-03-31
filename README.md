@@ -161,6 +161,14 @@ You can install bower packets use bowerphp.phar from console:
 	php bowerphp.phar install jquery
 	php bowerphp.phar install twbs/bootstrap#^4.1.0
 
+To save new dependencies to "bower.json" use:
+
+	php bowerphp.phar install PACKAGE --save
+
+Also, you can add dependencies to "bower.json" manually. Then use command in console:
+
+	bower install
+
 If your public project folder will be change (as "public"), you will be need change install libraries path in ".bowerrc" file.
 
 ## Менеджер пакетов
@@ -169,5 +177,13 @@ If your public project folder will be change (as "public"), you will be need cha
 
 	php bowerphp.phar install jquery
 	php bowerphp.phar install twbs/bootstrap#^4.1.0
+
+Чтобы добавить зависимость в файл "bower.json" используйте:
+
+	php bowerphp.phar install PACKAGE --save
+
+Также, вы можете добавить зависимости в файл "bower.json" вручную. Затем используйте команду в консоли:
+
+	bower install
 
 Если публичная папка вашего проекта изменится (по-умолчанию, "public"), вам необходимо изменить путь установки библиотек в файле ".bowerrc".

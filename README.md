@@ -156,16 +156,27 @@ Yes, the engine can still be run on version "5.6", but this will require a numbe
 
 ## Packet manager
 
-You can install bower packets use bowerphp.phar from console:
+You can install bower packets use bowerphp.phar from console in the root folder of the your project:
 
-	php bowerphp.phar install jquery
-	php bowerphp.phar install twbs/bootstrap#^4.1.0
+	php bowerphp.phar install PACKAGE
+
+Package is package name in bower ‎packages store. Supported formats:
+
+	jquery
+	twbs/bootstrap#^4.1.0
 
 To save new dependencies to "bower.json" use:
 
 	php bowerphp.phar install PACKAGE --save
 
-Also, you can add dependencies to "bower.json" manually. Then use command in console:
+Also, you can add dependencies to "bower.json" manually.
+
+To do this, specify the required packages in the "dependencies" section in this format:
+
+	"jquery": "*",
+	"bootstrap": "4.1.0"
+
+Then use command in console:
 
 	bower install
 
@@ -173,17 +184,26 @@ If your public project folder will be change (as "public"), you will be need cha
 
 ## Менеджер пакетов
 
-Вы можете установить пакеты bower используя bowerphp.phar из консоли:
+Вы можете установить пакеты bower используя bowerphp.phar из консоли, находясь в корневой папке проекта:
 
-	php bowerphp.phar install jquery
-	php bowerphp.phar install twbs/bootstrap#^4.1.0
+	php bowerphp.phar install PACKAGE
+
+Package - это имя пакета из хранилища bower. Поддерживаемые форматы:
+
+	jquery
+	twbs/bootstrap#^4.1.0
 
 Чтобы добавить зависимость в файл "bower.json" используйте:
 
 	php bowerphp.phar install PACKAGE --save
 
-Также, вы можете добавить зависимости в файл "bower.json" вручную. Затем используйте команду в консоли:
+Также, вы можете добавить зависимости в файл "bower.json" вручную. Для этого пропищите в секцию "dependencies" необходимые пакеты в формате:
 
-	bower install
+	"jquery": "*",
+	"bootstrap": "4.1.0"
+
+Затем используйте команду в консоли:
+
+	php bowerphp.phar install
 
 Если публичная папка вашего проекта изменится (по-умолчанию, "public"), вам необходимо изменить путь установки библиотек в файле ".bowerrc".

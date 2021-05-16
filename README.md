@@ -10,12 +10,12 @@
 
 Is official repository of isEngine.
 
-Latest version is 0.13<br>
+Latest version is 1.0 alpha<br>
 Status is in development
 
 Это официальный репозиторий isEngine.
 
-Последняя версия - 0.13<br>
+Последняя версия - 1.0 альфа<br>
 Статус - в разработке
 
 ## Project's links
@@ -146,13 +146,13 @@ Use "composer dump-autoload" in the root folder of the your project (as "yourdom
 
 The minimum version is now "7.0".
 
-Yes, the engine can still be run on version "5.6", but this will require a number of changes to the names of some helper functions, such as "print", "session", etc. These words are reserved by the system and should not be used.
+Yes, the engine can still be run on version "5.6", but support for this version is not a priority, and problems may arise in working on it.
 
 ## Поддержка предыдущих версий PHP
 
 Теперь минимальной версией является "7.0".
 
-Да, движок по-прежнему можно запустить на версии "5.6", но для этого придется внести ряд изменений в названия некоторых функций-хелперов, таких как "print", "session" и т.п. Эти слова являются зарезервированными системой и недопустимыми к использованию.
+Да, движок по-прежнему можно запустить на версии "5.6", но поддержка этой версии не стоит в приоритете, и в работе на ней могут возникнуть проблемы.
 
 ## Packet manager
 

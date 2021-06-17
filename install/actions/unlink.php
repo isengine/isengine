@@ -1,73 +1,32 @@
 <?php
+
+namespace is\Install;
+
+use is\Helpers\System;
+use is\Helpers\Objects;
+use is\Helpers\Parser;
+use is\Helpers\Local;
+
+use is\Install\Installer;
+use is\Install\Language;
+
+$installer = Installer::getInstance();
+$lang = Language::getInstance();
+
 // UNLINK
 // удаляем папку установки
 
-function dataunlink($folder) {
+if (isset($_GET['unlink'])) {
 	
-	global $lang;
+	$status[0][] = '<br>' . $lang -> get('status:unlink');
 	
-	if (mb_substr($folder, -1) !== DS) {
-		$folder .= DS;
-	}
+	Local::deleteFolder(PATH_INSTALL);
 	
-	$log = [];
-	$list = scandir($folder);
-	
-	if (!empty($list) && is_array($list)) {
-		foreach ($list as $item) {
-			if ($item === '.' || $item === '..') {
-				// пропускаем корневые элементы
-				continue;
-			} elseif (!is_dir($folder . $item)) {
-				// удаляем файлы
-				if (unlink($folder . $item)) {
-					$log[] = $lang['status']['file'] . '"' . $folder . $item . '"';
-				} else {
-					$log['errors'] = '<br>';
-				}
-			} else {
-				// удаляем файлы внутри папки
-				$sublog = dataunlink($folder . $item);
-				if (!empty($sublog) && is_array($sublog)) {
-					$log = array_merge($log, $sublog);
-				}
-				unset($sublog);
-			}
-		}
-		unset($item);
-	}
-	
-	unset($list);
-	
-	// удаляем саму папку
-	if (rmdir($folder)) {
-		$log[] = $lang['status']['folder'] . '"' . $folder . '"';
+	if (Local::matchFolder(PATH_INSTALL)) {
+		$status[1][] = '<br>' . $lang -> get('success:unlink');
 	} else {
-		$log['errors'] = '<br>';
+		$status[1][] = '<br>' . $lang -> get('errors:unlink');
 	}
-	
-	return $log;
-	
-}
-
-if (isset($get['unlink'])) {
-	
-	$path = mb_substr(PATH_INSTALL, mb_strlen(DR));
-	$path = DR . mb_substr($path, 0, mb_strpos($path, DS));
-	
-	$status[0][] = '<br>' . $lang['status']['unlink'];
-	$status[1] = dataunlink($path);
-	
-	if (!empty($status[1]['errors'])) {
-		$status[1][] = $lang['errors']['abort'];
-		$status[1][] = $lang['errors']['unlink'];
-	} else {
-		$status[1][] = '<br>' . $lang['success']['unlink'];
-	}
-	
-	unset($path);
-	
-	dataprint(array_merge($status[0], $status[1]), true);
 	
 }
 

@@ -1,28 +1,38 @@
 <?php
-// UNPACK
+
+namespace is\Install;
+
+use is\Helpers\System;
+use is\Helpers\Objects;
+use is\Helpers\Parser;
+use is\Helpers\Local;
+
+use is\Install\Installer;
+use is\Install\Language;
+
+$installer = Installer::getInstance();
+$lang = Language::getInstance();
+
+// INSTALL
 // распаковываем необходимые для работы файлы
 
-if (
-	isset($get['install']) ||
-	isset($get['unpack'])
-) {
+if (isset($_GET['install'])) {
 
-	//$install = $path . 'core' . DS . 'install' . DS . 'install.zip';
 	$install = PATH_INSTALL . 'presets' . DS . 'default.zip';
 
-	$status[0][] = '<br>' . $lang['status']['unpack'];
+	$status[0][] = '<br>' . $lang -> get('status:install');
 
 	if (!extension_loaded('zip')) {
-		$status[1][] = $lang['errors']['nozip'];
+		$status[1][] = $lang -> get('errors:nozip');
 	}
 
 	if (!file_exists($install)) {
-		$status[1][] = $lang['errors']['noinstall'];
+		$status[1][] = $lang -> get('errors:noinstall');
 	}
 
 	if (empty($status[1])) {
 		
-		$zip = new ZipArchive;
+		$zip = new \ZipArchive;
 		$res = $zip -> open($install);
 		
 		if ($res === true) {
@@ -39,7 +49,7 @@ if (
 				foreach ($f as $item) {
 					$i = mb_substr($item, mb_strrpos($item, DS) + 1);
 					rename($item, DR . 'backup' . DS . $time . DS . $i);
-					$status[0][] = $lang['status']['file'] . '"' . $i . '"' . $lang['errors']['file'];
+					$status[0][] = $lang -> get('status:file') . '"' . $i . '"' . $lang -> get('errors:file');
 					unset($i);
 				}
 				unset($item);
@@ -49,11 +59,11 @@ if (
 			$zip -> extractTo(DR);
 			$zip -> close();
 			
-			$status[0][] = $lang['success']['unpack'];
-			$status[0][] = $lang['status']['libraries'];
+			$status[0][] = $lang -> get('success:install');
+			$status[0][] = $lang -> get('status:libraries');
 			
 		} else {
-			$status[1][] = $lang['errors']['unzip'];
+			$status[1][] = $lang -> get('errors:unzip');
 		}
 
 	}
@@ -61,7 +71,7 @@ if (
 	unset($install);
 
 	if (!empty($status[1])) {
-		$status[0][] = $lang['errors']['abort'];
+		$status[0][] = $lang -> get('errors:abort');
 	}
 
 }

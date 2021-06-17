@@ -35,8 +35,8 @@ if (!$_GET) {
 		$array[] = 'refresh';
 	}
 	
-	if (!isset($_GET['unlink']) && !isset($_GET['unpack']) && !isset($_GET['install'])) {
-		$array[] = 'unpack';
+	if (!isset($_GET['unlink']) && !isset($_GET['install'])) {
+		$array[] = 'install';
 	}
 	
 	if (!isset($_GET['unlink'])) {

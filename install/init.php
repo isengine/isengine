@@ -11,10 +11,8 @@ use is\Install\Installer;
 use is\Install\Language;
 
 // несколько параметров для запуска:
+// ?install - даст полную установку с распаковкой
 // ?unlink - удаляет папку установки
-// ?unpack - даст только распаковку
-// ?update - установит или проапдейтит компоненты системы без распаковки
-// ?install - как и сочетание параметров даст полную установку с распаковкой
 // без параметров выведет меню
 
 // в дальнейшем планируется добавить конфигуратор configuration.ini и распаковку готовых шаблонов и настроек
@@ -36,9 +34,11 @@ $lang -> setLangs();
 $lang -> setCurrent();
 $lang -> read();
 
-//require PATH_INSTALL . 'actions' . DS . 'update.php';
-//require PATH_INSTALL . 'actions' . DS . 'unpack.php';
-//require PATH_INSTALL . 'actions' . DS . 'unlink.php'; 
+global $status;
+$status = [[], []];
+
+require PATH_INSTALL . 'actions' . DS . 'install.php';
+require PATH_INSTALL . 'actions' . DS . 'unlink.php'; 
 
 require PATH_INSTALL . 'template.php';
 

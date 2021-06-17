@@ -38,13 +38,23 @@ $lang = Language::getInstance();
 	
 	<div class="checkbox mb-3">
 	<?php
+		$installer -> template('status');
+		$installer -> template('buttons');
 		if (!empty($status)) {
-			$installer -> template('notice');
+	?>
+    <div class="alert alert-warning" role="alert">
+	    <?= $lang -> get('template:notice'); ?>
+    </div>
+  <?php
 		}
 	?>
 	</div>
 	
 	<?php $installer -> template('langs'); ?>
+	
+  <button type="button" class="btn btn-link" data-toggle="modal" data-target="#licenseModal">
+		<?= $lang -> get('template:license') . $installer -> get('system:license'); ?>
+  </button>
 	
 	<p class="mt-5 mb-3 text-muted">
 		<?= $lang -> get('template:version') . $installer -> get('system:version'); ?><br>
@@ -53,5 +63,28 @@ $lang = Language::getInstance();
 	</p>
 	
 </div>
+
+<!-- Modal -->
+<div class="modal fade" id="licenseModal" tabindex="-1" aria-labelledby="licenseModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="licenseModalLabel">
+        	<?= $lang -> get('template:license') . $installer -> get('system:license'); ?>
+        </h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	      <?= $installer -> get('license'); ?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>

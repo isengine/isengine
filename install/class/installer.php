@@ -11,6 +11,8 @@ use is\Parents;
 
 class Installer extends Parents\Singleton {
 	
+	public $license;
+	
 	public function setInfo() {
 		
 		$array = [
@@ -26,6 +28,10 @@ class Installer extends Parents\Singleton {
 		}
 		unset($key, $item);
 		
+	}
+	
+	public function setLicense() {
+		$this -> license = Local::readFile(DR . 'license');
 	}
 	
 	public function template($name) {

@@ -29,6 +29,7 @@ require PATH_INSTALL . 'class' . DS . 'language.php';
 
 $installer = Installer::getInstance();
 $installer -> setInfo();
+$installer -> setLicense();
 
 $lang = Language::getInstance();
 $lang -> setLangs();

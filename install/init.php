@@ -36,9 +36,9 @@ $lang -> setLangs();
 $lang -> setCurrent();
 $lang -> read();
 
-require PATH_INSTALL . 'actions' . DS . 'update.php';
-require PATH_INSTALL . 'actions' . DS . 'unpack.php';
-require PATH_INSTALL . 'actions' . DS . 'unlink.php'; 
+//require PATH_INSTALL . 'actions' . DS . 'update.php';
+//require PATH_INSTALL . 'actions' . DS . 'unpack.php';
+//require PATH_INSTALL . 'actions' . DS . 'unlink.php'; 
 
 require PATH_INSTALL . 'template.php';
 
@@ -46,21 +46,6 @@ require PATH_INSTALL . 'template.php';
 //echo print_r($lang -> get('langs'), 1);
 //echo print_r($lang -> get('current'), 1);
 //echo print_r($lang -> get(), 1);
-
-/*
-
-require PATH_INSTALL . 'install' . DS . 'print.php';
-require PATH_INSTALL . 'install' . DS . 'languages.php';
-require PATH_INSTALL . 'install' . DS . 'path.php';
-
-if (empty($get)) {
-	dataprint($status[0]);
-}
-
-require PATH_INSTALL . 'install' . DS . 'actions.php';
-
-dataprint(array_merge($status[0], $status[1]), empty($status[1]) ? true : null);
-*/
 
 exit;
 

@@ -1,6 +1,6 @@
 <?php
 
-if (!empty($status)) {
+if ($status) {
 	echo '<hr>';
 	if (is_array($status)) {
 		foreach ($status as $item) {

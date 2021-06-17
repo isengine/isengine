@@ -31,7 +31,9 @@ class Installer extends Parents\Singleton {
 	}
 	
 	public function setLicense() {
-		$this -> license = Local::readFile(DR . 'license');
+		$this -> license = Local::readFileLine(DR . 'license', '<br>');
+		$this -> license = '<p>' . preg_replace('/<br>\s*<br>/ui', '</p><p>', $this -> license) . '</p>';
+		$this -> license = str_replace('<br>', null, $this -> license);
 	}
 	
 	public function template($name) {

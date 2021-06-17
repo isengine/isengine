@@ -19,10 +19,10 @@ class Language extends Parents\Singleton {
 		$this -> langs = [];
 		
 		$f = glob(PATH_INSTALL . 'languages' . DS . '*.ini');
-		if (!empty($f) && is_array($f)) {
+		if (System::typeIterable($f)) {
 			foreach ($f as $item) {
 				$i = mb_substr($item, mb_strrpos($item, DS) + 1, -4);
-				if (!empty($i)) {
+				if ($i) {
 					$this -> langs[] = $i;
 				}
 				unset($i);
@@ -36,11 +36,12 @@ class Language extends Parents\Singleton {
 	public function setCurrent() {
 		$currents = [];
 		
-		if (!empty($_GET['lang'])) {
+		if ($_GET['lang']) {
 			$currents[] = $_GET['lang'];
+			unset($_GET['lang']);
 		}
 		
-		if (!empty($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+		if ($_SERVER['HTTP_ACCEPT_LANGUAGE']) {
 			foreach (preg_split('/\,/ui', $_SERVER['HTTP_ACCEPT_LANGUAGE']) as $item) {
 				$currents[] = mb_substr($item, 0, 2);
 			}

@@ -16,12 +16,13 @@ $lang = Language::getInstance();
 $langs = $lang -> get('langs');
 $clang = $lang -> get('current');
 
-if (System::typeIterable($langs)) : ?>
+if (System::typeIterable($langs)) :
+?>
 
 <div class="checkbox mb-3">
 <?php
 	$r = preg_replace('/(\?|\&)lang\=?\w*?(?=(\?|\&|$))/ui', '$3', $_SERVER['REQUEST_URI']);
-	$r .= (empty(mb_strpos($r, '?')) ? '?' : '&') . 'lang=';
+	$r .= (!mb_strpos($r, '?') ? '?' : '&') . 'lang=';
 	foreach ($langs as $item) :
 		if ($item === $clang) :
 ?>

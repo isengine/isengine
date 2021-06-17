@@ -1,5 +1,5 @@
 <?php
-
+// UNPACK
 // распаковываем необходимые для работы файлы
 
 if (
@@ -28,17 +28,17 @@ if (
 		if ($res === true) {
 			
 			$time = time();
-			if (!file_exists(PATH_SITE . 'backup')) {
-				mkdir(PATH_SITE . 'backup');
+			if (!file_exists(DR . 'backup')) {
+				mkdir(DR . 'backup');
 			}
-			if (!file_exists(PATH_SITE . 'backup' . DS . $time)) {
-				mkdir(PATH_SITE . 'backup' . DS . $time);
+			if (!file_exists(DR . 'backup' . DS . $time)) {
+				mkdir(DR . 'backup' . DS . $time);
 			}
-			$f = glob(PATH_SITE . '*.ini');
+			$f = glob(DR . '*.ini');
 			if (!empty($f) && is_array($f)) {
 				foreach ($f as $item) {
 					$i = mb_substr($item, mb_strrpos($item, DS) + 1);
-					rename($item, PATH_SITE . 'backup' . DS . $time . DS . $i);
+					rename($item, DR . 'backup' . DS . $time . DS . $i);
 					$status[0][] = $lang['status']['file'] . '"' . $i . '"' . $lang['errors']['file'];
 					unset($i);
 				}
@@ -46,7 +46,7 @@ if (
 			}
 			unset($f, $time);
 			
-			$zip -> extractTo(PATH_SITE);
+			$zip -> extractTo(DR);
 			$zip -> close();
 			
 			$status[0][] = $lang['success']['unpack'];

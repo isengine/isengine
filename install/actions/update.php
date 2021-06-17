@@ -1,5 +1,5 @@
 <?php
-
+// UPDATE
 // апдейтим систему
 
 if (PATH_COMPONENTS === $path) {

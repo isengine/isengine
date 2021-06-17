@@ -1,5 +1,5 @@
 <?php
-
+// UNLINK
 // удаляем папку установки
 
 function dataunlink($folder) {
@@ -52,8 +52,8 @@ function dataunlink($folder) {
 
 if (isset($get['unlink'])) {
 	
-	$path = mb_substr(PATH_INSTALL, mb_strlen(PATH_SITE));
-	$path = PATH_SITE . mb_substr($path, 0, mb_strpos($path, DS));
+	$path = mb_substr(PATH_INSTALL, mb_strlen(DR));
+	$path = DR . mb_substr($path, 0, mb_strpos($path, DS));
 	
 	$status[0][] = '<br>' . $lang['status']['unlink'];
 	$status[1] = dataunlink($path);

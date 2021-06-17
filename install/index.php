@@ -1,27 +1,33 @@
 <?php
 
-// несколько параметров для запуска:
-// ?unlink - удаляет папку установки
-// ?unpack - даст только распаковку
-// ?update - установит или проапдейтит компоненты системы без распаковки
-// ?install - как и сочетание параметров даст полную установку с распаковкой
-// без параметров выведет меню
+// Set base namespace
+// Рабочее пространство имен
 
-// в дальнейшем планируется добавить конфигуратор configuration.ini и распаковку готовых шаблонов и настроек
+namespace is;
+
+// Set base constants
+// Базовые константы
 
 if (!defined('isENGINE')) { define('isENGINE', microtime(true)); }
 if (!defined('DS')) { define('DS', DIRECTORY_SEPARATOR); }
 if (!defined('DP')) { define('DP', '..' . DIRECTORY_SEPARATOR); }
-//if (!defined('DR')) { define('DR', realpath(__DIR__ . DS . DP . DP . DP) . DS); }
 if (!defined('DR')) { define('DR', realpath(__DIR__ . DS . DP) . DS); }
 
-if (!defined('PATH_SITE')) { define('PATH_SITE', DR); }
+// Set extended constants
+// Расширенные константы
 
-define('PATH_THIS', realpath(__DIR__) . DS . 'install' . DS);
-define('PATH_INSTALL', realpath(__DIR__) . DS);
-define('PATH_COMPONENTS', realpath(__DIR__ . DS . '..') . DS);
+if (!defined('PATH_INSTALL')) { define('PATH_INSTALL', __DIR__ . DS); }
+if (!defined('PATH_SITE')) { define('PATH_SITE', str_replace(['/', '\\'], DS, $_SERVER['DOCUMENT_ROOT']) . DS); }
 
-require PATH_THIS . 'init.php';
+// Launch composer autoload
+// Запускаем автозагрузчик компоузера
+
+require DR . 'vendor' . DS . 'autoload.php';
+
+// Launch install process
+// Запускаем процесс установки
+
+require_once PATH_INSTALL . 'init.php';
 
 exit;
 

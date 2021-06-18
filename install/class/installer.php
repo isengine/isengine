@@ -12,6 +12,24 @@ use is\Parents;
 class Installer extends Parents\Singleton {
 	
 	public $license;
+	public $lang;
+	public $status;
+	public $buffer;
+	
+	public function setLang() {
+		$this -> lang = new Language;
+		$this -> lang -> setLangs();
+		$this -> lang -> setCurrent();
+		$this -> lang -> read();
+	}
+	
+	public function setStatus() {
+		$this -> status = new Parents\Data;
+	}
+	
+	public function setBuffer() {
+		$this -> buffer = new Parents\Data;
+	}
 	
 	public function setInfo() {
 		
@@ -40,6 +58,18 @@ class Installer extends Parents\Singleton {
 		$file = PATH_INSTALL . 'template' . DS . $name . '.php';
 		if (file_exists($file)) {
 			require $file;
+		}
+	}
+	
+	public function buffer($command = null, $key = null) {
+		if ($command === 'start') {
+			ob_start();
+		} elseif ($command === 'end') {
+			ob_end_clean();
+		} elseif ($key) {
+			$this -> buffer -> addDataKey($key, ob_get_contents());
+		} else {
+			$this -> buffer -> addData(ob_get_contents());
 		}
 	}
 	

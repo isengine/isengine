@@ -9,7 +9,7 @@ use is\Helpers\Local;
 
 use is\Parents;
 
-class Language extends Parents\Singleton {
+class Language extends Parents\Data {
 	
 	public $current;
 	public $langs;

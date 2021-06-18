@@ -8,7 +8,6 @@ use is\Helpers\Parser;
 use is\Helpers\Local;
 
 use is\Install\Installer;
-use is\Install\Language;
 
 // несколько параметров для запуска:
 // ?install - даст полную установку с распаковкой
@@ -22,30 +21,34 @@ use is\Install\Language;
 //define('PATH_INSTALL', realpath(__DIR__) . DS);
 //define('PATH_COMPONENTS', realpath(__DIR__ . DS . '..') . DS);
 
-require PATH_INSTALL . 'class' . DS . 'installer.php';
 require PATH_INSTALL . 'class' . DS . 'language.php';
+require PATH_INSTALL . 'class' . DS . 'installer.php';
 
 $installer = Installer::getInstance();
 $installer -> setInfo();
 $installer -> setLicense();
+$installer -> setLang();
+$installer -> setStatus();
+$installer -> setBuffer();
 
-$lang = Language::getInstance();
-$lang -> setLangs();
-$lang -> setCurrent();
-$lang -> read();
+unset($_GET['back']);
 
-global $status;
-$status = [[], []];
-
-require PATH_INSTALL . 'actions' . DS . 'install.php';
-require PATH_INSTALL . 'actions' . DS . 'unlink.php'; 
-
+require PATH_INSTALL . 'install.php';
 require PATH_INSTALL . 'template.php';
 
-//echo '<pre>';
-//echo print_r($lang -> get('langs'), 1);
-//echo print_r($lang -> get('current'), 1);
-//echo print_r($lang -> get(), 1);
+if (isset($_GET['unlink'])) {
+	Local::deleteFolder(PATH_INSTALL);
+	if (!Local::matchFolder(PATH_INSTALL)) {
+		$installer -> buffer -> addDataKey('a5', $installer -> lang -> get('success:unlink'));
+	}
+}
+
+$buffer = $installer -> buffer -> getData();
+$buffer = Objects::sort($buffer, null, true);
+
+Objects::each($buffer, function($item){
+	echo $item;
+});
 
 exit;
 

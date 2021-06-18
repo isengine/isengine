@@ -3,18 +3,12 @@
 namespace is\Install;
 
 use is\Helpers\System;
-use is\Helpers\Objects;
-use is\Helpers\Parser;
-use is\Helpers\Local;
-
 use is\Install\Installer;
-use is\Install\Language;
 
 $installer = Installer::getInstance();
-$lang = Language::getInstance();
 
-$langs = $lang -> get('langs');
-$clang = $lang -> get('current');
+$langs = $installer -> lang -> get('langs');
+$clang = $installer -> lang -> get('current');
 
 if (System::typeIterable($langs)) :
 ?>

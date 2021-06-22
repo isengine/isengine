@@ -1,0 +1,10 @@
+wp standart 3.5.7 <!-- 22 968.734 KB total / 23 044.352 KB in peak / 0.242 sec is speed -->
+joomla 3.8        <!-- 16 803.031 KB total / 16 849.578 KB in peak / 0.134 sec is speed -->
+bitrix lite       <!-- 13 478.914 KB total / 13 680.375 KB in peak / 0.152 sec is speed -->
+v0.10.0 dostavka  <!--  4 334.211 KB total / 18 783.461 KB in peak / 1.083 sec is speed -->
+
+define('isENGINE', microtime(true));
+
+<?php echo '
+<!--noindex--><!-- ' . number_format(memory_get_usage() / 1024, 3, '.', ' ') . ' KB total / ' . number_format(memory_get_peak_usage() / 1024, 3, '.', ' ') . ' KB in peak / ' . number_format(microtime(true) - isENGINE, 3, null, null) . ' sec is speed --><!--/noindex-->
+'; ?>

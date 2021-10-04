@@ -22,7 +22,11 @@ if (!defined('PATH_SITE')) { define('PATH_SITE', str_replace(['/', '\\'], DS, $_
 // Launch composer autoload
 // Запускаем автозагрузчик компоузера
 
-require DR . 'vendor' . DS . 'autoload.php';
+$autoload = DR . 'vendor' . DS . 'autoload.php';
+if (!file_exists($autoload)) {
+	$autoload = DR . 'vendor' . DS . 'isengine' . DS . 'framework' . DS . 'php' . DS . 'init.php';
+}
+require $autoload;
 
 // Launch install process
 // Запускаем процесс установки

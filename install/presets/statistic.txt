@@ -7,6 +7,7 @@ bitrix lite       <!-- 13 478.914 KB total / 13 680.375 KB in peak / 0.152 sec i
 v0.10.0 dostavka  <!--  4 334.211 KB total / 18 783.461 KB in peak / 1.083 sec is speed -->
 v0.10.0 kavtex    <!--  2 852.000 KB total / 13 474.000 KB in peak / 0.911 sec is speed -->
 v1.0a eshop 10.21 <!--  3 046.656 KB total / 10 367.484 KB in peak / 0.850 sec is speed -->
+v1.0a eshop 11.21 <!--  3 783.156 KB total /  7 778.219 KB in peak / 0.626 sec is speed -->
 v1.0a light       <!--  2 722.844 KB total /  2 913.344 KB in peak / 0.190 sec is speed -->
 v1.0a base        <!--  2 835.477 KB total /  2 998.930 KB in peak / 0.381 sec is speed -->
 

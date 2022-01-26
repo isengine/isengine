@@ -2,7 +2,7 @@
 	"name": "isengine/isengine",
 	"type": "project",
 	"description": "This is what you need to start the system.",
-	"version": "1.0.0-alpha",
+	"version": "1.0.0-beta",
 	"keywords": [ "php", "cms", "framework", "isengine" ],
 	"license": "MIT",
 	"authors": [

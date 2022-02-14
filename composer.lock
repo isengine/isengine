@@ -1,0 +1,1209 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b1f0d89d2eb1398256d8a7d844e407d4",
+    "packages": [
+        {
+            "name": "cebe/markdown",
+            "version": "1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cebe/markdown.git",
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cebe/markdown/zipball/25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "reference": "25b28bae8a6f185b5030673af77b32e1163d5c6e",
+                "shasum": ""
+            },
+            "require": {
+                "lib-pcre": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "cebe/indent": "*",
+                "facebook/xhprof": "*@dev",
+                "phpunit/phpunit": "4.1.*"
+            },
+            "bin": [
+                "bin/markdown"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "cebe\\markdown\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Carsten Brandt",
+                    "email": "mail@cebe.cc",
+                    "homepage": "http://cebe.cc/",
+                    "role": "Creator"
+                }
+            ],
+            "description": "A super fast, highly extensible markdown parser for PHP",
+            "homepage": "https://github.com/cebe/markdown#readme",
+            "keywords": [
+                "extensible",
+                "fast",
+                "gfm",
+                "markdown",
+                "markdown-extra"
+            ],
+            "support": {
+                "issues": "https://github.com/cebe/markdown/issues",
+                "source": "https://github.com/cebe/markdown"
+            },
+            "time": "2017-07-16T21:13:23+00:00"
+        },
+        {
+            "name": "chrisjean/php-ico",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/chrisbliss18/php-ico.git",
+                "reference": "ccd5c0d56554f3ddcd7a823e695be83e0d1e43b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/chrisbliss18/php-ico/zipball/ccd5c0d56554f3ddcd7a823e695be83e0d1e43b6",
+                "reference": "ccd5c0d56554f3ddcd7a823e695be83e0d1e43b6",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "class-php-ico.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Jean",
+                    "homepage": "https://chrisjean.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "An easy-to-use library to generate valid ICO files.",
+            "homepage": "https://github.com/chrisbliss18/php-ico",
+            "keywords": [
+                "favicon",
+                "ico"
+            ],
+            "support": {
+                "issues": "https://github.com/chrisbliss18/php-ico/issues",
+                "source": "https://github.com/chrisbliss18/php-ico"
+            },
+            "time": "2016-09-27T22:00:56+00:00"
+        },
+        {
+            "name": "claviska/simpleimage",
+            "version": "3.6.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/claviska/SimpleImage.git",
+                "reference": "00f90662686696b9b7157dbb176183aabe89700f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/claviska/SimpleImage/zipball/00f90662686696b9b7157dbb176183aabe89700f",
+                "reference": "00f90662686696b9b7157dbb176183aabe89700f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "league/color-extractor": "0.3.*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "claviska": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cory LaViska",
+                    "homepage": "http://www.abeautifulsite.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP class that makes working with images as simple as possible.",
+            "support": {
+                "issues": "https://github.com/claviska/SimpleImage/issues",
+                "source": "https://github.com/claviska/SimpleImage/tree/3.6.5"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/claviska",
+                    "type": "github"
+                }
+            ],
+            "time": "2021-12-01T12:42:55+00:00"
+        },
+        {
+            "name": "isengine/breadcrumbs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/breadcrumbs.git",
+                "reference": "86f8645eb5f53bfc24e723ba129cda0bd1cb3a97"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/breadcrumbs/zipball/86f8645eb5f53bfc24e723ba129cda0bd1cb3a97",
+                "reference": "86f8645eb5f53bfc24e723ba129cda0bd1cb3a97",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "Breadcrumbs isEngine module without scripts and with support twitter bootstrap 4.0+",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/breadcrumbs/issues",
+                "source": "https://github.com/isengine/breadcrumbs/tree/main"
+            },
+            "time": "2021-11-18T20:31:25+00:00"
+        },
+        {
+            "name": "isengine/content",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/content.git",
+                "reference": "2ea4ace2425f51274a2cbbbaf8ed2b4dc8a10945"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/content/zipball/2ea4ace2425f51274a2cbbbaf8ed2b4dc8a10945",
+                "reference": "2ea4ace2425f51274a2cbbbaf8ed2b4dc8a10945",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine module for content management",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/content/issues",
+                "source": "https://github.com/isengine/content/tree/main"
+            },
+            "time": "2021-11-26T22:03:12+00:00"
+        },
+        {
+            "name": "isengine/core",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/core.git",
+                "reference": "ebc84b3bc442cab9253d3552cc55fe31dc2a4aa5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/core/zipball/ebc84b3bc442cab9253d3552cc55fe31dc2a4aa5",
+                "reference": "ebc84b3bc442cab9253d3552cc55fe31dc2a4aa5",
+                "shasum": ""
+            },
+            "require": {
+                "cebe/markdown": "~1.1.1",
+                "chrisjean/php-ico": "^1.0.0",
+                "claviska/simpleimage": "^3.6.0",
+                "isengine/breadcrumbs": "*",
+                "isengine/content": "*",
+                "isengine/currency": "*",
+                "isengine/data": "*",
+                "isengine/form": "*",
+                "isengine/isjs": "*",
+                "isengine/isphp": "*",
+                "isengine/isscss": "*",
+                "isengine/map": "*",
+                "isengine/media": "*",
+                "isengine/menu": "*",
+                "isengine/scrolltotop": "*",
+                "isengine/socialnews": "*",
+                "isengine/weather": "*",
+                "mobiledetect/mobiledetectlib": "^2.8.0",
+                "php": "^5.6|^7.0|^8.0",
+                "scssphp/scssphp": "^1.4.0",
+                "shuchkin/simplexlsx": "^0.8.21",
+                "wikimedia/less.php": "^1.8|^2.0|^3.1.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\": "model/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "This is automated engine for creating websites based on self framework",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/core/issues",
+                "source": "https://github.com/isengine/core/tree/master"
+            },
+            "time": "2022-02-14T21:52:02+00:00"
+        },
+        {
+            "name": "isengine/currency",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/currency.git",
+                "reference": "09801801a61cb1a3b1a8910273dd16d2ddc2f4b4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/currency/zipball/09801801a61cb1a3b1a8910273dd16d2ddc2f4b4",
+                "reference": "09801801a61cb1a3b1a8910273dd16d2ddc2f4b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "Currency isEngine module with use data from cbr.ru",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/currency/issues",
+                "source": "https://github.com/isengine/currency/tree/main"
+            },
+            "time": "2021-10-21T13:02:57+00:00"
+        },
+        {
+            "name": "isengine/data",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/data.git",
+                "reference": "858e7dc137253b911c187f53e0f576730adc1442"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/data/zipball/858e7dc137253b911c187f53e0f576730adc1442",
+                "reference": "858e7dc137253b911c187f53e0f576730adc1442",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "one of basic isEngine modules for custom data management",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/data/issues",
+                "source": "https://github.com/isengine/data/tree/main"
+            },
+            "time": "2021-11-05T14:53:51+00:00"
+        },
+        {
+            "name": "isengine/form",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/form.git",
+                "reference": "37761f881248fe9969bec51b3757646502ca31b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/form/zipball/37761f881248fe9969bec51b3757646502ca31b0",
+                "reference": "37761f881248fe9969bec51b3757646502ca31b0",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine module for create forms",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/form/issues",
+                "source": "https://github.com/isengine/form/tree/main"
+            },
+            "time": "2022-02-12T19:28:11+00:00"
+        },
+        {
+            "name": "isengine/isjs",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/isjs.git",
+                "reference": "56984cf49405010f10b95b140885949609bd7bfd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/isjs/zipball/56984cf49405010f10b95b140885949609bd7bfd",
+                "reference": "56984cf49405010f10b95b140885949609bd7bfd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "email": "mail@isengine.org"
+                }
+            ],
+            "description": "isEngine framework on JavaScript",
+            "keywords": [
+                "JS",
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/isjs/issues",
+                "source": "https://github.com/isengine/isjs/tree/main"
+            },
+            "time": "2022-02-14T17:39:32+00:00"
+        },
+        {
+            "name": "isengine/isphp",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/isphp.git",
+                "reference": "b87fc850a6c427f82d3e60ed1f6dd22c260d5c6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/isphp/zipball/b87fc850a6c427f82d3e60ed1f6dd22c260d5c6d",
+                "reference": "b87fc850a6c427f82d3e60ed1f6dd22c260d5c6d",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\": "/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "email": "mail@isengine.org"
+                }
+            ],
+            "description": "isEngine framework libraries on PHP",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/isphp/issues",
+                "source": "https://github.com/isengine/isphp/tree/master"
+            },
+            "time": "2022-02-14T21:52:07+00:00"
+        },
+        {
+            "name": "isengine/isscss",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/isscss.git",
+                "reference": "c5ade9c3aebb25264141bc83f83c720623ad59c6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/isscss/zipball/c5ade9c3aebb25264141bc83f83c720623ad59c6",
+                "reference": "c5ade9c3aebb25264141bc83f83c720623ad59c6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "email": "mail@isengine.org"
+                }
+            ],
+            "description": "isEngine style framework on SASS/SCSS",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php",
+                "sass",
+                "scss"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/isscss/issues",
+                "source": "https://github.com/isengine/isscss/tree/main"
+            },
+            "time": "2022-02-14T21:48:54+00:00"
+        },
+        {
+            "name": "isengine/map",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/map.git",
+                "reference": "625066038e7ddfd5c2731c636371cd630899fced"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/map/zipball/625066038e7ddfd5c2731c636371cd630899fced",
+                "reference": "625066038e7ddfd5c2731c636371cd630899fced",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine module for print geomap",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/map/issues",
+                "source": "https://github.com/isengine/map/tree/main"
+            },
+            "time": "2022-01-30T21:02:37+00:00"
+        },
+        {
+            "name": "isengine/media",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/media.git",
+                "reference": "eb079d23d4bc6d39aeac8fdc6462786bad63a3fd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/media/zipball/eb079d23d4bc6d39aeac8fdc6462786bad63a3fd",
+                "reference": "eb079d23d4bc6d39aeac8fdc6462786bad63a3fd",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine module for create media galleries, sliders, etc.",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/media/issues",
+                "source": "https://github.com/isengine/media/tree/main"
+            },
+            "time": "2021-10-26T20:43:11+00:00"
+        },
+        {
+            "name": "isengine/menu",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/menu.git",
+                "reference": "fef8b6cdd685c0b797a0ab853e0f2d0246f3a48c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/menu/zipball/fef8b6cdd685c0b797a0ab853e0f2d0246f3a48c",
+                "reference": "fef8b6cdd685c0b797a0ab853e0f2d0246f3a48c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine module of menu",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/menu/issues",
+                "source": "https://github.com/isengine/menu/tree/main"
+            },
+            "time": "2021-11-30T21:10:15+00:00"
+        },
+        {
+            "name": "isengine/scrolltotop",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/scrolltotop.git",
+                "reference": "3b8901fbde38c6a4444cfe86d4911e91f18f425f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/scrolltotop/zipball/3b8901fbde38c6a4444cfe86d4911e91f18f425f",
+                "reference": "3b8901fbde38c6a4444cfe86d4911e91f18f425f",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine scroll to top button module",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/scrolltotop/issues",
+                "source": "https://github.com/isengine/scrolltotop/tree/main"
+            },
+            "time": "2021-10-21T13:03:38+00:00"
+        },
+        {
+            "name": "isengine/socialnews",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/socialnews.git",
+                "reference": "d252109378689aa9044ca5f375298bcaec3753e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/socialnews/zipball/d252109378689aa9044ca5f375298bcaec3753e3",
+                "reference": "d252109378689aa9044ca5f375298bcaec3753e3",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "isEngine news module with output publications from social networks",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/socialnews/issues",
+                "source": "https://github.com/isengine/socialnews/tree/main"
+            },
+            "time": "2021-10-21T13:03:53+00:00"
+        },
+        {
+            "name": "isengine/weather",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/isengine/weather.git",
+                "reference": "d3261d8c8aa09511fedee72d981de22c28fddaef"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/isengine/weather/zipball/d3261d8c8aa09511fedee72d981de22c28fddaef",
+                "reference": "d3261d8c8aa09511fedee72d981de22c28fddaef",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.6|^7.0|^8.0"
+            },
+            "default-branch": true,
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "is\\Masters\\Modules\\Isengine\\": "class/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Max Nikonov",
+                    "homepage": "https://github.com/fwmakc"
+                }
+            ],
+            "description": "Weather isEngine module with use data from openweathermap.org",
+            "keywords": [
+                "cms",
+                "framework",
+                "isengine",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/isengine/weather/issues",
+                "source": "https://github.com/isengine/weather/tree/main"
+            },
+            "time": "2021-10-21T13:02:39+00:00"
+        },
+        {
+            "name": "league/color-extractor",
+            "version": "0.3.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/color-extractor.git",
+                "reference": "837086ec60f50c84c611c613963e4ad2e2aec806"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/color-extractor/zipball/837086ec60f50c84c611c613963e4ad2e2aec806",
+                "reference": "837086ec60f50c84c611c613963e4ad2e2aec806",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "php": ">=5.4.0"
+            },
+            "replace": {
+                "matthecat/colorextractor": "*"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "~2",
+                "phpunit/phpunit": "~5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mathieu Lechat",
+                    "email": "math.lechat@gmail.com",
+                    "homepage": "http://matthecat.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Extract colors from an image as a human would do.",
+            "homepage": "https://github.com/thephpleague/color-extractor",
+            "keywords": [
+                "color",
+                "extract",
+                "human",
+                "image",
+                "palette"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/color-extractor/issues",
+                "source": "https://github.com/thephpleague/color-extractor/tree/master"
+            },
+            "time": "2016-12-15T09:30:02+00:00"
+        },
+        {
+            "name": "mobiledetect/mobiledetectlib",
+            "version": "2.8.38",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/serbanghita/Mobile-Detect.git",
+                "reference": "b6c4ac9686d204c49a432f527f137cf24ac0b90e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/serbanghita/Mobile-Detect/zipball/b6c4ac9686d204c49a432f527f137cf24ac0b90e",
+                "reference": "b6c4ac9686d204c49a432f527f137cf24ac0b90e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8.35||~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Detection": "namespaced/"
+                },
+                "classmap": [
+                    "Mobile_Detect.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serban Ghita",
+                    "email": "serbanghita@gmail.com",
+                    "homepage": "http://mobiledetect.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Mobile_Detect is a lightweight PHP class for detecting mobile devices. It uses the User-Agent string combined with specific HTTP headers to detect the mobile environment.",
+            "homepage": "https://github.com/serbanghita/Mobile-Detect",
+            "keywords": [
+                "detect mobile devices",
+                "mobile",
+                "mobile detect",
+                "mobile detector",
+                "php mobile detect"
+            ],
+            "support": {
+                "issues": "https://github.com/serbanghita/Mobile-Detect/issues",
+                "source": "https://github.com/serbanghita/Mobile-Detect/tree/2.8.38"
+            },
+            "time": "2022-02-14T12:38:04+00:00"
+        },
+        {
+            "name": "scssphp/scssphp",
+            "version": "1.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scssphp/scssphp.git",
+                "reference": "9699a52a862da4efb43985943afa17150155dd3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scssphp/scssphp/zipball/9699a52a862da4efb43985943afa17150155dd3d",
+                "reference": "9699a52a862da4efb43985943afa17150155dd3d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-ctype": "*",
+                "ext-json": "*",
+                "php": ">=5.6.0"
+            },
+            "require-dev": {
+                "bamarni/composer-bin-plugin": "^1.4",
+                "phpunit/phpunit": "^5.7 || ^6.5 || ^7.5 || ^8.3 || ^9.4",
+                "sass/sass-spec": "*",
+                "squizlabs/php_codesniffer": "~3.5",
+                "symfony/phpunit-bridge": "^5.1",
+                "thoughtbot/bourbon": "^7.0",
+                "twbs/bootstrap": "~5.0",
+                "twbs/bootstrap4": "4.6.1",
+                "zurb/foundation": "~6.5"
+            },
+            "suggest": {
+                "ext-iconv": "Can be used as fallback when ext-mbstring is not available",
+                "ext-mbstring": "For best performance, mbstring should be installed as it is faster than ext-iconv"
+            },
+            "bin": [
+                "bin/pscss"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "ScssPhp\\ScssPhp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anthon Pang",
+                    "email": "apang@softwaredevelopment.ca",
+                    "homepage": "https://github.com/robocoder"
+                },
+                {
+                    "name": "Cédric Morin",
+                    "email": "cedric@yterium.com",
+                    "homepage": "https://github.com/Cerdic"
+                }
+            ],
+            "description": "scssphp is a compiler for SCSS written in PHP.",
+            "homepage": "http://scssphp.github.io/scssphp/",
+            "keywords": [
+                "css",
+                "less",
+                "sass",
+                "scss",
+                "stylesheet"
+            ],
+            "support": {
+                "issues": "https://github.com/scssphp/scssphp/issues",
+                "source": "https://github.com/scssphp/scssphp/tree/1.x"
+            },
+            "time": "2022-01-06T18:16:18+00:00"
+        },
+        {
+            "name": "shuchkin/simplexlsx",
+            "version": "0.8.34",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/shuchkin/simplexlsx.git",
+                "reference": "0fc296bac30614780fb2882bed5c5f95a47d297d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/shuchkin/simplexlsx/zipball/0fc296bac30614780fb2882bed5c5f95a47d297d",
+                "reference": "0fc296bac30614780fb2882bed5c5f95a47d297d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-libxml": "*",
+                "ext-mbstring": "*",
+                "ext-simplexml": "*",
+                "ext-zlib": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/SimpleXLSX.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Shuchkin (SMSPILOT)",
+                    "email": "sergey.shuchkin@gmail.com",
+                    "homepage": "https://github.com/shuchkin"
+                }
+            ],
+            "description": "Parse and retrieve data from Excel XLSx files. MS Excel 2007 workbooks PHP reader.",
+            "homepage": "https://github.com/shuchkin/simplexlsx",
+            "keywords": [
+                "backend",
+                "excel",
+                "parser",
+                "php",
+                "xlsx"
+            ],
+            "support": {
+                "issues": "https://github.com/shuchkin/simplexlsx/issues",
+                "source": "https://github.com/shuchkin/simplexlsx/tree/0.8.34"
+            },
+            "time": "2022-02-04T15:03:48+00:00"
+        },
+        {
+            "name": "wikimedia/less.php",
+            "version": "v3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wikimedia/less.php.git",
+                "reference": "a486d78b9bd16b72f237fc6093aa56d69ce8bd13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wikimedia/less.php/zipball/a486d78b9bd16b72f237fc6093aa56d69ce8bd13",
+                "reference": "a486d78b9bd16b72f237fc6093aa56d69ce8bd13",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.9"
+            },
+            "require-dev": {
+                "mediawiki/mediawiki-codesniffer": "34.0.0",
+                "mediawiki/minus-x": "1.0.0",
+                "php-parallel-lint/php-console-highlighter": "0.5.0",
+                "php-parallel-lint/php-parallel-lint": "1.2.0",
+                "phpunit/phpunit": "^8.5"
+            },
+            "bin": [
+                "bin/lessc"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Less": "lib/"
+                },
+                "classmap": [
+                    "lessc.inc.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Josh Schmidt",
+                    "homepage": "https://github.com/oyejorge"
+                },
+                {
+                    "name": "Matt Agar",
+                    "homepage": "https://github.com/agar"
+                },
+                {
+                    "name": "Martin Jantošovič",
+                    "homepage": "https://github.com/Mordred"
+                }
+            ],
+            "description": "PHP port of the Javascript version of LESS http://lesscss.org (Originally maintained by Josh Schmidt)",
+            "keywords": [
+                "css",
+                "less",
+                "less.js",
+                "lesscss",
+                "php",
+                "stylesheet"
+            ],
+            "support": {
+                "issues": "https://github.com/wikimedia/less.php/issues",
+                "source": "https://github.com/wikimedia/less.php/tree/v3.1.0"
+            },
+            "time": "2020-12-11T19:33:31+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^5.6|^7.0|^8.0"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.1.0"
+}

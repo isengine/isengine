@@ -10,12 +10,12 @@
 
 Is official repository of isEngine.
 
-Latest version is 1.0 alpha<br>
+Latest version is 1.0 beta<br>
 Status is in development
 
 Это официальный репозиторий isEngine.
 
-Последняя версия - 1.0 альфа<br>
+Последняя версия - 1.0 бета<br>
 Статус - в разработке
 
 ## Project's links

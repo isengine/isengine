@@ -34,7 +34,7 @@ $installer -> buffer('start');
 <body class="text-center">
 <div class="form-signin">
 	
-	<img class="mb-4" src="https://raw.githubusercontent.com/isengine/docs/master/logo/poster.svg" alt="" width="100%" height="144">
+	<img class="mb-4" src="https://raw.githubusercontent.com/isengine/docs/master/logo/logo.svg" alt="" width="100%" height="144">
 	<h1 class="h3 font-weight-normal"><?= $installer -> lang -> get('template:title'); ?></h1>
 	
 	<div class="checkbox my-4">

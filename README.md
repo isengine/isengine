@@ -1,4 +1,4 @@
-<p align="center"><a href="https://isengine.org" target="_blank"><img src="https://raw.githubusercontent.com/isengine/docs/master/logo/poster.svg" width="400"></a></p>
+<p align="center"><a href="https://isengine.org" target="_blank"><img src="https://raw.githubusercontent.com/isengine/docs/master/logo/logo.svg" width="400"></a></p>
 
 <p align="center">
 <a href="https://packagist.org/packages/isengine/isengine"><img src="https://img.shields.io/packagist/dt/isengine/isengine" alt="Total Downloads"></a>

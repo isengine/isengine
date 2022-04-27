@@ -1,5 +1,15 @@
 <?php
 
+namespace is;
+
+use is\Helpers\System;
+use is\Helpers\Strings;
+use is\Helpers\Objects;
+use is\Helpers\Sessions;
+use is\Components\Display;
+use is\Components\Log;
+use is\Masters\View;
+
 // читаем настройки и тексты для кодов ошибок
 //$options = (object) dataprepare($real . 'settings.ini');
 //$data = (object) dataprepare($real . 'lang.ini');
@@ -30,9 +40,9 @@ if ($message) {
 			'<span id="timer">' . $options['timer'] . '</span>',
 			'<a href="' . $previous . '">' . $previous . '</a>',
 			'<a href="/?query=restore">' . $options['restore'][$lang] . '</a>',
-			'<a href="/">http://' . $_SERVER['SERVER_NAME'] . '</a>',
+			'<a href="/">http://' . System::server('host') . '</a>',
 			$options['block'][$lang],
-			'<a href="mailto: ' . $mail . '?subject=' . $error['lang'] . ' ' . $error['code'] . ' (' . $_SERVER['SERVER_NAME'] . ')">' . $mail . '</a>',
+			'<a href="mailto: ' . $mail . '?subject=' . $error['lang'] . ' ' . $error['code'] . ' (' . System::server('host') . ')">' . $mail . '</a>',
 		],
 		$message
 	);

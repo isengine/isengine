@@ -13,8 +13,8 @@ use is\Components\Log;
 use is\Components\State;
 use is\Masters\View;
 
-if (!defined('isLOADED')) { define('isLOADED', microtime(true)); }
-if (!defined('isLOADEDMEM')) { define('isLOADEDMEM', memory_get_peak_usage()); }
+if (!defined('ISLOADED')) { define('ISLOADED', microtime(true)); }
+if (!defined('ISLOADEDMEM')) { define('ISLOADEDMEM', memory_get_peak_usage()); }
 
 // читаем
 

@@ -1,0 +1,18 @@
+{
+	"type" : "authorisation",
+	"get" : true,
+	"errors" : true,
+	"submit" : "enter",
+	"form" : [
+		{
+			"name" : "login",
+			"type" : "text",
+			"verify" : "login"
+		},
+		{
+			"name" : "password",
+			"type" : "password",
+			"verify" : "password"
+		}
+	]
+}

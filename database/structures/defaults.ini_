@@ -1,0 +1,17 @@
+{
+	"index" : null,
+	"about" : null,
+	"catalog:content" : null,
+	"service:content" : null,
+	"news:content" : null,
+	"blog:content" : null,
+	"faq:content" : null,
+	"help" : null,
+	"contacts" : null
+	"search" : null,
+	"information:group" : {
+		"rules" : null,
+		"privacy" : null,
+		"covid" : null
+	}
+}

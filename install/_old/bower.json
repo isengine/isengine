@@ -1,9 +1,0 @@
-{
-    "name": "isengine",
-    "authors": [
-        "isengine <mail@isengine.org>"
-    ],
-    "private": true,
-    "dependencies": {
-    }
-}

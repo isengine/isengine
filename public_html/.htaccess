@@ -1,0 +1,102 @@
+# *********************************************
+# Apache Server configuration file for isEngine
+# *********************************************
+
+# value of module rewrite variables
+# значение переменных модуля rewrite
+# 
+# example url:  http://site.com/folder/page.php?query=value
+# example path: /server/domains/site.com/www/folder/page.php
+# %{HTTPS}            off / on
+# %{HTTP_HOST}        site.com
+# %{THE_REQUEST}      GET /folder/page.php HTTP/1.1
+# %{REQUEST_URI}      /folder/page.php
+# %{QUERY_STRING}     query=value
+# %{REQUEST_FILENAME} /server/domains/site.com/www/folder/page.php
+# %1-9                1st-9th matched in () in RewriteCond second argument
+# example:            RewriteCond %{REQUEST_URI} .+\/.+\.(php|ini)$ [NC]
+# %1:                 'php' or 'ini'
+
+# assign default encoding
+# назначаем кодировку по-умолчанию
+AddDefaultCharset UTF-8
+
+# do not allow index folders
+# запрещаем индексировать папки
+Options -Indexes
+
+# do not allow to transmit session identifier, except through cookies
+# запрещаем передавать идентификатор сессии, кроме как через куки
+php_flag session.use_only_cookies on
+
+# URL-based session management has additional security risks
+# compared to cookie-based management - therefore, disable
+# управление сессией на основе URL имеет дополнительные риски безопасности
+# по сравнению с управлением на основе cookies - поэтому отключаем
+php_flag session.use_trans_sid off
+
+# default encoding assignment for various processes
+# назначение кодировки по-умолчанию для различных процессов
+php_value default_charset UTF-8
+
+# set name of session identifier by default
+# задаем имя идентификатора сессии по-умолчанию
+#php_value session.name "SID"
+
+# error output is recommended to be included only at design time
+# вывод ошибок, рекомендуется включать только на время разработки
+#php_value error_reporting E_ALL & E_STRICT
+php_flag display_errors on
+#php_flag display_errors off
+
+# some old security settings
+# несколько устаревших настроек безопасности
+#php_flag register_globals off
+#php_value variables_order "EGPCS"
+
+# enable rewrite engine
+# включение правил перенаправления
+RewriteEngine on
+#RewriteBase /
+
+ErrorDocument 400 /?error=400
+ErrorDocument 401 /?error=401
+ErrorDocument 403 /?error=403
+ErrorDocument 404 /?error=404
+ErrorDocument 500 /?error=500
+ErrorDocument 502 /?error=502
+ErrorDocument 504 /?error=504
+
+# SEF settings
+# настройки для работы SEF
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !index.php$ [NC]
+RewriteRule ^(.*)$ index.php [L]
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteCond %{REQUEST_URI} .+\/.+\.(php|ini)(\/)?$ [NC]
+RewriteRule ^(.*)$ /index.php [L]
+#RewriteRule ^(.*)$ /index.php?error=404 [L]
+
+RewriteCond %{REQUEST_URI} ^/.+\.(xml|txt)(\/)?$ [NC]
+RewriteRule ^(.*)$ /index.php [L]
+
+# request any real folder redirects to the beginning
+# запрос любой существующей папки перенаправляет в начало
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*)$ /index.php [L]
+
+# cache settings
+# настройки кэширования
+<FilesMatch ".(rss|atom|xml|txt|jpg|jpeg|gif|png|webp|ico|svg|eot|otf|ttf|woff|woff2|js|css)$">
+Header set Cache-Control "max-age=31536000"
+</FilesMatch>
+
+# gzip dynamic compress settings
+# настройки динамического сжатия
+<IfModule deflate_module>
+  <IfModule filter_module>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml application/xml application/xhtml+xml application/rdf+xml application/rss+xml application/atom+xml image/svg+xml text/css text/javascript application/javascript application/x-javascript font/otf font/opentype application/font-otf application/x-font-otf font/ttf font/truetype application/font-ttf application/x-font-ttf
+  </IfModule>
+</IfModule>

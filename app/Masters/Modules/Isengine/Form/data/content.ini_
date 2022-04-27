@@ -1,0 +1,36 @@
+{
+	"process" : "form:submit",
+	"get" : true,
+	"errors" : true,
+	"submit" : "Отправить",
+	"form" : [
+		{
+			"name" : "name",
+			"type" : "text",
+			"verify" : "notags",
+			"default" : "ФИО"
+		},
+		{
+			"name" : "email",
+			"type" : "email",
+			"verify" : "email",
+			"default" : "Почта"
+		},
+		{
+			"name" : "message",
+			"type" : "textarea",
+			"verify" : "notags",
+			"default" : "Текст сообщения"
+		}
+	],
+	"send" : {
+		"type" : "email",
+		"param" : "",
+		"id" : "",
+		"key" : ""
+	},
+	"message" : {
+		"subject" : "Новое сообщение с сайта",
+		"text" : "Данные сообщения"
+	}
+}

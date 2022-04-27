@@ -1,0 +1,35 @@
+{
+	"type" : "registration",
+	"get" : true,
+	"submit" : true,
+	"errors" : true,
+	"required" : true,	
+	"form" : [
+		{
+			"name" : "login",
+			"type" : "text",
+			"verify" : "login",
+			"default" : "login"
+		},
+		{
+			"name" : "email",
+			"type" : "text",
+			"verify" : "email",
+			"default" : "email"
+		},
+		{
+			"name" : "password",
+			"type" : "password",
+			"verify" : "password",
+			"label" : "enter and confirm password",
+			"description" : "enter your password here"
+		},
+		{
+			"name" : "password_confirm",
+			"type" : "password",
+			"verify" : "password",
+			"placeholder" : "confirm password",
+			"description" : "confirm your password here"
+		}
+	]
+}

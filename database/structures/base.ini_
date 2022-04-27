@@ -1,0 +1,33 @@
+{
+	"index" : null,
+	"index2" : null,
+	"index3" : null,
+	"index4" : null,
+
+	"about" : null,
+	"about2" : null,
+	"about3" : null,
+
+	"services" : null,
+	"services2" : null,
+	"services3" : null,
+	"services-single" : null,
+
+	"team" : null,
+	"team2" : null,
+	"team-single" : null,
+
+	"news" : null,
+	"news2" : null,
+	"news-single" : null,
+
+	"gallery" : null,
+	"appointment" : null,
+	"price-table" : null,
+	"shop" : null,
+	"shop-single" : null,
+	"faq" : null,
+	"e404" : null,
+	
+	"contacts" : null
+}

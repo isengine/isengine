@@ -1,24 +1,29 @@
 {
-	"name": "isengine/isengine",
-	"type": "project",
-	"description": "This is what you need to start the system.",
-	"version": "1.0.0-beta",
-	"keywords": [ "php", "cms", "framework", "isengine" ],
-	"license": "MIT",
-	"authors": [
-		{
-			"name": "Max Nikonov",
-			"email": "mail@isengine.org"
-		}
-	],
-	"minimum-stability": "dev",
-	"require": {
-		"php" : "^5.6|^7.0|^8.0",
-		"isengine/core": "*"
-	},
-	"autoload": {
-		"psr-4": {
-			"is\\": "app/"
-		}
-	}
+    "name": "isengine/isengine",
+    "type": "project",
+    "description": "Простой и легкий php-фреймворк для быстрой разработки сайтов и веб-приложений",
+    "version": "1.0.0-beta",
+    "keywords": [ "php", "cms", "framework", "isengine" ],
+    "license": "MIT",
+    "homepage": "https://isengine.org",
+    "support": {
+        "issues": "https://github.com/isengine/isengine/issues",
+        "source": "https://github.com/isengine/isengine"
+    },
+    "authors": [
+        {
+            "name": "Max Nikonov",
+            "email": "mail@isengine.org"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : "^5.6|^7.0|^8.0",
+        "isengine/core": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "is\\": "app/"
+        }
+    }
 }

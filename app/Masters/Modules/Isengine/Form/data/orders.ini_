@@ -1,0 +1,173 @@
+{
+	"process" : "form:submit",
+	//"process" : "form.sdfd:submit",
+	"customprocess" : "order",
+	"get" : false,
+	/*"submit" : "Отправить заказ",*/
+	"required" : null,
+	"form" : [
+		{
+			"name" : "name",
+			"type" : "text",
+			"required" : true,
+			"verify" : "notags",
+			"default" : "Ваше имя *",
+			"message" : "Имя заказчика",
+			"filter" : "href www",
+			"class" : "order-form__item",
+			"wrapper" : "col-xl-6 col-lg-6 col-md-12 col-xs-12 col-xs-12",
+			"row" : "open"
+		},
+		{
+			"name" : "phone",
+			"type" : "text",
+			"required" : true,
+			"verify" : "phone",
+			"minlen" : "10",
+			"maxlen" : "11",
+			"clear" : "phone phone_ru phone_link",
+			"default" : "Контактный телефон *",
+			"message" : "Контактный телефон",
+			"class" : "order-form__item order-form__item-phone",
+			"wrapper" : "col-xl-6 col-lg-6 col-md-12 col-xs-12 col-xs-12",
+			"row" : "close"
+		},
+		{
+			"name" : "city",
+			"type" : "select",
+			"options" : {
+				"pyatigorsk" : "Пятигорск",
+				"essentuki" : "Ессентуки",
+				"lermontov" : "Лермонтов",
+				"inozemtsevo" : "Иноземцево",
+				"energetik" : "Энергетик"
+			},
+			"options_title" : "Выберите город",
+			"novalue" : "Город не выбран",
+			"required" : true,
+			"verify" : "notags",
+			"default" : "",
+			"label" : "Город или населенный пункт *",
+			"message" : "Город доставки",
+			"filter" : "href www",
+			"class" : "order-form__item",
+			"wrapper" : "col-12",
+			"row" : true
+		},
+		{
+			"name" : "address",
+			"type" : "textarea",
+			"required" : true,
+			"verify" : "notags",
+			"default" : "",
+			"label" : "Адрес доставки (улица, дом) *",
+			"message" : "Адрес доставки",
+			"filter" : "href www",
+			"class" : "order-form__item",
+			"wrapper" : "col-12",
+			"row" : true
+		},
+		{
+			"name" : "checkbox",
+			"type" : "group:radio",
+			"verify" : "notags",
+			"options" : {
+				"whatsapp" : "на whatsapp",
+				"sms" : "по sms"
+			},
+			"novalue" : "не выбрано",
+			"default" : "",
+			"label" : "Отправлять уведомления",
+			"message" : "Уведомления",
+			"class" : "order-form__group",
+			"wrapper" : "col-12 d-none",
+			"row" : true
+		},
+		{
+			"name" : "primechaniya",
+			"type" : "textarea",
+			"verify" : "notags",
+			"default" : "",
+			"label" : "Примечания к заказу",
+			"message" : "Примечания к заказу",
+			"filter" : "href www",
+			"class" : "order-form__item",
+			"wrapper" : "col-12",
+			"row" : true
+		},
+		{
+			"name" : "description",
+			"type" : "info",
+			"default" : "* все поля отмеченные звездочкой обязательны к заполнению!",
+			"class" : "order-form__description",
+			"wrapper" : "col",
+			"row" : true
+		},
+		{
+			"name" : "submit",
+			"type" : "submit",
+			"default" : "Отправить заказ",
+			"nosend" : true,
+			"class" : "",
+			"wrapper" : "col order__button",
+			"row" : true
+		}
+	],
+	"send" : {
+		"type" : "mail",
+		"param" : "",
+		"id" : "",
+		"key" : ""
+	},
+	"labels" : {
+		"subject" : "Новый заказ с сайта",
+		"message" : "Данные сообщения",
+		"complete" : null,
+		"refresh" : null
+	},
+	
+	"cookie" : {
+		"cart" : null
+	},
+	
+	"classes" : {
+		"prefix" : null,
+		"defaults" : null,
+		"bootstrap" : null,
+		
+		"common" : "order-form",
+		"item" : "",
+		"label" : "order-form__description",
+		
+		"error" : "order-form__error"
+		
+	},
+	
+	"elements" : {
+		"errors" : true,
+		"required" : null
+	},
+	
+	"captcha" : {
+		"enable" : null,
+		"id" : "",
+		"font" : "1",
+		"symbols" : "numeric",
+		"length" : "",
+		"width" : "",
+		"height" : "",
+		"amplitude" : "",
+		"waves" : "disable",
+		"rotate" : "",
+		"blacknoise" : "",
+		"whitenoise" : "",
+		"linenoise" : "",
+		"lines" : "disable",
+		"no_spaces" : "",
+		"color" : "0072c3",
+		"bgcolor" : "",
+		"alt" : "проверочный код",
+		"captcha" : ""
+	}
+	
+}

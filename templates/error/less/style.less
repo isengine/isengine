@@ -1,0 +1,116 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+div {
+	display: block;
+	padding: 20px 0;
+	margin: 0;
+	background: #eee;
+    position: absolute;
+    top: 50%;
+	width: 100%;
+    transform: translateY(-50%);
+}
+div p {
+	width: 50%;
+	font: 400 24px 'PT Serif', serif;
+	margin: auto;
+	padding: 10px 0;
+}
+span.code {
+	line-height: 1em;
+	font-size: 8em;
+	display: block;
+	text-shadow: 5px 5px 5px rgba(0,0,0,0.25);
+	font-family: PT Sans;
+	font-weight: 200;
+	
+	color: #5a5c69;
+    position: relative;
+    line-height: 1;
+    width: 1.5em;
+	
+	margin-left: auto!important;
+    margin-right: auto!important;
+	
+}
+span.code:before {
+	content: attr(data-text);
+    position: absolute;
+    top: 0;
+	clip: rect(0, 0, 0, 0);
+	width: 100%;
+	background: transparent;
+	
+    left: -2px;
+    text-shadow: 1px 0 transparent;
+    animation: animation-noise 2s infinite linear alternate-reverse;
+}
+
+span.colon {
+	display: none;
+	font-size: 0.5em;
+	line-height: 0.5em;
+	padding-left: 0.1em;
+}
+span#error {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;
+}
+span#timer {
+	color: blue;
+	text-decoration: underline;
+	cursor: pointer;	
+}
+
+@media (max-width: 1199px) { div p { width: 75%; font-size: 18px; } }
+@media (max-width: 767px) { div p { width: 90%; font-size: 16px; } }
+
+@-webkit-keyframes animation-noise {
+	0% { clip: rect(142px, 600px, 72px, 0); left: -2px; }
+	5% { clip: rect(114px, 600px, 142px, 0); left: -2px; }
+	10% { clip: rect(162px, 600px, 50px, 0); left: 2px; }
+	15% { clip: rect(10px, 600px, 176px, 0); left: 2px; }
+	20% { clip: rect(124px, 600px, 151px, 0); left: -2px; }
+	25% { clip: rect(56px, 600px, 112px, 0); left: -2px; }
+	30% { clip: rect(136px, 600px, 163px, 0); left: 2px; }
+	35% { clip: rect(110px, 600px, 14px, 0); left: 2px; }
+	40% { clip: rect(27px, 600px, 168px, 0); left: -2px; }
+	45% { clip: rect(76px, 600px, 97px, 0); left: -2px; }
+	50% { clip: rect(27px, 600px, 61px, 0); left: 2px; }
+	55% { clip: rect(175px, 600px, 179px, 0); left: 2px; }
+	60% { clip: rect(73px, 600px, 55px, 0); left: -2px; }
+	65% { clip: rect(72px, 600px, 69px, 0); left: -2px; }
+	70% { clip: rect(92px, 600px, 43px, 0); left: 2px; }
+	75% { clip: rect(29px, 600px, 113px, 0); left: 2px; }
+	80% { clip: rect(38px, 600px, 24px, 0); left: -2px; }
+	85% { clip: rect(78px, 600px, 38px, 0); left: -2px; }
+	90% { clip: rect(22px, 600px, 151px, 0); left: 2px; }
+	95% { clip: rect(43px, 600px, 2px, 0); left: 2px; }
+	100% { clip: rect(71px, 600px, 75px, 0); left: 0px; }
+}
+@keyframes animation-noise {
+	0% { clip: rect(142px, 600px, 72px, 0); left: -2px; }
+	5% { clip: rect(114px, 600px, 142px, 0); left: -2px; }
+	10% { clip: rect(162px, 600px, 50px, 0); left: 2px; }
+	15% { clip: rect(10px, 600px, 176px, 0); left: 2px; }
+	20% { clip: rect(124px, 600px, 151px, 0); left: -2px; }
+	25% { clip: rect(56px, 600px, 112px, 0); left: -2px; }
+	30% { clip: rect(136px, 600px, 163px, 0); left: 2px; }
+	35% { clip: rect(110px, 600px, 14px, 0); left: 2px; }
+	40% { clip: rect(27px, 600px, 168px, 0); left: -2px; }
+	45% { clip: rect(76px, 600px, 97px, 0); left: -2px; }
+	50% { clip: rect(27px, 600px, 61px, 0); left: 2px; }
+	55% { clip: rect(175px, 600px, 179px, 0); left: 2px; }
+	60% { clip: rect(73px, 600px, 55px, 0); left: -2px; }
+	65% { clip: rect(72px, 600px, 69px, 0); left: -2px; }
+	70% { clip: rect(92px, 600px, 43px, 0); left: 2px; }
+	75% { clip: rect(29px, 600px, 113px, 0); left: 2px; }
+	80% { clip: rect(38px, 600px, 24px, 0); left: -2px; }
+	85% { clip: rect(78px, 600px, 38px, 0); left: -2px; }
+	90% { clip: rect(22px, 600px, 151px, 0); left: 2px; }
+	95% { clip: rect(43px, 600px, 2px, 0); left: 2px; }
+	100% { clip: rect(71px, 600px, 75px, 0); left: 0px; }
+}

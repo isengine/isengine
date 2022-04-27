@@ -1,0 +1,61 @@
+$is-colors: (
+	
+	theme:  #6DB13F, //B30818 6DB13F
+	second: #EF8720, //3CAA3C EF8720 
+	third:  #F3E759, //FFC18D FFC18D
+	
+	theme-dark:   desaturate(darken(#6DB13F, 20%), 10%),
+	theme-light:  lighten(#6DB13F, 10%),
+	second-dark:  desaturate(darken(#EF8720, 20%), 10%),
+	second-light: lighten(#EF8720, 10%),
+	third-dark:   desaturate(darken(#F3E759, 20%), 10%),
+	third-light:  lighten(#F3E759, 10%),
+	
+	green: 	  #6DB13F,
+	yellow:   #F9C82D,
+	blue: 	  #5BA3D4,
+	teal: 	  #128c7e,
+	red: 	  #E54142,
+	orange:   #EF8720,
+	pink: 	  #D64381,
+	purple:   #444A9E,
+	beige: 	  #F0E1CE,
+	
+	gray-1: #F8F8F8, // 97 middle
+	gray-2: #E8E8E8, // 91 <
+	gray-3: #D0D0D0, // 82 middle
+	gray-4: #B9B9B9, // 73 <
+	gray-5: #A2A2A2, // 64 middle
+	gray-6: #808080, // 50 <
+	gray-7: #5C5C5C, // 36 middle
+	gray-8: #454545, // 27 <
+	gray-9: #2E2E2E, // 18 middle
+	
+	white:    #FFFFFF, // 100
+	black:    #161616, // 9
+	deep:     #000000, // 0
+	none:     transparent
+	
+);
+
+$is-font: (
+	
+	theme: (
+		name:   #{"Ubuntu", sans-serif},
+		size:   16px,
+		weight: 400
+	),
+	
+	second: (
+		name:   #{"Ubuntu Condensed", sans-serif},
+		size:   16px,
+		weight: 400
+	),
+	
+	icon: (
+		name:   FontAwesome,
+		size:   16px,
+		weight: 400
+	)
+	
+);

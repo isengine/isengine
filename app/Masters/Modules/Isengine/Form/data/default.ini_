@@ -1,0 +1,87 @@
+{
+	"process" : "form:submit",
+	"get" : true,
+	"errors" : true,
+	"submit" : "Отправить",
+	"form" : [
+		{
+			"name" : "name",
+			"type" : "text",
+			"verify" : "notags",
+			"default" : "ФИО"
+		},
+		{
+			"name" : "email",
+			"type" : "email",
+			"verify" : "email",
+			"default" : "Почта"
+		},
+		{
+			"name" : "message",
+			"type" : "textarea",
+			"verify" : "notags",
+			"default" : "Текст сообщения"
+		}
+	],
+	"send" : {
+		"type" : "mail",
+		"param" : "",
+		"id" : "",
+		"key" : ""
+	},
+	"labels" : {
+		"subject" : "Новое сообщение с сайта",
+		"message" : "Данные сообщения",
+		"complete" : null,
+		"refresh" : null,
+		
+		"errors" : {},
+		"error_field" : "Введенный текст слишком короткий или содержит недопустимые символы",
+		"error_select" : "Не выбрано допустимое значение"
+		
+	},
+	
+	"cookie" : null,
+	
+	"classes" : {
+		
+		"prefix" : true,
+		"defaults" : true,
+		"bootstrap" : null,
+		
+		"common" : "",
+		"item" : "",
+		"label" : "order-form__description",
+		
+		"error" : "order-form__error"
+		
+	},
+	
+	"elements" : {
+		"errors" : true,
+		"required" : null
+	},
+	
+	"captcha" : {
+		"enable" : "",
+		"id" : "",
+		"font" : "1",
+		"symbols" : "numeric",
+		"length" : "",
+		"width" : "",
+		"height" : "",
+		"amplitude" : "",
+		"waves" : "disable",
+		"rotate" : "",
+		"blacknoise" : "",
+		"whitenoise" : "",
+		"linenoise" : "",
+		"lines" : "disable",
+		"no_spaces" : "",
+		"color" : "0072c3",
+		"bgcolor" : "",
+		"alt" : "проверочный код",
+		"captcha" : ""
+	}
+	
+}

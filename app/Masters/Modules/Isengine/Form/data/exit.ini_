@@ -1,0 +1,12 @@
+{
+	"type" : "authorisation",
+	"get" : true,
+	"submit" : false,
+	"form" : [
+		{
+			"name" : "exit",
+			"type" : "submit",
+			"default" : "exit"
+		}
+	]
+}

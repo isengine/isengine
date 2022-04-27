@@ -1,0 +1,57 @@
+{
+	"home" : "",
+
+	"news:content" : null,
+	"newz:params|template|browser-cache" : null,
+	"neyu:special||1:minute" : null,
+	"new||default" : null,
+	"contahkts||parent" : null,
+	"contagdz||1024" : null,
+	"contacts" : null,
+
+	"action|||default" : {
+		"one|||parent" : {
+			"sub" : {
+				"path1|||60" : null,
+				"path2" : null,
+				"path3" : null
+			}
+		},
+		"two" : {
+			"sub:group" : {
+				"path1" : null,
+				"path2" : null,
+				"path3" : null
+			}
+		}
+	},
+	"about" : {
+		"services:content" : null,
+		"news:content" : null,
+		"testimonials:content" : "//site.com",
+		"faq" : "https://site.com/faq",
+		"conditions" : "/documents/conditions/",
+		"kurortnyy_sbor" : "documents:kurortnyy_sbor",
+		"sub" : {
+			"path1" : "/about/sub/#path1",
+			"path2" : "/about/sub/#path2",
+			"path3" : "/about/sub/#path3"
+		}
+	},
+	"rooms:content" : null,
+	"conferences:content" : null,
+	"restaurants:content" : null,
+	"contacts" : null,
+	"bronirovanie" : null,
+	"reservation:params" : null,
+	"reservation_wedding:params" : null,
+	"documents" : {
+		"conditions" : "local:files:request.pdf",
+		"kurortnyy_sbor" : null,
+		"privacypolicy" : null,
+		"useragreement" : null,
+		"agreementonpersonaldataprocessing" : null,
+		"protection_personal_data" : null,
+		"preferential_categories" : null
+	}
+}

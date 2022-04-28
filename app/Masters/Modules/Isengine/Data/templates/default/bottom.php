@@ -15,7 +15,13 @@ $page = $view -> get('state|page');
 ?>
 <div class="container-fluid fixed ab bg-white b-0 bt border-gray-2">
 	<div class="row align-items-end justify-content-between flex-nowrap align-center sm-none">
-		<?php Objects::each($this -> getData(), function($item, $key) use ($url, $page) { ?>
+		<?php
+            Objects::each($this -> getData(), function($item, $key) use ($url, $page) {
+                $item = Objects::createByIndex(
+                    ['type', 'link', 'icon', 'page', 'title'],
+                    $item
+                );
+        ?>
 		<a
 		<?php if ($item['type'] === 'menu') { ?>
 			href="#offcanvasCatalog" data-bs-toggle="offcanvas" role="button" aria-controls="offcanvasCatalog"

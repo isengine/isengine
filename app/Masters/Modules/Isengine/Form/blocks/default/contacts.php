@@ -10,8 +10,6 @@ $element = $item[0];
 $item = $item[1];
 $data = $item['options'];
 
-$name = $data['name'];
-
 ?>
 <div class="mb-05">
 	<div>

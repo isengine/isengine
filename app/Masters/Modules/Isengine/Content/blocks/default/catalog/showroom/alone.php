@@ -208,7 +208,7 @@ $data = $item -> getData();
 							</span>
 						</div>
 						<div class="col-6 md-col-8">
-							<?= $data[$key] ? $data[$key] : 'нет данных'; ?>
+							<?= empty($data[$key]) ? 'нет данных' : $data[$key]; ?>
 						</div>
 					</div>
 				<?php }); ?>
@@ -218,8 +218,8 @@ $data = $item -> getData();
 			
 			<div class="tab-pane fade" id="nav-2" role="tabpanel" aria-labelledby="nav-tab-2">
 				
-				<?= $data['description']; ?>
-				<?= $data['content']; ?>
+				<?= empty($data['description']) ? null : $data['description']; ?>
+				<?= empty($data['content']) ? null : $data['content']; ?>
 				
 				<?php
 					Objects::each($data['gallery'], function($item) use ($view, $data) {

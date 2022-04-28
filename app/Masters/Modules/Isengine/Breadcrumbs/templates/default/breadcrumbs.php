@@ -132,7 +132,10 @@ if ($last && $sets['last-item']) {
 		$link = $router -> structure -> getDataByName($position)['link'];
 	}
 	
-	$lang = $view -> get('lang|nav')[$position ? $position : 'index'];
+	//$pos = $position ? $position : 'index';
+	//$nav = $view -> get('lang|nav');
+	$lang = $view -> get('lang|nav:' . ($position ? $position : 'index'));
+	//$lang = isset($view -> get('lang|nav')[$position ? $position : 'index'];
 	$content = '<span>' . ($lang ? $lang : $last) . '</span><meta itemprop="position" content="' . $count . '">';
 	
 	if ($sets['classes']['last-item']) {

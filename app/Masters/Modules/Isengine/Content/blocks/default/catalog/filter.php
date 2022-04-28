@@ -54,7 +54,10 @@ $link = '/' . ($link ? $link . '/' : null);
 			
 			Objects::each($sets['list'], function($item, $key) use ($sets, &$data) {
 				
-				$split = Strings::split($key, ':');
+				$split = Objects::createByIndex(
+                    [0, 1],
+                    Strings::split($key, ':')
+                );
 				$name = $split[0];
 				$type = $split[1];
 				

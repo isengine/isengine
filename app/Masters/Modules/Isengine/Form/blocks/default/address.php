@@ -9,8 +9,6 @@ use is\Helpers\Strings;
 $data = $item[1]['options'];
 $item = $item[0];
 
-$name = $data['name'];
-
 ?>
 <div class="mb-1">
 	<label for="form-order-name" class="form-label"><?= $data['label']; ?></label>

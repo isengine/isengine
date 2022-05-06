@@ -1,18 +1,8 @@
 <?php
 
-namespace is;
-
-/*
-* DS, DIRECTORY SEPARATOR - разделитель папок
-* DP, DIRECTORY PARENT - предыдущая папка
-* DI, DIRECTORY INDEX - индексная, публичная папка проекта
-* DR, DIRECTORY ROOT - корневая папка проекта
-*/
-define('DS', DIRECTORY_SEPARATOR);
-define('DP', '..' . DIRECTORY_SEPARATOR);
-define('DI', __DIR__ . DS);
-define('DR', realpath(__DIR__ . DS . '..') . DS);
-
-require_once DR . 'vendor' . DS . 'isengine' . DS . 'core' . DS . 'init.php';
-
-?>
+require_once
+    __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR .
+    'vendor' . DIRECTORY_SEPARATOR .
+    'isengine' . DIRECTORY_SEPARATOR .
+    'core' . DIRECTORY_SEPARATOR .
+    'init.php';

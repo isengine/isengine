@@ -20,7 +20,7 @@ $view = View::getInstance();
 </p>
 
 <p class="align-center">
-	<a class="btn border-contrast color-contrast align-center" data-bs-toggle="modal" href="#eshopFeedback" role="button">
+	<a class="btn border-contrast color-contrast align-center" data-bs-toggle="modal" href="#feedback" role="button">
 		Обратная связь
 	</a>
 </p>

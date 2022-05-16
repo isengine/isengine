@@ -11,11 +11,11 @@ $view = View::getInstance();
 
 ?>
 
-<div class="modal fade px-0" id="eshopFeedback" tabindex="-1" aria-labelledby="eshopFeedbackLabel" aria-hidden="true">
+<div class="modal fade px-0" id="feedback" tabindex="-1" aria-labelledby="feedbackLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-fullscreen-lg-down">
 		<div class="modal-content">
 			<div class="modal-header">
-				<div class="modal-title" id="eshopFeedbackLabel">
+				<div class="modal-title" id="feedbackLabel">
 					<h4>
 						Обратная связь
 					</h4>

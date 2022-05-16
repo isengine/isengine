@@ -22,7 +22,7 @@ $view = View::getInstance();
 >
 	<div class="collapse" id="bottom-buttons-collapse">
 		<?= $view -> get('tvars') -> launch('{phone|{lang|information:phone:0}:button button--phone:<i class="bi-telephone"></i>}'); ?>
-		<a class="button button--email" data-bs-toggle="modal" href="#eshopFeedback" role="button">
+		<a class="button button--email" data-bs-toggle="modal" href="#feedback" role="button">
 			<i class="bi-envelope"></i>
 		</a>
 		<?//= $view -> get('tvars') -> launch('{mail|{lang|information:email:0}:button button--email:<i class="bi-envelope"></i>:Вопрос с сайта {state|site}}'); ?>

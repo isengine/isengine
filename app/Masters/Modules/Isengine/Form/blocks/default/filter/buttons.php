@@ -13,8 +13,8 @@ $item = $item[0];
 $data = $options['data'];
 $value = $options['value'] ? $options['value'] : [];
 
-$item -> setClass('btn-check');
-$item -> addCustom('type', 'checkbox');
+$item->setClass('btn-check');
+$item->addCustom('type', 'checkbox');
 
 ?>
 <div class="mb-05">
@@ -24,24 +24,21 @@ $item -> addCustom('type', 'checkbox');
 	<div class="flex flex-wrap">
 		<?php
 			Objects::each($value, function($value, $key) use ($item, $id, $data){
-				$element = $item -> copy();
-				$element -> setId($id . '-' . $key);
-				$element -> addCustom('name', $id . '[]');
-				$element -> addCustom('value', $value);
-				$element -> addCustom('autocomplete', 'off');
+				$element = $item->copy();
+				$element->setId($id . '-' . $key);
+				$element->addCustom('name', $id . '[]');
+				$element->addCustom('value', $value);
+				$element->addCustom('autocomplete', 'off');
 				
 				if (
-					(
-						System::typeIterable($data) &&
-						Objects::match($data, $value)
-					) ||
-					$data === $value
+					(System::typeIterable($data) && Objects::match($data, $value))
+                    || $data === $value
 				) {
-					$element -> addCustom('checked', 'checked');
+					$element->addCustom('checked', 'checked');
 				}
 		?>
 		<div class="m-025">
-			<?php $element -> print(); ?>
+			<?php $element->print(); ?>
 			<label
 				class="btn btn-sm btn-outline-primary"
 				for="<?= $id . '-' . $key; ?>"

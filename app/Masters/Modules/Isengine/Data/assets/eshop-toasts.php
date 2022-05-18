@@ -9,7 +9,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('display') -> addBuffer('
+$view->get('display')->addBuffer('
 <script>
 var toastElList = [].slice.call(document.querySelectorAll(".toast"))
 var toastList = toastElList.map(function(toastEl) {

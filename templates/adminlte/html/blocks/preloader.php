@@ -5,7 +5,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$sets = $view -> get('vars|adminlte:preloader');
+$sets = $view->get('vars|adminlte:preloader');
 
 if (!$sets) {
 	return;

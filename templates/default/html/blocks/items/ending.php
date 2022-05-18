@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,22 +10,18 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
+$view->get('block')->launch('footer', null, null);
 
-$view -> get('block') -> launch('footer', null, null);
+$view->get('block')->launch('items:check', 'default', null);
+$view->get('block')->launch('items:cookies', 'default', null);
+$view->get('block')->launch('items:assets', 'default', null);
 
-$view -> get('block') -> launch('items:check', 'default', null);
-$view -> get('block') -> launch('items:cookies', 'default', null);
-$view -> get('block') -> launch('items:assets', 'default', null);
+$view->get('block')->launch('scripts', null, null);
 
-$view -> get('block') -> launch('scripts', null, null);
-
-$view -> get('block') -> launch('items:display', 'default', null);
-$view -> get('block') -> launch('items:inspect', 'default', null);
+$view->get('block')->launch('items:display', 'default', null);
+$view->get('block')->launch('items:inspect', 'default', null);
 
 ?>
 

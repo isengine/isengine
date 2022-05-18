@@ -35,23 +35,23 @@ $data = '[
 ?>
 
 <div class="row">
-	<?php Objects::each(json_decode($data, true), function($item){ ?>
-	<div class="col-12 xs-col-6 md-col-3">
-		<table>
-			<tr style="vertical-align: top;">
-				<td>
-					<i class="<?= $item['icon']; ?> fs-15 pr-05 color-contrast"></i>
-				</td>
-				<td>
-					<p class="fs-15 inline color-contrast">
-						<?= $item['title']; ?>
-					</p>
-					<p class="d-block color-white">
-						<?= $item['description']; ?>
-					</p>
-				</td>
-			</tr>
-		</table>
-	</div>
-	<?php }); ?>
+    <?php Objects::each(json_decode($data, true), function ($item){ ?>
+    <div class="col-12 xs-col-6 md-col-3">
+        <table>
+            <tr style="vertical-align: top;">
+                <td>
+                    <i class="<?= $item['icon']; ?> fs-15 pr-05 color-contrast"></i>
+                </td>
+                <td>
+                    <p class="fs-15 inline color-contrast">
+                        <?= $item['title']; ?>
+                    </p>
+                    <p class="d-block color-white">
+                        <?= $item['description']; ?>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <?php }); ?>
 </div>

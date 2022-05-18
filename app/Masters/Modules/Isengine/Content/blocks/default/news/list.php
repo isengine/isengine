@@ -10,10 +10,10 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
-$parents = Strings::join($item -> get('parents'), '-');
-$id = Strings::replace(($parents ? $parents . '-' : null) . $item -> get('name'), ' ', '_');
+$parents = Strings::join($item->get('parents'), '-');
+$id = Strings::replace(($parents ? $parents . '-' : null) . $item->get('name'), ' ', '_');
 
 ?>
 <div class="col-12 py-1" id="<?= $id; ?>">

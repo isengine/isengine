@@ -12,7 +12,7 @@ $view = View::getInstance();
 ?>
 <div class="row">
 <?php
-$this -> iterate([
+$this->iterate([
 	'default:catalog:values',
 	'default:catalog:showroom:inner'
 ]);

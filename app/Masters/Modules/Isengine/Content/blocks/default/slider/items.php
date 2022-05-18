@@ -10,11 +10,11 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
-$first = Objects::first($this -> getData() -> getNames(), 'value');
-$parents = Strings::join($item -> get('parents'), ':');
-$key = ($parents ? $parents . ':' : null) . $item -> get('name');
+$first = Objects::first($this->getData()->getNames(), 'value');
+$parents = Strings::join($item->get('parents'), ':');
+$key = ($parents ? $parents . ':' : null) . $item->get('name');
 
 ?>
 <div class="carousel-item<?= $key === $first ? ' active' : null; ?>">

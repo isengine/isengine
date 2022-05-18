@@ -10,11 +10,11 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$content = $view -> get('vars|content');
+$content = $view->get('vars|content');
 $content = Parser::fromJson($content);
 $content = Objects::first($content, 'value');
 
-$columns = $view -> get('vars|columns');
+$columns = $view->get('vars|columns');
 
 // мы используем настройки модуля форм,
 // где вначале используются служебные поля
@@ -74,6 +74,6 @@ Objects::each($columns, function($item, $key) use (&$settings, $content){
 //System::debug($content);
 //System::debug($settings);
 
-$view -> get('vars') -> set('columns', Parser::toJson(['data' => $settings]));
+$view->get('vars')->set('columns', Parser::toJson(['data' => $settings]));
 
 ?>

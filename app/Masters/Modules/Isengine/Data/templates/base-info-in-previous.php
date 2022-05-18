@@ -7,7 +7,7 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$len = Objects::len($this -> getData());
+$len = Objects::len($this->getData());
 $len = $len ? round(12 / $len) : 12;
 
 ?>
@@ -15,7 +15,7 @@ $len = $len ? round(12 / $len) : 12;
 <section class="service-wrap-layout1 bg-light-primary100">
 	<div class="container">
 		<div class="row no-gutters service-inner-layout1">
-			<?php Objects::each($this -> getData(), function($item) use ($len) { ?>
+			<?php Objects::each($this->getData(), function($item) use ($len) { ?>
 				<div class="single-item col-lg-<?= $len; ?> col-md-6 col-12">
 					<div class="service-box-layout1">
 						<div class="item-icon">

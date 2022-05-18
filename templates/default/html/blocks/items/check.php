@@ -16,20 +16,20 @@ $view = View::getInstance();
 $state = State::getInstance();
 $config = Config::getInstance();
 
-if (!$state -> get('cookie')) {
-?>
+if (!$state->get('cookie')) {
+    ?>
 <noindex>
-	<div id="id_cookie"></div>
+    <div id="id_cookie"></div>
 </noindex>
 <script>
-document.cookie = "isengine=<?= (new \DateTime()) -> getTimestamp(); ?>; max-age=<?= $config -> get('time:year'); ?>";
+document.cookie = "isengine=<?= (new \DateTime())->getTimestamp(); ?>; max-age=<?= $config->get('time:year'); ?>";
 if (!document.cookie.match(new RegExp("(?:^|; )" + ("isengine").replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"))) {
-	document.getElementById('id_cookie').innerHTML = "<?= $view -> get('lang|common:nocookie'); ?>";
+    document.getElementById('id_cookie').innerHTML = "<?= $view->get('lang|common:nocookie'); ?>";
 }
 </script> 
-<?php
+    <?php
 }
 ?>
 <noscript>
-<?= $view -> get('lang|common:noscript'); ?>
+<?= $view->get('lang|common:noscript'); ?>
 </noscript>

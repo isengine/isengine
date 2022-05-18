@@ -23,8 +23,8 @@ class Cutitems extends Methods\Form {
 	
 	public function launch() {
 		
-		$path = $this -> getData('path');
-		$name = $this -> getData('filename');
+		$path = $this->getData('path');
+		$name = $this->getData('filename');
 		
 		if (!$path) {
 			exit;
@@ -51,7 +51,7 @@ class Cutitems extends Methods\Form {
 		
 		$url = '/' . Paths::toUrl($path) . '/';
 		
-		$local = Local::search($real, [
+		$local = Local::list($real, [
 			'merge' => true,
 			'subfolders' => false
 		]);

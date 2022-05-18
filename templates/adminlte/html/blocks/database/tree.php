@@ -9,8 +9,8 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$map = $view -> get('vars|parents');
-$collection = $view -> get('vars|collection');
+$map = $view->get('vars|parents');
+$collection = $view->get('vars|collection');
 
 //System::debug($map);
 

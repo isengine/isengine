@@ -11,20 +11,18 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$page = $view -> get('state|route-string');
+$page = $view->get('state|route-string');
 
 if (!$page) {
-	$page = 'index';
+    $page = 'index';
 }
 
 $special = [];
 
-Objects::each($view -> get('state|settings:special'), function($item, $key) use ($page, &$special) {
-	if (Objects::match($item, $page)) {
-		$special[] = $key;
-	}
+Objects::each($view->get('state|settings:special'), function ($item, $key) use ($page, &$special) {
+    if (Objects::match($item, $page)) {
+        $special[] = $key;
+    }
 });
 
-$view -> get('vars') -> set('special', $special);
-
-?>
+$view->get('vars')->set('special', $special);

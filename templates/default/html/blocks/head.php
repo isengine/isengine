@@ -9,8 +9,6 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-Objects::each($view -> get('vars|special'), function($item) use ($view) {
-	$view -> get('block') -> launch('head:' . $item);
+Objects::each($view->get('vars|special'), function ($item) use ($view) {
+    $view->get('block')->launch('head:' . $item);
 });
-
-?>

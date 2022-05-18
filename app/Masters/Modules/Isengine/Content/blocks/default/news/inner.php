@@ -10,7 +10,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 ?>
 <div class="col-12 xs-col-6 lg-col-3 py-1">

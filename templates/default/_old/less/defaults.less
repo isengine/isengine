@@ -1,0 +1,660 @@
+// use:
+// @import "defaults";
+// for include colors and font themes, some cool functions
+
+// url
+
+@url: '/assets/images/';
+// use: [ url('@{url}...'); ]
+
+// fonts
+
+@font-theme: 'Open Sans', sans-serif;
+@font-theme2: 'Open Sans Narrow', sans-serif;
+@font-icon: 'FontAwesome';
+
+/*
+*  You can add more fonts with '@font-' prefix
+*/
+
+// colors
+
+@color-theme:  @color-beige;
+@color-theme2: spin(@color-green, 50);
+@color-theme3: @color-green;
+@color-theme4: @color-green;
+
+/*
+*  You can add more colors with '@color-' prefix
+*  If colors haven't update after change, you must change main 'less' file
+*  (for example, add empty line)
+*/
+
+@color-none:    transparent;
+@color-white:   #FFFFFF;
+@color-black:   #212121;
+@color-green: 	#6DB13F;
+@color-yellow: 	#F9C82D;
+@color-blue: 	#5BA3D4;
+@color-teal: 	#128c7e;
+@color-red: 	#E54142;
+@color-orange: 	#EF8720;
+@color-pink: 	#D64381;
+@color-purple: 	#444A9E;
+@color-beige: 	#F0E1CE;
+
+// break points
+
+@sm: 576px;
+@md: 768px;
+@lg: 992px;
+@xl: 1200px;
+
+// font functions
+
+/*
+*  use:
+*  .font(theme);
+*  .font(theme, 700);
+*  .font(theme, 700, 14px);
+*  .font(theme, 700, 14px, 1.25em);
+*  
+*  all parameters can be used as:
+*  theme, 'theme'
+*  700, '700'
+*  1.5em, '1.5em'
+*  
+*  all additional functions will be called when needed
+*  
+*/
+
+.font(@name, @weight: '', @size: '', @height: '') {
+	@font: e(%('font-%a', e(@name)));
+	font-family: @@font;
+}
+.font(@name, @weight: '', @size: '', @height: '') when not (@weight = '') and not (@weight = null) {
+	font-weight: e(@weight);
+}
+.font(@name, @weight: '', @size: '', @height: '') when not (@size = '') and not (@size = null) {
+	font-size: e(@size);
+}
+.font(@name, @weight, @size: '', @height: '') when not (@height = '') and not (@height = null) {
+	line-height: e(@height);
+}
+
+// color functions
+
+/*
+*  use:
+*  .color();
+*  .color(theme);
+*  .color(theme, light, -10);
+*  .color-bg(green, fade, 10);
+*  .color-special(border-top-color, green, fade, 10);
+*  
+*  colors, function names and special can be used as:
+*  theme, 'theme' (recommended)
+*  saturate, 'saturate'
+*  border-top-color, 'border-top-color'
+*  
+*  colors and function names support default or null value:
+*  .color('');
+*  .color('', '');
+*  (it may be needed to skip value)
+*  
+*  allow functions is:
+*  saturate, lighten, fade, spin, tint, shade
+*  (absolutely duplicate original less functions by name)
+*  
+*  without function color will be placed as is:
+*  .color(theme) => color: #... (theme)
+*  
+*/
+
+.color         (@c: '', @n: '', @v: 50) when (@c = ''), (@c = null) { .color(theme, @n, @v); }
+.color-bg      (@c: '', @n: '', @v: 50) when (@c = ''), (@c = null) { .color-bg(theme, @n, @v); }
+.color-border  (@c: '', @n: '', @v: 50) when (@c = ''), (@c = null) { .color-border(theme, @n, @v); }
+.color-special (@s, @c: '', @n: '', @v: 50) when (@c = ''), (@c = null) { .color-special(@s, theme, @n, @v); }
+
+.color         (@c: theme, @n: '', @v: 50) when not (@c = '') and not (@c = null) {
+	@col: e(%('color-%a', e(@c)));
+	.color-function(@@col, @n, @v, color);
+}
+.color-bg      (@c: theme, @n: '', @v: 50) when not (@c = '') and not (@c = null) {
+	@col: e(%('color-%a', e(@c)));
+	.color-function(@@col, @n, @v, background-color);
+}
+.color-border  (@c: theme, @n: '', @v: 50) when not (@c = '') and not (@c = null) {
+	@col: e(%('color-%a', e(@c)));
+	.color-function(@@col, @n, @v, border-color);
+}
+.color-special (@s, @c: theme, @n: '', @v: 50) when not (@c = '') and not (@c = null) {
+	@col: e(%('color-%a', e(@c)));
+	.color-function(@@col, @n, @v, e(@s));
+}
+
+.color-function (@c, @n, @v, @t) when (@n = ''), (@n = null) { @{t}: @c; }
+.color-function (@c, @n, @v, @t) when (e(@n) = saturate)     { @{t}: saturate(@c, @v); }
+.color-function (@c, @n, @v, @t) when (e(@n) = lighten)      { @{t}: lighten(@c, @v); }
+.color-function (@c, @n, @v, @t) when (e(@n) = fade)         { @{t}: fade(@c, @v); }
+.color-function (@c, @n, @v, @t) when (e(@n) = spin)         { @{t}: spin(@c, @v); }
+.color-function (@c, @n, @v, @t) when (e(@n) = tint)         { @{t}: tint(@c, @v); }
+.color-function (@c, @n, @v, @t) when (e(@n) = shade)        { @{t}: shade(@c, @v); }
+
+// media query functions
+
+/*
+*  use:
+*  .media('width', '25%', '50%', ...);
+*  
+*  first value is css parameter
+*  next values is values for breakpoints:
+*  xs - extra small
+*  sm - small
+*  md - medium
+*  lg - large
+*  xl - extra large
+*  
+*  '' or null - skip this breakpoints
+*
+*  all breakpoints set top as variables by its names
+*  
+*/
+
+.media(@n, @size-xs: '', @size-sm: '', @size-md: '', @size-lg: '', @size-xl: '') when not (@size-xs = '') and not (@size-xs = null) {
+	@name: e(@n);
+	@{name}: e(@size-xs);
+}
+.media(@n, @size-xs: '', @size-sm: '', @size-md: '', @size-lg: '', @size-xl: '') when not (@size-sm = '') and not (@size-sm = null) {
+	@name: e(@n);
+	@media (min-width: @sm) { @{name}: e(@size-sm); }
+}
+.media(@n, @size-xs: '', @size-sm: '', @size-md: '', @size-lg: '', @size-xl: '') when not (@size-sm = '') and not (@size-sm = null) {
+	@name: e(@n);
+	@media (min-width: @md) { @{name}: e(@size-md); }
+}
+.media(@n, @size-xs: '', @size-sm: '', @size-md: '', @size-lg: '', @size-xl: '') when not (@size-sm = '') and not (@size-sm = null) {
+	@name: e(@n);
+	@media (min-width: @lg) { @{name}: e(@size-lg); }
+}
+.media(@n, @size-xs: '', @size-sm: '', @size-md: '', @size-lg: '', @size-xl: '') when not (@size-sm = '') and not (@size-sm = null) {
+	@name: e(@n);
+	@media (min-width: @xl) { @{name}: e(@size-xl); }
+}
+
+// image functions
+
+/*
+*  use:
+*  .image(type, link, size);
+*  
+*  type is:
+*  '', 'bg' or 'mask'
+*  
+*  type and size can be used as:
+*  bg, 'bg'
+*  cover, 'cover'
+*  
+*  but link can be used only:
+*  'path/to/image.png'
+*  (without first slash)
+*  
+*/
+
+.image (@type: '', @link: '', @center: '') when not (@link = '') and not (@link = null) {
+	.image-link(@type, @link);
+}
+.image (@type: '', @link: '', @center: '') when not (@center = '') and not (@center = null) {
+	.image-center(@type, @center);
+}
+
+.image-link (@type: '', @link) when (@type = bg), (@type = 'bg') {
+	background-image: url('@{url}@{link}');
+}
+.image-link (@type: '', @link) when (@type = mask), (@type = 'mask') {
+	mask: url('@{url}@{link}');
+	-webkit-mask: url('@{url}@{link}');
+}
+
+.image-center (@type: '', @size: cover) {
+	width: 100%;
+}
+.image-center (@type: '', @size: cover) when (@type = ''), (@type = null) {
+	object-fit: e(@size);
+}
+.image-center (@type: '', @size: cover) when (@type = bg), (@type = 'bg') {
+	background-size: e(@size);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.image-center (@type: '', @size: contain) when (@type = mask), (@type = 'mask') {
+	mask-size: e(@size);
+	mask-position: 50% 50%;
+	mask-repeat: no-repeat;
+	-webkit-mask-size: e(@size);
+	-webkit-mask-position: 50% 50%;
+	-webkit-mask-repeat: no-repeat;
+}
+
+// space functions
+
+/*
+*  use:
+*  .space()
+*  .space('', 10px)
+*  .space('', '10px')
+*  .space('m')
+*  .space('mt', 10px)
+*  
+*  first value is:
+*  '' or null - all margin and all padding
+*  'm' - margin
+*  'p' - padding
+*  'x' - left and right
+*  'y' - top and bottom
+*  't' - top only
+*  'b' - bottom only
+*  'l' - left only
+*  'r' - right only
+*  (and you will can combine it)
+*  
+*/
+
+.space (@type: '', @val: 0) when (@type = ''), (@type = null) {
+	padding: e(@val);
+	margin: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'x'), (@type = x) {
+	padding-left: e(@val);
+	padding-right: e(@val);
+	margin-left: e(@val);
+	margin-right: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'y'), (@type = y) {
+	padding-top: e(@val);
+	padding-bottom: e(@val);
+	margin-top: e(@val);
+	margin-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 't'), (@type = t) {
+	padding-top: e(@val);
+	margin-top: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'b'), (@type = b) {
+	padding-bottom: e(@val);
+	margin-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'l'), (@type = l) {
+	padding-left: e(@val);
+	margin-left: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'r'), (@type = r) {
+	padding-right: e(@val);
+	margin-right: e(@val);
+}
+
+.space (@type: '', @val: 0) when (@type = 'p'), (@type = p) {
+	padding: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'px'), (@type = px) {
+	padding-left: e(@val);
+	padding-right: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'py'), (@type = py) {
+	padding-top: e(@val);
+	padding-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'pt'), (@type = pt) {
+	padding-top: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'pb'), (@type = pb) {
+	padding-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'pl'), (@type = pl) {
+	padding-left: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'pr'), (@type = pr) {
+	padding-right: e(@val);
+}
+
+.space (@type: '', @val: 0) when (@type = 'm'), (@type = m) {
+	margin: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'mx'), (@type = mx) {
+	margin-left: e(@val);
+	margin-right: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'my'), (@type = my) {
+	margin-top: e(@val);
+	margin-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'mt'), (@type = mt) {
+	margin-top: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'mb'), (@type = mb) {
+	margin-bottom: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'ml'), (@type = ml) {
+	margin-left: e(@val);
+}
+.space (@type: '', @val: 0) when (@type = 'mr'), (@type = mr) {
+	margin-right: e(@val);
+}
+
+// align functions
+
+/*
+*  use:
+*  .align()
+*  .align('a')
+*  .align('ax')
+*  
+*  first value is:
+*  '' or null - all margin and all padding
+*  'a' - absolute
+*  'r' - relative
+*  'b' - block
+*  'x' - by horizontal
+*  'y' - by vertical
+*  't' - by top
+*  'b' - by bottom
+*  'l' - by left
+*  'r' - by right
+*  's' - by size
+*  'w' - by weight
+*  'h' - by height
+*  (and you will can combine it)
+*  
+*/
+
+.align (@type: '') when (@type = 'a'), (@type = a) {
+	position: absolute;
+	left: 50%;
+	right: auto;
+	top: 50%;
+	bottom: auto;
+	transform: translate(-50%, -50%);
+}
+.align (@type: '') when (@type = 'ax'), (@type = ax) {
+	position: absolute;
+	left: 50%;
+	right: auto;
+	transform: translateX(-50%);
+}
+.align (@type: '') when (@type = 'ay'), (@type = ay) {
+	position: absolute;
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+}
+.align (@type: '') when (@type = 'at'), (@type = at) {
+	position: absolute;
+	top: 0;
+	bottom: auto;
+}
+.align (@type: '') when (@type = 'ab'), (@type = ab) {
+	position: absolute;
+	top: auto;
+	bottom: 0;
+}
+.align (@type: '') when (@type = 'al'), (@type = al) {
+	position: absolute;
+	left: 0;
+	right: auto;
+}
+.align (@type: '') when (@type = 'ar'), (@type = ar) {
+	position: absolute;
+	left: auto;
+	right: 0;
+}
+.align (@type: '') when (@type = 'as'), (@type = as) {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.align (@type: '') when (@type = 'aw'), (@type = aw) {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+.align (@type: '') when (@type = 'ah'), (@type = ah) {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+}
+
+.align (@type: '') when (@type = 'r'), (@type = r) {
+	position: relative;
+	left: 50%;
+	right: auto;
+	top: 50%;
+	bottom: auto;
+	transform: translate(-50%, -50%);
+}
+.align (@type: '') when (@type = 'rx'), (@type = rx) {
+	position: relative;
+	left: 50%;
+	right: auto;
+	transform: translateX(-50%);
+}
+.align (@type: '') when (@type = 'ry'), (@type = ry) {
+	position: relative;
+	top: 50%;
+	bottom: auto;
+	transform: translateY(-50%);
+}
+.align (@type: '') when (@type = 'rt'), (@type = rt) {
+	position: relative;
+	top: 0;
+	bottom: auto;
+}
+.align (@type: '') when (@type = 'rb'), (@type = rb) {
+	position: relative;
+	top: auto;
+	bottom: 0;
+}
+.align (@type: '') when (@type = 'rl'), (@type = rl) {
+	position: relative;
+	left: 0;
+	right: auto;
+}
+.align (@type: '') when (@type = 'rr'), (@type = rr) {
+	position: relative;
+	left: auto;
+	right: 0;
+}
+.align (@type: '') when (@type = 'rs'), (@type = rs) {
+	position: relative;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+.align (@type: '') when (@type = 'rw'), (@type = rw) {
+	position: relative;
+	left: 0;
+	right: 0;
+}
+.align (@type: '') when (@type = 'rh'), (@type = rh) {
+	position: relative;
+	top: 0;
+	bottom: 0;
+}
+
+.align (@type: '') when (@type = 'b'), (@type = b) {
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.align (@type: '') when (@type = 'bx'), (@type = bx) {
+	width: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.align (@type: '') when (@type = 'by'), (@type = by) {
+	height: auto;
+	line-height: 100%;
+	vertical-align: middle;
+}
+.align (@type: '') when (@type = 'bt'), (@type = bt) {
+	vertical-align: top;
+}
+.align (@type: '') when (@type = 'bb'), (@type = bb) {
+	vertical-align: bottom;
+}
+.align (@type: '') when (@type = 'bl'), (@type = bl) {
+	width: 100%;
+	text-align: left;
+}
+.align (@type: '') when (@type = 'br'), (@type = br) {
+	width: 100%;
+	text-align: right;
+}
+.align (@type: '') when (@type = 'bw'), (@type = bw) {
+	width: 100%;
+	text-align: center;
+}
+.align (@type: '') when (@type = 'bh'), (@type = bh) {
+	height: 100%;
+	vertical-align: middle;
+}
+
+// flex functions
+
+/*
+*  use:
+*  .flex()
+*  .flex('a')
+*  .flex('ax')
+*  
+*  first value is:
+*  '' or null - create flex container
+*  'x' - by horizontal
+*  'y' - by vertical
+*  't' - by top
+*  'b' - by bottom
+*  'l' - by left
+*  'r' - by right
+*  's' - by size
+*  'w' - by weight
+*  'h' - by height
+*  
+*  'stretch', stretch flex container by width
+*  'col', reverse flex container by vertical columns
+*  'item' - set default flex item
+*  'width', val - set item width, 'auto' by default
+*  'order', val - set item order, 0 by default
+*  
+*/
+
+.flex (@type: '') when (@type = ''), (@type = null) {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex (@type: '') when (@type = 'x'), (@type = x) {
+	justify-content: center;
+}
+.flex (@type: '') when (@type = 'y'), (@type = y) {
+	align-content: center;
+}
+.flex (@type: '') when (@type = 't'), (@type = t) {
+	align-content: flex-start;
+}
+.flex (@type: '') when (@type = 'b'), (@type = b) {
+	align-content: flex-end;
+}
+.flex (@type: '') when (@type = 'l'), (@type = l) {
+	justify-content: flex-start;
+}
+.flex (@type: '') when (@type = 'r'), (@type = r) {
+	justify-content: flex-end;
+}
+.flex (@type: '') when (@type = 's'), (@type = s) {
+	align-content: space-evenly;
+	justify-content: space-evenly;
+}
+.flex (@type: '') when (@type = 'w'), (@type = w) {
+	justify-content: space-between;
+}
+.flex (@type: '') when (@type = 'h'), (@type = h) {
+	align-content: space-between;
+}
+
+.flex (@type: '') when (@type = 'stretсh'), (@type = stretch) {
+	align-content: normal;
+	align-items: stretch;
+}
+.flex (@type: '') when (@type = 'col'), (@type = col) {
+	flex-direction: column;
+}
+.flex (@type: '', @val: auto) when (@type = 'item'), (@type = item) {
+	flex: e(@val);
+}
+.flex (@type: '', @val: auto) when (@type = 'width'), (@type = width) {
+	flex: 0 0 e(@val);
+	width: e(@val);
+}
+.flex (@type: '', @val: 0) when (@type = 'order'), (@type = order) {
+	order: e(@val);
+}
+
+// list functions
+
+/*
+*  use:
+*  .list()
+*  .list('ul')
+*  .flex('li')
+*  
+*  first value is:
+*  '' or null - create default list container
+*  'style', val - set type list container by val
+*  'column', val - set columns in list
+*  
+*  'numeric' - set list as numeric
+*  'dots' - set list as marked
+*  
+*/
+
+.list (@type: '') when (@type = ''), (@type = null) {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.list (@type: '', @val: 'none') when (@type = 'style'), (@type = style) {
+	list-style: e(@val);
+}
+.list (@type: '', @val: 1) when (@type = 'column'), (@type = column) {
+	column-count: e(@val);
+	-moz-column-count: e(@val);
+	-webkit-column-count: e(@val);
+}
+
+.list (@type: '') when (@type = 'numeric'), (@type = numeric) {
+	list-style: decimal inside;
+}
+.list (@type: '') when (@type = 'dots'), (@type = dots) {
+	list-style: disc inside;
+}
+
+// other defaults
+
+.link-empty {
+	outline: none !important;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.animation (@property: 'all', @duration: '0.25s', @type: 'ease') {
+	transition: e(@property) e(@duration) e(@type);
+}

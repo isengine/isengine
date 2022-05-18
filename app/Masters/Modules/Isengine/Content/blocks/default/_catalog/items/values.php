@@ -12,13 +12,13 @@ use is\Helpers\Paths;
 
 if (!$item) { return; }
 
-$data = &$item -> getData();
+$data = &$item->getData();
 
-$name = $item -> getEntryKey('name');
+$name = $item->getEntryKey('name');
 $sizes = Strings::split($data['size']);
 $count = $sizes ? Objects::len($sizes) : 0;
-$link = '/' . Strings::join($item -> getEntryKey('parents'), '/') . '/' . $name . '/';
-$real = DI . 'content' . DS . Strings::join($item -> getEntryKey('parents'), DS) . DS . $name . DS;
+$link = '/' . Strings::join($item->getEntryKey('parents'), '/') . '/' . $name . '/';
+$real = DI . 'content' . DS . Strings::join($item->getEntryKey('parents'), DS) . DS . $name . DS;
 $imglink = 'content' . Strings::unlast($link);
 
 $images = Local::search($real, [
@@ -29,19 +29,19 @@ $images = Local::search($real, [
 	'subfolders' => false
 ]);
 
-$item -> setData('name', $name);
-$item -> setData('step', 1);
-$item -> setData('sizes', $sizes);
-$item -> setData('count', $count);
-$item -> setData('link', $link);
-$item -> setData('images', [
+$item->setData('name', $name);
+$item->setData('step', 1);
+$item->setData('sizes', $sizes);
+$item->setData('count', $count);
+$item->setData('link', $link);
+$item->setData('images', [
 	'link' => $imglink,
 	'list' => $images
 ]);
-$item -> setData('image', '{img|' . '/' . $imglink . '/' . Objects::first($images, 'value') . ':/content/catalog/default.jpg:lazyload w-100 align-image-contain:' . $name . '}');
+$item->setData('image', '{img|' . '/' . $imglink . '/' . Objects::first($images, 'value') . ':/content/catalog/default.jpg:lazyload w-100 align-image-contain:' . $name . '}');
 
 if (!$data['id']) {
-	$item -> setData('id', Strings::join($item -> getEntryKey('parents'), '_') . '_' . $name);
+	$item->setData('id', Strings::join($item->getEntryKey('parents'), '_') . '_' . $name);
 }
 
 if ($count) {
@@ -57,10 +57,10 @@ if ($count) {
 	}
 	
 	if (!$priceone) {
-		$item -> setData('priceone', $price / $count);
+		$item->setData('priceone', $price / $count);
 	}
 	if (!$price) {
-		$item -> setData('price', $priceone * $count);
+		$item->setData('price', $priceone * $count);
 	}
 	
 }

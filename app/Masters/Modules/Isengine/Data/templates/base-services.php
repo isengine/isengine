@@ -15,11 +15,11 @@ $view = View::getInstance();
 <section class="departments-box-layout7 bg-light-secondary100">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2 class="title"><?= $view -> get('lang|this:services:title'); ?></h2>
-			<div class="sub-title"><?= $view -> get('lang|this:services:description'); ?></div>
+			<h2 class="title"><?= $view->get('lang|this:services:title'); ?></h2>
+			<div class="sub-title"><?= $view->get('lang|this:services:description'); ?></div>
 		</div>
 		<div class="row gutters-5">
-			<?php Objects::each($this -> getData(), function($item) { ?>
+			<?php Objects::each($this->getData(), function($item) { ?>
 				<div class="col-lg-2 col-md-3 col-sm-6 col-12">
 					<div class="single-box">
 						<a href="<?= $item['link']; ?>">

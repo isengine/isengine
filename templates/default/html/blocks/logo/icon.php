@@ -10,6 +10,6 @@ use is\Masters\View;
 $view = View::getInstance();
 
 ?>
-<a href="/" alt="<?= $view -> get('lang|title'); ?>" class="mr-05">
-	<i class="fs-2 lh-2 align-middle <?= $view -> get('lang|icon'); ?>"></i>
+<a href="/" alt="<?= $view->get('lang|title'); ?>" class="mr-05">
+    <i class="fs-2 lh-2 align-middle <?= $view->get('lang|icon'); ?>"></i>
 </a>

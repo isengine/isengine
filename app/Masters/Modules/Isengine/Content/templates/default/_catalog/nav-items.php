@@ -8,15 +8,15 @@ use is\Helpers\Objects;
 use is\Masters\View;
 
 $view = View::getInstance();
-$instance = Strings::after($this -> instance, ':', null, true);
+$instance = Strings::after($this->instance, ':', null, true);
 
 $map = [];
-$exclude = $this -> get('settings')['exclude'];
+$exclude = $this->get('settings')['exclude'];
 
-$this -> getData() -> iterate(function($item) use (&$map, $exclude){
+$this->getData()->iterate(function($item) use (&$map, $exclude){
 	
-	$key = Strings::join($item -> getData('group'), ':');
-	$val = Strings::join($item -> getData('folder'), ' ');
+	$key = Strings::join($item->getData('group'), ':');
+	$val = Strings::join($item->getData('folder'), ' ');
 	
 	if (
 		$exclude &&
@@ -40,13 +40,13 @@ $this -> getData() -> iterate(function($item) use (&$map, $exclude){
 	</li>
 	
 	<li class="nav-item">
-		<a class="btn active" aria-current="page" href="/"><?= $view -> get('lang|nav:index'); ?></a>
+		<a class="btn active" aria-current="page" href="/"><?= $view->get('lang|nav:index'); ?></a>
 	</li>
 	<li class="nav-item">
-		<a class="btn href="/about/"><?= $view -> get('lang|nav:about'); ?></a>
+		<a class="btn href="/about/"><?= $view->get('lang|nav:about'); ?></a>
 	</li>
 	<li class="nav-item">
-		<a class="btn href="/contacts/"><?= $view -> get('lang|nav:contacts'); ?></a>
+		<a class="btn href="/contacts/"><?= $view->get('lang|nav:contacts'); ?></a>
 	</li>
 	<li class="nav-item dropdown">
 		<a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

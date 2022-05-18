@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,28 +11,22 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $config = Config::getInstance();
 $view = View::getInstance();
 
-// код
-
 $class = [
-	$view -> get('state|template') !== $config -> get('default:template') ? $view -> get('state|template') : null,
-	$view -> get('state|page'),
-	$view -> get('device|type'),
-	$view -> get('device|os'),
-	$view -> get('state|settings:classes:body')
+    $view->get('state|template') !== $config->get('default:template') ? $view->get('state|template') : null,
+    $view->get('state|page'),
+    $view->get('device|type'),
+    $view->get('device|os'),
+    $view->get('state|settings:classes:body')
 ];
 
-$class = Objects::add($class, $view -> get('special') -> search( $view -> get('state|page') ));
+$class = Objects::add($class, $view->get('special')->search($view->get('state|page')));
 $class = Strings::join(Objects::unique(Objects::clear($class)), ' ');
 
-$style = $view -> get('state|settings:styles:body');
+$style = $view->get('state|settings:styles:body');
 
 echo '<body' . ($class ? ' class="' . $class . '"' : null) . ($style ? ' style="' . $style . '"' : null) . '>';
 
 unset($class, $style);
-
-?>

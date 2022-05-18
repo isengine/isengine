@@ -9,7 +9,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('display') -> addBuffer("
+$view->get('display')->addBuffer("
 <script>
 $(function () {
   'use strict'
@@ -24,7 +24,7 @@ while ($n > 0) {
 	$n -= 86400;
 }
 
-$view -> get('display') -> addBuffer("
+$view->get('display')->addBuffer("
   // Get context with jQuery - using jQuery's .get() method.
   var monthlyChartCanvas = $('#monthlyChart').get(0).getContext('2d')
 
@@ -72,7 +72,7 @@ while ($n > 0) {
 	$n -= 2592000; //month
 }
 
-$view -> get('display') -> addBuffer("
+$view->get('display')->addBuffer("
   // Get context with jQuery - using jQuery's .get() method.
   var yearlyChartCanvas = $('#yearlyChart').get(0).getContext('2d')
 
@@ -111,7 +111,7 @@ $view -> get('display') -> addBuffer("
   )
 ");
 
-$view -> get('display') -> addBuffer("
+$view->get('display')->addBuffer("
 })
 </script>
 ");

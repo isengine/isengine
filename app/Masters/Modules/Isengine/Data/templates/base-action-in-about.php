@@ -9,7 +9,7 @@ use is\Helpers\Prepare;
 
 ?>
 <ul>
-	<?php Objects::each($this -> getData(), function($item) { ?>
+	<?php Objects::each($this->getData(), function($item) { ?>
 		<li>
 			<a href="<?= $item['link']; ?>">
 				<i class="<?= $item['icon']; ?>"></i>

@@ -10,7 +10,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 ?>
 <div class="col-12 xs-col-6 md-col-4 lg-col-3 xl-col-2 p-05" id="<?= $data['id']; ?>" is-name="<?= $data['name']; ?>">

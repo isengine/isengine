@@ -11,10 +11,10 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$button = $view -> get('lang|this:team:button:more');
+$button = $view->get('lang|this:team:button:more');
 $content = null;
 
-Objects::each($this -> getData(), function($item) use (&$content, $button){
+Objects::each($this->getData(), function($item) use (&$content, $button){
 	
 	$schedule = null;
 	Objects::each($item['schedule'], function($i, $k) use (&$schedule){
@@ -48,8 +48,8 @@ Objects::each($this -> getData(), function($item) use (&$content, $button){
 <section class="team-wrap-layout4 bg-light-secondary100">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2><?= $view -> get('lang|this:team:title'); ?></h2>
-			<p><?= $view -> get('lang|this:team:description'); ?></p>
+			<h2><?= $view->get('lang|this:team:title'); ?></h2>
+			<p><?= $view->get('lang|this:team:description'); ?></p>
 		</div>
 		<div class="row gutters-15">
 			<?= $content; ?>

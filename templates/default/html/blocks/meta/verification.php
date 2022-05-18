@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,25 +10,21 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
-
-$yandex = $view -> get('state|settings:webmaster:yandex:verification');
-$google = $view -> get('state|settings:webmaster:google:verification');
+$yandex = $view->get('state|settings:webmaster:yandex:verification');
+$google = $view->get('state|settings:webmaster:google:verification');
 
 if ($yandex) {
-?>
+    ?>
 <meta name="yandex-verification" content="<?= $yandex; ?>" />
-<?php
+    <?php
 }
 
 if ($google) {
-?>
+    ?>
 <meta name="google-site-verification" content="<?= $google; ?>" />
-<?php
+    <?php
 }
 
 unset($yandex, $google);

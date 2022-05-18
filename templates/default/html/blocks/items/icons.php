@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,21 +11,17 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
-
-$icons = $view -> get('icon') -> getData();
+$icons = $view->get('icon')->getData();
 if (!System::typeIterable($icons)) { return; }
 
 $print = null;
-$path = $view -> get('state|domain') . $icons['settings']['path'] . '/';
+$path = $view->get('state|domain') . $icons['settings']['path'] . '/';
 
 if (!empty($icons['favicon'])) {
-	$print .= '<link rel="icon" type="image/x-icon" href="' . (empty($icons['favicon']['rootfolder']) ? $path : $view -> get('state|domain')) . (empty($icons['favicon']['name']) ? 'favicon' : $icons['favicon']['name']) . '.ico">';
-	$print .= '<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="' . (empty($icons['favicon']['rootfolder']) ? $path : $view -> get('state|domain')) . (empty($icons['favicon']['name']) ? 'favicon' : $icons['favicon']['name']) . '.ico">';
+	$print .= '<link rel="icon" type="image/x-icon" href="' . (empty($icons['favicon']['rootfolder']) ? $path : $view->get('state|domain')) . (empty($icons['favicon']['name']) ? 'favicon' : $icons['favicon']['name']) . '.ico">';
+	$print .= '<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="' . (empty($icons['favicon']['rootfolder']) ? $path : $view->get('state|domain')) . (empty($icons['favicon']['name']) ? 'favicon' : $icons['favicon']['name']) . '.ico">';
 }
 
 if (!empty($icons['safari'])) {

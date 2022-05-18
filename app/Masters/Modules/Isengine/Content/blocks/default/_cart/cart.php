@@ -10,14 +10,14 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item ? $item -> getData() : ['price' => ['current' => true]];
-$id = ':' . $this -> settings['id'];
+$data = $item ? $item->getData() : ['price' => ['current' => true]];
+$id = ':' . $this->settings['id'];
 ?>
 <tr class="item item-delete py-05" is-name="<?= $data['id']; ?>" data-step="<?= $data['step']; ?>" data-price="<?= $data['price']['current']; ?>" data-price-old="<?= $data['price']['old']; ?>" is-data-from="true">
 	<td class="align-left">
 		<a href="<?= $data['link'] ?>" class="item-link color-gray-8 color-gray-6-hover" is-data="link:href">
 			<div class="pl-0 pr-05 item-image block xs-inline-block" is-data="image">
-				<?= $view -> get('tvars') -> launch($data['image']); ?>
+				<?= $view->get('tvars')->launch($data['image']); ?>
 			</div>
 			<span class="item-title" is-data="title">
 				<?= $data['title']; ?>

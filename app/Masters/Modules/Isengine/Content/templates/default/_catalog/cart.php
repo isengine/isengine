@@ -10,22 +10,22 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$cart = $view -> get('vars|cart');
+$cart = $view->get('vars|cart');
 $cart_is = System::typeIterable($cart);
 
 $data = Objects::keys($cart);
-$this -> data -> leaveByList($data, 'name');
+$this->data->leaveByList($data, 'name');
 
-$isorder = $this -> settings['id'] === 'order';
+$isorder = $this->settings['id'] === 'order';
 
-$this -> block('default:cart:none');
+$this->block('default:cart:none');
 ?>
 
 <div class="container<?= $isorder ? ' mb-025' : null; ?><?= !$cart_is ? ' none' : null; ?> catalog-cart">
 	
 	<?php
 		if ($isorder) {
-			$this -> block('default:cart:order', null);
+			$this->block('default:cart:order', null);
 		}
 	?>
 	
@@ -36,7 +36,7 @@ $this -> block('default:cart:none');
 	<table class="cart w-100 catalog-cart-main">
 		<?php
 			if ($cart_is) {
-				$this -> iterate(['default:catalog:xlsx:values', 'default:cart:cart']);
+				$this->iterate(['default:catalog:xlsx:values', 'default:cart:cart']);
 			}
 		?>
 	</table>
@@ -96,7 +96,7 @@ $this -> block('default:cart:none');
 	
 	<?php
 		if ($isorder) {
-			$view -> get('module') -> launch('form', 'default:order');
+			$view->get('module')->launch('form', 'default:order');
 		}
 	?>
 	
@@ -104,6 +104,6 @@ $this -> block('default:cart:none');
 
 <?php if (!$isorder) { ?>
 <table class="container none catalog-cart-template">
-	<?php $this -> block('default:cart:cart', null); ?>
+	<?php $this->block('default:cart:cart', null); ?>
 </table>
 <?php } ?>

@@ -10,21 +10,21 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-// System::debug($this -> navigate);
+// System::debug($this->navigate);
 // /news/page/2/
 // /news/page/2/items/15
 // /news/2/15
 // /news/?page=2&items=15
 
-if ($this -> navigate -> pages < 2) {
+if ($this->navigate->pages < 2) {
 	return;
 }
 
 // формируем изначальную строку
 
-$link = Objects::convert($this -> parents);
+$link = Objects::convert($this->parents);
 
-$rest = $this -> navigate -> rest;
+$rest = $this->navigate->rest;
 
 if ($rest) {
 	
@@ -60,10 +60,10 @@ unset($link, $join);
 // при этом изначально он должен быть с ключами
 
 
-$page = $this -> navigate -> page;
-$pages = $this -> navigate -> pages;
+$page = $this->navigate->page;
+$pages = $this->navigate->pages;
 
-//System::debug($this -> navigate);
+//System::debug($this->navigate);
 //System::debug($link);
 
 //<i class="bi bi-chevron-left fs-075"></i>
@@ -74,15 +74,15 @@ $pages = $this -> navigate -> pages;
 		
 		<?php
 			if ($page > 1) {
-				$this -> navigate -> addDataKey(
-					$rest && !$this -> navigate -> keys
+				$this->navigate->addDataKey(
+					$rest && !$this->navigate->keys
 					? 0
-					: $this -> navigate -> name_page,
+					: $this->navigate->name_page,
 					1
 				);
 		?>
 			<li class="page-item">
-				<a class="page-link" href="<?= $url . $this -> navigate -> renderData(); ?>" aria-label="First">
+				<a class="page-link" href="<?= $url . $this->navigate->renderData(); ?>" aria-label="First">
 					<span aria-hidden="true">&laquo;</span>
 				</a>
 			</li>
@@ -96,15 +96,15 @@ $pages = $this -> navigate -> pages;
 			}
 			
 			if ($page > 1) {
-				$this -> navigate -> addDataKey(
-					$rest && !$this -> navigate -> keys
+				$this->navigate->addDataKey(
+					$rest && !$this->navigate->keys
 					? 0
-					: $this -> navigate -> name_page,
+					: $this->navigate->name_page,
 					$page - 1
 				);
 		?>
 			<li class="page-item">
-				<a class="page-link" href="<?= $url . $this -> navigate -> renderData(); ?>" aria-label="Previous">
+				<a class="page-link" href="<?= $url . $this->navigate->renderData(); ?>" aria-label="Previous">
 					<span aria-hidden="true">&lsaquo;</span>
 				</a>
 			</li>
@@ -121,10 +121,10 @@ $pages = $this -> navigate -> pages;
 				
 				$item++;
 				
-				$this -> navigate -> addDataKey(
-					$rest && !$this -> navigate -> keys
+				$this->navigate->addDataKey(
+					$rest && !$this->navigate->keys
 					? 0
-					: $this -> navigate -> name_page,
+					: $this->navigate->name_page,
 					$item
 				);
 				
@@ -137,7 +137,7 @@ $pages = $this -> navigate -> pages;
 				} else {
 		?>
 			<li class="page-item">
-				<a href="<?= $url . $this -> navigate -> renderData(); ?>" class="page-link">
+				<a href="<?= $url . $this->navigate->renderData(); ?>" class="page-link">
 					<?= $item; ?>
 				</a>
 			</li>
@@ -146,15 +146,15 @@ $pages = $this -> navigate -> pages;
 			});
 			
 			if ($page < $pages) {
-				$this -> navigate -> addDataKey(
-					$rest && !$this -> navigate -> keys
+				$this->navigate->addDataKey(
+					$rest && !$this->navigate->keys
 					? 0
-					: $this -> navigate -> name_page,
+					: $this->navigate->name_page,
 					$page + 1
 				);
 		?>
 			<li class="page-item">
-				<a class="page-link" href="<?= $url . $this -> navigate -> renderData(); ?>" aria-label="Next">
+				<a class="page-link" href="<?= $url . $this->navigate->renderData(); ?>" aria-label="Next">
 					<span aria-hidden="true">&rsaquo;</span>
 				</a>
 			</li>
@@ -168,15 +168,15 @@ $pages = $this -> navigate -> pages;
 			}
 			
 			if ($page < $pages) {
-				$this -> navigate -> addDataKey(
-					$rest && !$this -> navigate -> keys
+				$this->navigate->addDataKey(
+					$rest && !$this->navigate->keys
 					? 0
-					: $this -> navigate -> name_page,
+					: $this->navigate->name_page,
 					$pages
 				);
 		?>
 			<li class="page-item">
-				<a class="page-link" href="<?= $url . $this -> navigate -> renderData(); ?>" aria-label="Last">
+				<a class="page-link" href="<?= $url . $this->navigate->renderData(); ?>" aria-label="Last">
 					<span aria-hidden="true">&raquo;</span>
 				</a>
 			</li>

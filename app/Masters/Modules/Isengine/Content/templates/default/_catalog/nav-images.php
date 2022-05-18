@@ -8,15 +8,15 @@ use is\Helpers\Objects;
 use is\Masters\View;
 
 $view = View::getInstance();
-$instance = Strings::after($this -> instance, ':', null, true);
+$instance = Strings::after($this->instance, ':', null, true);
 
 $map = [];
-$exclude = $this -> get('settings')['exclude'];
+$exclude = $this->get('settings')['exclude'];
 
-$this -> getData() -> iterate(function($item) use (&$map, $exclude){
+$this->getData()->iterate(function($item) use (&$map, $exclude){
 	
-	$key = Strings::join($item -> getData('group'), ':');
-	$val = Strings::join($item -> getData('folder'), ' ');
+	$key = Strings::join($item->getData('group'), ':');
+	$val = Strings::join($item->getData('folder'), ' ');
 	
 	if (
 		$exclude &&
@@ -34,14 +34,14 @@ $this -> getData() -> iterate(function($item) use (&$map, $exclude){
 
 ?>
 <div class="col-12">
-	<div class="row <?= $this -> type; ?>" id="catalog-nav">
+	<div class="row <?= $this->type; ?>" id="catalog-nav">
 		<?php
 			Objects::each($map, function($name, $item){
 				
 				$link = '/catalog/' . Strings::replace($item, ':', '/') . '/';
 				
 				$image = '{img|/content/groups/' . $name . '.jpg:/content/catalog/default.jpg:lazyload w-100 align-image-contain radius-1:' . $name . '}';
-				$this -> tvars($image);
+				$this->tvars($image);
 				
 		?>
 		<div class="col-6 sm-col-4 md-col-3 align-center mb-2">

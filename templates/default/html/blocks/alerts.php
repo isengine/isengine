@@ -10,7 +10,5 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-//$view -> get('module') -> launch('data', 'default:alerts|default:alerts');
-$view -> get('module') -> launch('data', 'default:alerts|default:alerts-multiple');
-
-?>
+//$view->get('module')->launch('data', 'default:alerts|default:alerts');
+$view->get('module')->launch('data', 'default:alerts|default:alerts-multiple');

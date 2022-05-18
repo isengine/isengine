@@ -6,8 +6,8 @@ use is\Helpers\System;
 use is\Helpers\Strings;
 use is\Helpers\Objects;
 
-$week = $this -> getData('week');
-$footer = $this -> getData('footer');
+$week = $this->getData('week');
+$footer = $this->getData('footer');
 
 ?>
 <div class="row">
@@ -19,7 +19,7 @@ $footer = $this -> getData('footer');
 					График посещаемости сайта
 				</h5>
 				<div class="card-tools">
-					<a href="https://metrika.yandex.ru/dashboard?id=<?= $this -> getData('id'); ?>" target="blank" class="btn btn-tool">
+					<a href="https://metrika.yandex.ru/dashboard?id=<?= $this->getData('id'); ?>" target="blank" class="btn btn-tool">
 						<i class="fas fa-external-link-alt"></i>
 					</a>
 					<?php /*
@@ -36,7 +36,7 @@ $footer = $this -> getData('footer');
 			<div class="card-body">
 				<div class="row">
 					<div class="col-12">
-						<?php if ($this -> getData('month')) { ?>
+						<?php if ($this->getData('month')) { ?>
 						<p class="text-center">
 							<strong><?= date('d.m.Y', time() - 2592000) . ' - ' . date('d.m.Y', time() - 86400); ?></strong>
 						</p>
@@ -44,7 +44,7 @@ $footer = $this -> getData('footer');
 							<canvas id="monthlyChart" height="180" style="height: 180px;"></canvas>
 						</div>
 						<?php } ?>
-						<?php if ($this -> getData('year')) { ?>
+						<?php if ($this->getData('year')) { ?>
 						<p class="text-center">
 							<strong><?= date('m.Y', time() - 31104000) . ' - ' . date('m.Y', time() - 2592000); ?></strong>
 						</p>

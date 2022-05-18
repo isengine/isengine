@@ -10,7 +10,7 @@ use is\Helpers\Prepare;
 $content = null;
 $tabs = null;
 
-Objects::each($this -> getData(), function($item, $key, $pos) use (&$content, &$tabs){
+Objects::each($this->getData(), function($item, $key, $pos) use (&$content, &$tabs){
 	
 	$images = null;
 	

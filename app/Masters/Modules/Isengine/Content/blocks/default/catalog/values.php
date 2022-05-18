@@ -34,11 +34,11 @@ $data = Objects::merge(
         'sale' => null,
         'step' => null
     ],
-    $item -> getData()
+    $item->getData()
 );
 
-$name = $item -> getEntryKey('name');
-$parents = $item -> getEntryKey('parents');
+$name = $item->getEntryKey('name');
+$parents = $item->getEntryKey('parents');
 $parents = $parents ? (Strings::join($parents, '/') . '/') : null;
 $id = Strings::replace(Strings::replace($parents, '/', '-') . $name, ' ', '_');
 $name = Strings::replace($parents, '/', ':') . $name;
@@ -53,8 +53,8 @@ $name = Strings::replace($parents, '/', ':') . $name;
 
 // читаем цену из общего прайса
 
-//$combine = $view -> get('vars|catalog-combine');
-$combine = $globals -> get('catalog-combine');
+//$combine = $view->get('vars|catalog-combine');
+$combine = $globals->get('catalog-combine');
 
 //System::debug($combine);
 
@@ -194,7 +194,7 @@ $gallery = null;
 $gallery_real = DI . Strings::replace(Strings::unfirst($gallery_link), '/', DS);
 
 if (Local::matchFolder($gallery_real)) {
-	$list = Local::search($gallery_real, [
+	$list = Local::list($gallery_real, [
 		'return' => 'files',
 		'subfolders' => false,
 		'merge' => true,
@@ -207,17 +207,17 @@ if (Local::matchFolder($gallery_real)) {
 }
 
 if (
-	!Local::matchFile($image_real) &&
-	$gallery
+	!Local::matchFile($image_real)
+    && $gallery
 ) {
 	$image = Objects::first($gallery, 'value');
 }
 
 //$image = Prepare::urlencode($image, '/');
 
-if ($view -> getData('tvars')) {
-	$image_contain = $view -> get('tvars') -> launch( '{img|' . $image . ':/content/items/default.jpg:lazyload w-100 align-image-contain:' . $data['title'] . '}' );
-	$image_cover = $view -> get('tvars') -> launch( '{img|' . $image . ':/content/items/default.jpg:lazyload w-100 align-image-cover height-100:' . $data['title'] . '}' );
+if ($view->getData('tvars')) {
+	$image_contain = $view->get('tvars')->launch( '{img|' . $image . ':/content/items/default.jpg:lazyload w-100 align-image-contain:' . $data['title'] . '}' );
+	$image_cover = $view->get('tvars')->launch( '{img|' . $image . ':/content/items/default.jpg:lazyload w-100 align-image-cover height-100:' . $data['title'] . '}' );
 } else {
 	$image_contain = '<img src="' . $image . '" data-srcset="' . $image . '" srcset="/content/items/default.jpg" class="lazyload w-100 align-image-contain" alt="' . $data['title'] . '" />';
 	$image_cover = '<img src="' . $image . '" data-srcset="' . $image . '" srcset="/content/items/default.jpg" class="lazyload w-100 align-image-cover" alt="' . $data['title'] . '" />';
@@ -225,9 +225,9 @@ if ($view -> getData('tvars')) {
 
 // устанавливаем даты
 
-$ctime = $item -> get('ctime');
-//$date = $ctime ? $ctime : $view -> get('time') -> convert($data['date'], '{day}.{month}.{year}', '{abs}');
-//$date_display = $data['date'] ? $data['date'] : $view -> get('time|' . $ctime, '{day}.{month}.{year}');
+$ctime = $item->get('ctime');
+//$date = $ctime ? $ctime : $view->get('time')->convert($data['date'], '{day}.{month}.{year}', '{abs}');
+//$date_display = $data['date'] ? $data['date'] : $view->get('time|' . $ctime, '{day}.{month}.{year}');
 $date = $ctime ? $ctime : Datetimes::convert($data['date'], '{day}.{month}.{year}', '{abs}');
 $date_display = $data['date'] ? $data['date'] : Datetimes::convert($ctime, '{abs}', '{day}.{month}.{year}');
 
@@ -237,12 +237,12 @@ $tags = $data['tags'] ? Objects::convert($data['tags']) : [];
 
 // устанавливаем ссылку
 
-$link = Prepare::urlencode('/' . $parents . $item -> getEntryKey('name') . '/', '/');
+$link = Prepare::urlencode('/' . $parents . $item->getEntryKey('name') . '/', '/');
 
 // записываем все расчитанные данные
 
-$item -> setData(Objects::merge(
-	$item -> getData(),
+$item->setData(Objects::merge(
+	$item->getData(),
 	[
 		'id' => $id,
 		'name' => $name,

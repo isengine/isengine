@@ -12,9 +12,7 @@ use is\Masters\View;
 $view = View::getInstance();
 
 if (isset($_GET['success'])) {
-	$this -> block('default:contacts-success');
+    $this->block('default:contacts-success');
 } else {
-	$this -> printForm();
+    $this->printForm();
 }
-
-?>

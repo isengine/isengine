@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,14 +10,12 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
-
-$counter = $view -> get('state|settings:webmaster:yandex:counter');
-if (!$counter) { return; }
+$counter = $view->get('state|settings:webmaster:yandex:counter');
+if (!$counter) {
+    return;
+}
 ?>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -32,7 +28,7 @@ if (!$counter) { return; }
         trackLinks:true,
         accurateTrackBounce:true,
         webvisor:true,
-		ecommerce:"dataLayer"
+        ecommerce:"dataLayer"
    });
 </script>
 <noscript><div><img src="https://mc.yandex.ru/watch/<?= $counter; ?>" style="position:absolute; left:-9999px;" alt="" /></div></noscript>

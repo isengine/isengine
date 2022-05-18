@@ -16,24 +16,24 @@ $view = View::getInstance();
 		
 		<div class="row">
 		<?php
-			$this -> iterate([
+			$this->iterate([
 				'default:catalog:values',
-				'default:catalog:showroom:' . $this -> type
+				'default:catalog:showroom:' . $this->type
 			]);
 		?>
 		</div>
 		
-		<?php if ($this -> type !== 'alone') { ?>
+		<?php if ($this->type !== 'alone') { ?>
 		<div class="row">
-			<?php $this -> block('default:catalog:navigate:list'); ?>
+			<?php $this->block('default:catalog:navigate:list'); ?>
 		</div>
 		<?php } ?>
 		
 	</div>
 	
-	<?php if ($this -> type !== 'alone') { ?>
+	<?php if ($this->type !== 'alone') { ?>
 	<div class="col-12 md-col-4 lg-col-3 order-1 md-order-2">
-		<?php $this -> block('default:catalog:filter'); ?>
+		<?php $this->block('default:catalog:filter'); ?>
 	</div>
 	<?php } ?>
 	

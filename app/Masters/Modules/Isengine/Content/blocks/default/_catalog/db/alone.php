@@ -12,16 +12,16 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 /*
-$sets = &$this -> settings;
-$instance = &$this -> instance;
+$sets = &$this->settings;
+$instance = &$this->instance;
 
 System::debug($item, '!q');
 ?>
 <div class="<?= Strings::join($sets['classes'], ' '); ?>">
-	<?= $view -> get('lang|title'); ?>
+	<?= $view->get('lang|title'); ?>
 	АДЫН АДЫН САПСЕМ АДЫН!
 </div>
 */
@@ -95,8 +95,8 @@ $settings = '{
 	<div class="col-12 sm-col-6 pt-15 relative">
 		
 		<div class="container-fill">
-			<?//= $view -> get('tvars') -> launch($data['image']); ?>
-			<?php $view -> get('module') -> launch('media', null, $settings); ?>
+			<?//= $view->get('tvars')->launch($data['image']); ?>
+			<?php $view->get('module')->launch('media', null, $settings); ?>
 		</div>
 		
 	</div>
@@ -130,7 +130,7 @@ $settings = '{
 				</div>
 			<?php }); ?>
 			<div>
-				<a href="<?= $view -> get('state|url'); ?>#nav-tab" class="color-theme">
+				<a href="<?= $view->get('state|url'); ?>#nav-tab" class="color-theme">
 					Все характеристики
 				</a>
 			</div>

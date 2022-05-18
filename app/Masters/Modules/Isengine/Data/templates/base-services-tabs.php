@@ -10,12 +10,12 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$price = $view -> get('lang|this:price');
+$price = $view->get('lang|this:price');
 
 $content = null;
 $tabs = null;
 
-Objects::each($this -> getData(), function($item, $key, $pos) use (&$content, &$tabs, $price){
+Objects::each($this->getData(), function($item, $key, $pos) use (&$content, &$tabs, $price){
 	
 	$tabs .= '
 		<li class="nav-item">
@@ -66,7 +66,7 @@ Objects::each($this -> getData(), function($item, $key, $pos) use (&$content, &$
 
 <div class="sidebar-widget-area sidebar-break-md col-xl-3 col-lg-4 col-12 no-equal-item">
 	<div class="widget widget-department-info">
-		<h3 class="section-title title-bar-primary"><?= $view -> get('lang|this:services:title'); ?></h3>
+		<h3 class="section-title title-bar-primary"><?= $view->get('lang|this:services:title'); ?></h3>
 		<ul class="nav nav-tabs tab-nav-list">
 			<?= $tabs; ?>
 		</ul>
@@ -78,8 +78,8 @@ Objects::each($this -> getData(), function($item, $key, $pos) use (&$content, &$
 	</div>
 	<div class="single-departments-box-layout1">
 		<div class="item-content">
-			<?php $view -> get('module') -> launch('data', 'base-price|base-price-in-services'); ?>
-			<?php $view -> get('module') -> launch('data', 'base-team|base-team-in-services'); ?>
+			<?php $view->get('module')->launch('data', 'base-price|base-price-in-services'); ?>
+			<?php $view->get('module')->launch('data', 'base-team|base-team-in-services'); ?>
 		</div>
 	</div>
 </div>

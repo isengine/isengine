@@ -8,11 +8,11 @@ use is\Helpers\Objects;
 use is\Helpers\Prepare;
 use is\Masters\View;
 
-$year = $this -> getData('year');
+$year = $this->getData('year');
 
 $script = '';
 
-Objects::each($this -> getData('map'), function($key, $index, $pos) use ($year, &$script) {
+Objects::each($this->getData('map'), function($key, $index, $pos) use ($year, &$script) {
 	
 	$item = $year[$key];
 	$script .= ($pos !== 'first' ? ',' : null) . '{

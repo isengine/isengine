@@ -12,20 +12,20 @@ $item = $item[0];
 $data = $options['data'];
 $value = $options['value'] ? $options['value'] : [];
 
-$item -> setTag('select');
-$item -> setClass('form-select');
+$item->setTag('select');
+$item->setClass('form-select');
 
 $content = '<option value="">Выбрать</option>';
 Objects::each($value, function($value) use ($data, &$content){
 	$content .= '<option value="' . $value . '"' . ($data === $value ? ' selected' : null) . '>' . $value . '</option>';
 });
 
-$item -> setContent($content);
+$item->setContent($content);
 
 ?>
 <div class="mb-05">
 	<div class="color-gray-6 py-05">
 		<?= $options['description']; ?>
 	</div>
-	<?php $item -> print(); ?>
+	<?php $item->print(); ?>
 </div>

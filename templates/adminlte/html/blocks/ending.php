@@ -5,7 +5,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$pagename = $view -> get('vars|pagename');
+$pagename = $view->get('vars|pagename');
 
 ?>
     </section>
@@ -13,14 +13,14 @@ $pagename = $view -> get('vars|pagename');
   </div>
   <!-- /.content-wrapper -->
 
-<?php $view -> get('block') -> launch('control-sidebar'); ?>
-<?php $view -> get('block') -> launch('footer'); ?>
+<?php $view->get('block')->launch('control-sidebar'); ?>
+<?php $view->get('block')->launch('footer'); ?>
 
 </div>
 <!-- ./wrapper -->
 
-<?php $view -> get('block') -> launch('scripts:' . $pagename); ?>
-<?php $view -> get('block') -> launch('items:display', 'default', null); ?>
+<?php $view->get('block')->launch('scripts:' . $pagename); ?>
+<?php $view->get('block')->launch('items:display', 'default', null); ?>
 
 </body>
 </html>

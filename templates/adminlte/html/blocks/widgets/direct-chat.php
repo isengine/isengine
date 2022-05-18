@@ -14,7 +14,7 @@ $view = View::getInstance();
 				"badge" : "bg-primary",
 				"button" : "btn-primary"
 			';
-			$view -> get('module') -> launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
+			$view->get('module')->launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
 		?>
 	</div>
 	<div class="col-md-3">
@@ -24,7 +24,7 @@ $view = View::getInstance();
 				"badge" : "bg-success",
 				"button" : "btn-success"
 			';
-			$view -> get('module') -> launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
+			$view->get('module')->launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
 		?>
 	</div>
 	<div class="col-md-3">
@@ -34,7 +34,7 @@ $view = View::getInstance();
 				"badge" : "bg-danger",
 				"button" : "btn-warning"
 			';
-			$view -> get('module') -> launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
+			$view->get('module')->launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
 		?>
 	</div>
 	<div class="col-md-3">
@@ -44,7 +44,7 @@ $view = View::getInstance();
 				"badge" : "badge",
 				"button" : "btn-danger"
 			';
-			$view -> get('module') -> launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
+			$view->get('module')->launch('data', 'adminlte-direct-chat', '{"classes":{' . $sets . '}}');
 		?>
 	</div>
 </div>

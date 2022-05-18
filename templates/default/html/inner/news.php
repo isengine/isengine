@@ -9,6 +9,4 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('module') -> launch('content', 'default:news:routing', null, null);
-
-?>
+$view->get('module')->launch('content', 'default:news:routing', null, null);

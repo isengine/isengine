@@ -18,5 +18,5 @@ $data = $item['options'];
 		<span class="color-theme">*</span>
 		<?php } ?>
 	</div>
-	<?php $element -> print(); ?>
+	<?php $element->print(); ?>
 </div>

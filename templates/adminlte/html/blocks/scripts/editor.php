@@ -14,7 +14,7 @@ use is\Components\Uri;
 $view = View::getInstance();
 $uri = Uri::getInstance();
 
-$path = $uri -> getData('collection') . ':' . $uri -> getData('parents') . ':' . $uri -> getData('name');
+$path = $uri->getData('collection') . ':' . $uri->getData('parents') . ':' . $uri->getData('name');
 Local::createFolder(DI . Paths::toReal($path) . DS);
 
 ?>
@@ -50,7 +50,7 @@ $(function () {
 		$(this).bootstrapSwitch('state', $(this).prop('checked'));
 	});
 	
-	var content = <?= Parser::toJson($view -> get('vars|content')); ?>;
+	var content = <?= Parser::toJson($view->get('vars|content')); ?>;
 	//console.log(collection);
 	
 	$('div[type="adminlte-form-editor-array"] input').each(function(){

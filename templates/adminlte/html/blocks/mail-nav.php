@@ -8,7 +8,7 @@ $view = View::getInstance();
 ?>
 <div class="col-md-3">
 	
-	<?php if ($view -> get('state|page') === 'inbox') { ?>
+	<?php if ($view->get('state|page') === 'inbox') { ?>
 	<a href="/adminlte/pages/mailbox/compose/" class="btn btn-primary btn-block mb-3">Compose</a>
 	<?php } else { ?>
 	<a href="/adminlte/pages/mailbox/inbox/" class="btn btn-primary btn-block mb-3">Back to Inbox</a>

@@ -9,7 +9,7 @@ use is\Helpers\Strings;
 $view = View::getInstance();
 
 $class = null;
-$sets = $view -> get('vars|adminlte:sidebar');
+$sets = $view->get('vars|adminlte:sidebar');
 
 if ($sets['flat']) { $class .= ' nav-flat'; }
 if ($sets['lagacy']) { $class .= ' nav-legacy'; }
@@ -21,13 +21,13 @@ if ($sets['indent']) { $class .= ' nav-child-indent'; }
 	<ul class="nav nav-pills nav-sidebar flex-column<?= $class; ?>" data-widget="treeview" role="menu" data-accordion="false">
 		<li class="nav-item">
 			<a href="/adminlte/" class="nav-link active">
-				<i class="nav-icon <?= $view -> get('lang|this:icons:index'); ?>"></i>
-				<p><?= $view -> get('lang|this:pagenames:index'); ?></p>
+				<i class="nav-icon <?= $view->get('lang|this:icons:index'); ?>"></i>
+				<p><?= $view->get('lang|this:pagenames:index'); ?></p>
 			</a>
 		</li>
 		<?php
-			$array = $view -> get('lang|this');
-			Objects::each($view -> get('state|structure:adminlte:db'), function($item, $key) use ($array) {
+			$array = $view->get('lang|this');
+			Objects::each($view->get('state|structure:adminlte:db'), function($item, $key) use ($array) {
 				$target = 'db:' . $key;
 				$lang = $array['pagenames'][$target];
 				$icon = $array['icons'][$target];
@@ -44,10 +44,10 @@ if ($sets['indent']) { $class .= ' nav-child-indent'; }
 		?>
 		<?php
 			$state = [];
-			Objects::each($view -> get('state|structure:adminlte:pages'), function($item, $key) use ($view, $state) {
+			Objects::each($view->get('state|structure:adminlte:pages'), function($item, $key) use ($view, $state) {
 				$state[] = $key;
 				
-				$array = $view -> get('lang|this');
+				$array = $view->get('lang|this');
 				$target = 'pages:' . Strings::join($state, ':');
 				$lang = $array['pagenames'][$target];
 				$icon = $array['icons'][$target];
@@ -75,7 +75,7 @@ if ($sets['indent']) { $class .= ' nav-child-indent'; }
 			<?php
 				Objects::each($item, function($i, $k) use ($view, $state) {
 					$state[] = $k;
-					$array = $view -> get('lang|this');
+					$array = $view->get('lang|this');
 					$target = 'pages:' . Strings::join($state, ':');
 					$lang = $array['pagenames'][$target];
 					$icon = $array['icons'][$target];

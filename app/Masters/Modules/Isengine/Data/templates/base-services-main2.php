@@ -10,10 +10,10 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$button = $view -> get('lang|common:readmore', 'upper');
+$button = $view->get('lang|common:readmore', 'upper');
 
 ?>
-<?php Objects::each($this -> getData(), function($item) use ($button) { ?>
+<?php Objects::each($this->getData(), function($item) use ($button) { ?>
 	<div class="col-xl-4 col-lg-6 col-md-6 col-12">
 		<div class="departments-box-layout5">
 			<div class="item-img">

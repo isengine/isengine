@@ -17,7 +17,7 @@ $view = View::getInstance();
 	</div>
 	<div class="card-body">
 		<div class="row">
-		<?php Objects::each($view -> get('vars|columns'), function($item){ ?>
+		<?php Objects::each($view->get('vars|columns'), function($item){ ?>
 			<div class="col-12 col-sm-6 col-xl-4">
 				<div class="row align-items-center mb-1">
 					<div class="col-6">
@@ -39,7 +39,7 @@ $view = View::getInstance();
 	</div>
 	<div class="card-body">
 		<div class="row">
-		<?php Objects::each($view -> get('vars|keys'), function($item){ ?>
+		<?php Objects::each($view->get('vars|keys'), function($item){ ?>
 			<div class="col-12 col-sm-6 col-xl-4">
 				<div class="row align-items-center mb-1">
 					<div class="col-6">

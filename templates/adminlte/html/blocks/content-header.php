@@ -5,7 +5,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$pagename = $view -> get('lang|this:pagenames')[$view -> get('vars|pagename')];
+$pagename = $view->get('lang|this:pagenames')[$view->get('vars|pagename')];
 
 ?>
     <!-- Content Header (Page header) -->
@@ -17,7 +17,7 @@ $pagename = $view -> get('lang|this:pagenames')[$view -> get('vars|pagename')];
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="/adminlte/"><?= $view -> get('lang|this:pagenames:home'); ?></a></li>
+              <li class="breadcrumb-item"><a href="/adminlte/"><?= $view->get('lang|this:pagenames:home'); ?></a></li>
               <!--<li class="breadcrumb-item"><a href="/adminlte/pages/">Pages</a></li>-->
               <li class="breadcrumb-item active"><?= $pagename; ?></li>
             </ol>

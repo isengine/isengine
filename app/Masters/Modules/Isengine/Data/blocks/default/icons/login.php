@@ -10,11 +10,11 @@ use is\Masters\View;
 
 $user = User::getInstance();
 
-if ($user -> isset()) {
-	$this -> block('default:icons:user');
+if ($user->isset()) {
+	$this->block('default:icons:user');
 } else {
 	$view = View::getInstance();
-	$view -> get('module') -> launch('form', 'default:login');
+	$view->get('module')->launch('form', 'default:login');
 }
 
 ?>

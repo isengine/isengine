@@ -16,10 +16,10 @@ class Login extends Methods\Defaults\Login {
 	
 	public function launch() {
 		
-		$this -> spam('check', 403);
+		$this->spam('check', 403);
 		
-		$login = $this -> getData('login');
-		$password = $this -> getData('password');
+		$login = $this->getData('login');
+		$password = $this->getData('password');
 		
 		$login = Prepare::clear($login);
 		$login = Prepare::notags($login);
@@ -35,7 +35,7 @@ class Login extends Methods\Defaults\Login {
 		
 		// ищем пользователя
 		
-		$data = $this -> findUser($login);
+		$data = $this->findUser($login);
 		
 		if (!$data['user']) {
 			echo 'User not found';
@@ -46,7 +46,7 @@ class Login extends Methods\Defaults\Login {
 		$result = null;
 		
 		foreach ($data['password'] as $item) {
-			$result = Prepare::matchCrypt($password, $data['user'] -> data[$item]);
+			$result = Prepare::matchCrypt($password, $data['user']->data[$item]);
 			if ($result) {
 				break;
 			}
@@ -58,13 +58,13 @@ class Login extends Methods\Defaults\Login {
 		if ($result) {
 			
 			$session = Session::getInstance();
-			$session -> open();
-			$session -> init();
-			$session -> setValue('user', Prepare::toJson($data['user']));
-			$session -> getValue('settings', Prepare::toJson($data['settings']));
-			Sessions::setCookie('session', $session -> getSession('token'));
+			$session->open();
+			$session->init();
+			$session->setValue('user', Prepare::toJson($data['user']));
+			$session->getValue('settings', Prepare::toJson($data['settings']));
+			Sessions::setCookie('session', $session->getSession('token'));
 			Sessions::setCookie('login', true);
-			$this -> returns(null, 'adminlte');
+			$this->returns(null, 'adminlte');
 			
 		}
 		

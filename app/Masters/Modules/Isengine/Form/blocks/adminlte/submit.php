@@ -15,6 +15,6 @@ $data = $item['options'];
 	<div class="col-8">
 	</div>
 	<div class="col-4">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

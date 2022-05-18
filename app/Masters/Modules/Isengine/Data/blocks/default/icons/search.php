@@ -10,6 +10,6 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('block') -> launch('header:search');
+$view->get('block')->launch('header:search');
 
 ?>

@@ -11,7 +11,7 @@ $view = View::getInstance();
 
 ?>
 <span class="color-gray-6">
-	<?= $view -> get('lang|common:address', 'upperFirst'); ?>
+    <?= $view->get('lang|common:address', 'upperFirst'); ?>
 </span>
 <br>
-<?= $view -> get('lang|information:address'); ?>
+<?= $view->get('lang|information:address'); ?>

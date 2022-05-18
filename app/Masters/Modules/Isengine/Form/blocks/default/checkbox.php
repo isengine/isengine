@@ -12,12 +12,12 @@ $data = $item['options'];
 
 $name = 'form-login-' . $item['name'];
 
-$element -> addId($name);
+$element->addId($name);
 
 ?>
 <div class="mb-05">
 	<div class="form-check">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 		<label class="form-check-label <?= $name; ?>-label" for="<?= $name; ?>">
 			<?= $data['label']; ?>
 			<?= $data['description']; ?>

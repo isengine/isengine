@@ -7,7 +7,7 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$len = Objects::len($this -> getData());
+$len = Objects::len($this->getData());
 $len = $len ? round(12 / $len) : 12;
 
 ?>
@@ -15,7 +15,7 @@ $len = $len ? round(12 / $len) : 12;
 <section class="call-to-action-wrap-layout5 bg-light-secondary100">
 	<div class="container">
 		<div class="row">
-			<?php Objects::each($this -> getData(), function($item) use ($len) { ?>
+			<?php Objects::each($this->getData(), function($item) use ($len) { ?>
 				<div class="col-md-<?= $len; ?> col-12 single-item">
 					<div class="call-to-action-box-layout5">
 						<div class="media media-none-md">

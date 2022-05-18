@@ -7,7 +7,7 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$len = Objects::len($this -> getData());
+$len = Objects::len($this->getData());
 $len = round(12 / $len);
 if ($len < 1) {
 	$len = 12;
@@ -20,7 +20,7 @@ if ($len < 1) {
 <section class="about-wrap-layout2">
 	<div class="container">
 		<div class="row">
-			<?php Objects::each($this -> getData(), function($item) use ($len) { ?>
+			<?php Objects::each($this->getData(), function($item) use ($len) { ?>
 				<div class="col-md-<?= $len; ?> col-12">
 					<div class="about-box-layout4">
 						<div class="media">

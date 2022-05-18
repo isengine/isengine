@@ -12,15 +12,15 @@ $view = View::getInstance();
 ?>
 
 <h3 class="color-contrast align-center mb-1">
-	ОСТАЛИСЬ ВОПРОСЫ?
+    ОСТАЛИСЬ ВОПРОСЫ?
 </h3>
 
 <p class="align-center color-white">
-	Просто заполните форму, нажав на кнопку ниже
+    Просто заполните форму, нажав на кнопку ниже
 </p>
 
 <p class="align-center">
-	<a class="btn border-contrast color-contrast align-center" data-bs-toggle="modal" href="#feedback" role="button">
-		Обратная связь
-	</a>
+    <a class="btn border-contrast color-contrast align-center" data-bs-toggle="modal" href="#feedback" role="button">
+        Обратная связь
+    </a>
 </p>

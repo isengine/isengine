@@ -9,7 +9,7 @@ use is\Masters\View;
 $view = View::getInstance();
 
 $class = null;
-$sets = $view -> get('vars|adminlte');
+$sets = $view->get('vars|adminlte');
 
 if ($sets['sidebar']['minimal']) { $class .= ' sidebar-mini'; }
 if ($sets['sidebar']['minimal-on-md']) { $class .= ' sidebar-mini-md'; }

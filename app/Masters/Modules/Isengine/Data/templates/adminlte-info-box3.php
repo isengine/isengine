@@ -9,7 +9,7 @@ use is\Helpers\Prepare;
 
 ?>
 <div class="row">
-	<?php Objects::each($this -> getData(), function($item) { ?>
+	<?php Objects::each($this->getData(), function($item) { ?>
 	<div class="col-lg-3 col-6">
 		<div class="small-box <?= $item['class']; ?>">
 			<div class="inner">

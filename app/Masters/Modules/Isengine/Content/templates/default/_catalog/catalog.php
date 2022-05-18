@@ -8,12 +8,12 @@ use is\Helpers\Objects;
 use is\Masters\View;
 
 $view = View::getInstance();
-$instance = Strings::after($this -> instance, ':', null, true);
+$instance = Strings::after($this->instance, ':', null, true);
 
 ?>
 <div class="col-12">
-	<div class="row <?= $this -> type; ?>" id="catalog">
-		<?php $this -> iterate(['default:catalog:db:values', 'default:catalog:db:' . $this -> type]); ?>
-		<?php //$this -> iterate(['default:catalog:xlsx:values', 'default:catalog:xlsx:' . $this -> type]); ?>
+	<div class="row <?= $this->type; ?>" id="catalog">
+		<?php $this->iterate(['default:catalog:db:values', 'default:catalog:db:' . $this->type]); ?>
+		<?php //$this->iterate(['default:catalog:xlsx:values', 'default:catalog:xlsx:' . $this->type]); ?>
 	</div>
 </div>

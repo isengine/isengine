@@ -7,7 +7,7 @@ use is\Helpers\Strings;
 use is\Helpers\Objects;
 use is\Masters\View;
 
-$id = $this -> getData('id');
+$id = $this->getData('id');
 
 ?>
 <div class="row">

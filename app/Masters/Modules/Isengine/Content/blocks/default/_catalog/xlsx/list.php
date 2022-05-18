@@ -10,7 +10,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 if (!$data['price']['current']) {
 	return;
@@ -43,7 +43,7 @@ if (!$data['price']['current']) {
 		<div class="item-info h-100">
 			<a href="<?= $data['link'] ?>" class="item-link flex flex-column h-100" is-data="link:href">
 				<div class="item-image" is-data="image">
-					<?= $view -> get('tvars') -> launch($data['image']); ?>
+					<?= $view->get('tvars')->launch($data['image']); ?>
 				</div>
 				<h3 class="h6 item-title">
 					<span is-data="title"><?= $data['title']; ?></span>

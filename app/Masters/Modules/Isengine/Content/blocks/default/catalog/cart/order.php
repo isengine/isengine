@@ -10,7 +10,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$lang = $view -> get('lang|this:cart-attention');
+$lang = $view->get('lang|this:cart-attention');
 
 ?>
 

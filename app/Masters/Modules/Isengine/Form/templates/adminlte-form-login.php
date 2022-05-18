@@ -6,6 +6,6 @@ use is\Helpers\System;
 use is\Helpers\Objects;
 use is\Helpers\Strings;
 
-$this -> printForm();
+$this->printForm();
 
 ?>

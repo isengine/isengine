@@ -11,7 +11,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$cart = $view -> get('vars|cart');
+$cart = $view->get('vars|cart');
 $cart_is = System::typeIterable($cart);
 $success = Sessions::getCookie('order-complete');
 

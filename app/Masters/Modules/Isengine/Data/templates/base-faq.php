@@ -7,7 +7,7 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-//$item = $this -> getData();
+//$item = $this->getData();
 
 $class = ['One', 'Two', 'Three', 'Four', 'Five'];
 
@@ -23,7 +23,7 @@ $class = ['One', 'Two', 'Three', 'Four', 'Five'];
 					</div>
 					<div class="faq-list-layout1">
 						<div class="panel-group" id="accordion">
-							<?php Objects::each($this -> getData(), function($item, $key, $pos) use ($class) { ?>
+							<?php Objects::each($this->getData(), function($item, $key, $pos) use ($class) { ?>
 							<div class="panel panel-default">
 								<div class="panel-heading<?= $pos === 'first' || $pos === 'alone' ? ' active' : null; ?>">
 									<div class="panel-title">

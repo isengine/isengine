@@ -13,12 +13,12 @@ $view = View::getInstance();
 
 $content = null;
 $class = ['1st', '2nd', '3rd'];
-$button = $view -> get('lang|this:news:button:more');
+$button = $view->get('lang|this:news:button:more');
 
-$this -> reverseData();
-$this -> reduceData(0, 3);
+$this->reverseData();
+$this->reduceData(0, 3);
 
-Objects::each($this -> getData(), function($item, $key) use (&$content, $class, $button){
+Objects::each($this->getData(), function($item, $key) use (&$content, $class, $button){
 	$data = $item['data'];
 	$content .= '
 		<div class="blog-col-' . $class[$key] . ' col-xl-4 col-lg-6 col-md-6 col-12">
@@ -54,8 +54,8 @@ Objects::each($this -> getData(), function($item, $key) use (&$content, $class, 
 <section class="blog-wrap-layout1 bg-accent100">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2><?= $view -> get('lang|this:news:title'); ?></h2>
-			<p><?= $view -> get('lang|this:news:description'); ?></p>
+			<h2><?= $view->get('lang|this:news:title'); ?></h2>
+			<p><?= $view->get('lang|this:news:description'); ?></p>
 		</div>
 		<div class="row">
 			<?= $content; ?>

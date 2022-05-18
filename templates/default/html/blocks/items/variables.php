@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,36 +11,32 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
-
-// код
 
 // делаем прелоад
 
-$array = $view -> get('state|settings:variables');
-if (!System::typeIterable($array)) { return; }
+$array = $view->get('state|settings:variables');
+if (!System::typeIterable($array)) {
+    return;
+}
 
 $print = null;
 
 foreach ($array as $key => $item) {
-	
-	$key = Parser::fromString($key);
-	$item = $view -> get('tvars') -> launch($item);
-	
-	if ($key[1] !== 'js') {
-		$view -> get('vars') -> set($key[0], $item);
-	}
-	
-	if ($key[1] !== 'php') {
-		if (empty($key[2])) {
-			$print .= $key[0] . '="' . $item . '", ';
-		} else {
-			$print .= $key[0] . '=' . $item . ', ';
-		}
-	}
-	
+    $key = Parser::fromString($key);
+    $item = $view->get('tvars')->launch($item);
+
+    if ($key[1] !== 'js') {
+        $view->get('vars')->set($key[0], $item);
+    }
+
+    if ($key[1] !== 'php') {
+        if (empty($key[2])) {
+            $print .= $key[0] . '="' . $item . '", ';
+        } else {
+            $print .= $key[0] . '=' . $item . ', ';
+        }
+    }
 }
 
 unset($key, $item);

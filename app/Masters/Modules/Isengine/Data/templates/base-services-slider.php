@@ -13,9 +13,9 @@ $view = View::getInstance();
 
 $images = null;
 $content = null;
-$button = $view -> get('lang|this:services:button:slider');
+$button = $view->get('lang|this:services:button:slider');
 
-Objects::each($this -> getData(), function($item) use (&$images, &$content, $button){
+Objects::each($this->getData(), function($item) use (&$images, &$content, $button){
 	
 	$images .= '
 		<div class="nav-item"><i class="' . $item['icon'] . '"></i>' . $item['title'] . '</div>
@@ -65,8 +65,8 @@ Objects::each($this -> getData(), function($item) use (&$images, &$content, $but
 <section class="departments-wrap-layout3 bg-accent100 bg-common" data-bg-image="/img/services/background-slider.png">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2><?= $view -> get('lang|this:services:title'); ?></h2>
-			<p><?= $view -> get('lang|this:services:description'); ?></p>
+			<h2><?= $view->get('lang|this:services:title'); ?></h2>
+			<p><?= $view->get('lang|this:services:description'); ?></p>
 		</div>
 		<div id="slick-carousel-wrap" class="departments-box-layout3">
 			<div class="nav-wrap carousel-nav">

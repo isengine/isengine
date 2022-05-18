@@ -12,13 +12,13 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('module') -> launch('media', 'default', '{
-	"folder" : "' . $this -> navigate -> current . '",
+$view->get('module')->launch('media', 'default', '{
+	"folder" : "' . $this->navigate->current . '",
 	"slider" : { "enable" : false },
 	"slideshow" : { "enable" : false },
 	"gallery" : { "enable" : true }
 }');
 
-$data = $item -> getData();
+$data = $item->getData();
 
 ?>

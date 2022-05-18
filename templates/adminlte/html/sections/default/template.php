@@ -33,7 +33,7 @@ $view = View::getInstance();
   <div class="card">
     <div class="card-body login-card-body">
 
-<?php $view -> get('module') -> launch('form', 'adminlte-form-login'); ?>
+<?php $view->get('module')->launch('form', 'adminlte-form-login'); ?>
 
     </div>
   </div>

@@ -8,11 +8,11 @@ use is\Helpers\Objects;
 use is\Helpers\Prepare;
 use is\Masters\View;
 
-$month = $this -> getData('month');
+$month = $this->getData('month');
 
 $script = '';
 
-Objects::each($this -> getData('map'), function($key, $index, $pos) use ($month, &$script) {
+Objects::each($this->getData('map'), function($key, $index, $pos) use ($month, &$script) {
 	
 	$item = $month[$key];
 	$script .= ($pos !== 'first' ? ',' : null) . '{

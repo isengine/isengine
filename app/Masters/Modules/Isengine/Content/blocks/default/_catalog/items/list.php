@@ -10,7 +10,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 $even = true;
 $col = $even ? 'col-6 xs-col-3' : 'col-12 xs-col-4';
@@ -20,7 +20,7 @@ $col = $even ? 'col-6 xs-col-3' : 'col-12 xs-col-4';
 <div class="<?= $col; ?> align-center mb-2">
 		<a href="<?= $data['link'] ?>" class="block m-05">
 			<div class="block border radius-1 mt-1">
-				<?= $view -> get('tvars') -> launch($data['image']); ?>
+				<?= $view->get('tvars')->launch($data['image']); ?>
 			</div>
 		</a>
 		<a href="<?= $data['link'] ?>" class="btn bg-second">
@@ -46,7 +46,7 @@ $col = $even ? 'col-6 xs-col-3' : 'col-12 xs-col-4';
 		<div class="item-info h-100">
 			<a href="<?= $data['link'] ?>" class="item-link flex flex-column h-100">
 				<div class="item-image">
-					<?= $view -> get('tvars') -> launch($data['image']); ?>
+					<?= $view->get('tvars')->launch($data['image']); ?>
 				</div>
 				<h3 class="h6 item-title">
 					<span>Модель <?= $data['name']; ?></span>

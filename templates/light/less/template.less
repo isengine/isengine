@@ -1,0 +1,142 @@
+// colors and font themes
+@import "defaults";
+
+@color-themea: @color-blue;
+@font-this: 'Ubuntu', sans-serif;
+//@font-this: 'Nunito', sans-serif;
+
+body {
+	.font(this, 200);
+}
+
+.logo {
+	&-main {
+		width: 256px;
+	}
+	&-menu {
+		height: 64px;
+		width: auto;
+	}
+}
+
+.block {
+	&-description {
+		line-height: 1.75;
+	}
+	&-separator {
+		width: 50px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	
+	&:last-child &-separator {
+		display: none!important;
+	}
+}
+
+.offcanvas-start {
+	z-index: 9999;
+}
+
+.navbar-brand {
+	display: none;
+}
+
+body.docs main {
+	h1 {
+		padding-bottom: 1rem;
+		margin-top: -1rem;
+		border-bottom: 1px solid #eee;
+		margin-bottom: 2rem;
+	}
+	h2 {
+		padding-top: 1.25rem;
+		padding-bottom: .75rem;
+	}
+	a.id {
+		text-decoration: none;
+		&::after {
+			content: '#';
+			opacity: 0;
+			transition: opacity ease 0.5s;
+		}
+		&:hover::after,
+		&:focus::after {
+			opacity: 1;
+		}
+	}
+	pre {
+		background: #6c757d;
+		color: #fff;
+		padding: 1rem;
+		border-radius: .25rem;
+	}
+	.sticky {
+		padding-bottom: 2rem;
+		margin-bottom: 2rem;
+		background-color: #f8f9fa;
+		@media (min-width: 576px) {
+			position: -webkit-sticky;
+			position: sticky;
+			height: 100vh;
+			top: 0;
+			overflow: auto;
+			padding-top: 3rem;
+			padding-bottom: 4rem;
+			margin-bottom: -3rem;
+			margin-top: -3rem;
+		}
+		&.collapse.show,
+		&.collapsing {
+			padding-left: 2rem;
+		}
+		&.collapse:not(.show) + .col-12 {
+			width: 100%!important;
+			padding-left: 2rem;
+		}
+	}
+	.collapse-button {
+		z-index: 1200;
+		margin-left: -1rem;
+		display: none;
+		width: auto;
+		@media (min-width: 576px) {
+			display: block;
+		}
+		.btn {
+			padding: 2rem 0.5rem;
+			//transform: translateX(-1rem);
+			.fa {
+				font-size: .75rem;
+			}
+			&.collapsed {
+				background-color: #f8f9fa;
+				.fa {
+					transform: rotateZ(180deg);
+				}
+			}
+		}
+	}
+	.nav-link {
+		padding: .15rem 0 .15rem 0;
+		font-size: .9rem;
+		line-height: 1.2rem;
+	}
+	blockquote {
+		padding: 1.25rem;
+		margin: 1.25rem 0;
+		border-left: .25rem solid;
+		border-radius: 0;
+		background-color: #f8f9fa;
+		border-color: #6c757d;
+		
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.navbar .container-fluid {
+	justify-content: flex-end;
+	padding-right: 0;
+}

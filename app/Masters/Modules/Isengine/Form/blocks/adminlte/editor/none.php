@@ -12,12 +12,12 @@ $data = $item['options'];
 
 $name = 'adminlte-form-editor-' . Strings::replace($item['name'], ['[', ']'], '_');
 
-$element -> addId($name);
-$element -> addClass('d-none');
+$element->addId($name);
+$element->addClass('d-none');
 
 ?>
 <div class="row">
 	<div class="col">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

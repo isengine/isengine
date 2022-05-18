@@ -9,7 +9,7 @@ use is\Helpers\Prepare;
 
 $content = null;
 
-Objects::each($this -> getData(), function($item, $key) use (&$content){
+Objects::each($this->getData(), function($item, $key) use (&$content){
 	$content .= '
 		<div class="testmonial-box-layout1">
 			<div class="item-img">

@@ -15,6 +15,6 @@ $item = $item[0];
 	<a class="ml-05 color-second" data-bs-toggle="modal" href="#mapModal" role="button">
 		<?= $data['button']; ?>
 	</a>
-	<?php $item -> print(); ?>
+	<?php $item->print(); ?>
 	<div class="form-text"><?= $data['description']; ?></div>
 </div>

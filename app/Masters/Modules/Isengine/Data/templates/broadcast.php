@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -14,22 +12,18 @@ use is\Model\Components\State;
 use is\Model\Masters\View;
 use is\Model\Masters\Database;
 
-// читаем
-
 $view = View::getInstance();
 $db = Database::getInstance();
 
-// код
+$db->collection('content');
+$db->driver->filter->addFilter('name', 'slider');
+$db->driver->filter->addFilter('parents', '+slider');
+$db->driver->filter->addFilter('type', '-settings');
+$db->launch();
 
-$db -> collection('content');
-$db -> driver -> filter -> addFilter('name', 'slider');
-$db -> driver -> filter -> addFilter('parents', '+slider');
-$db -> driver -> filter -> addFilter('type', '-settings');
-$db -> launch();
+$data = $db->data->getFirstData();
 
-$data = $db -> data -> getFirstData();
-
-$db -> clear();
+$db->clear();
 
 if (!System::typeIterable($data)) {
 	return;

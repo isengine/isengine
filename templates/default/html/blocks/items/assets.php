@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,46 +11,46 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
-
-// код
 
 // определяем место
 
-$state = $view -> get('state');
-$place = $state -> getData('place');
+$state = $view->get('state');
+$place = $state->getData('place');
 
 if ($place === 'head') {
-	$place = 'body';
+    $place = 'body';
 } elseif ($place === 'body') {
-	$place = 'ending';
+    $place = 'ending';
 } else {
-	$place = 'head';
+    $place = 'head';
 }
 
-$state -> addData('place', $place);
+$state->addData('place', $place);
 
 // делаем рендеринг
 
-$assets = $view -> get('state|settings:assets');
+$assets = $view->get('state|settings:assets');
 $array = !empty($assets[$place]) ? $assets[$place] : null;
 
-$page = Strings::join($view -> get('state|route'), ':');
-if (!$page) { $page = 'index'; }
-$special = $view -> get('special') -> search($page);
+$page = Strings::join($view->get('state|route'), ':');
+if (!$page) {
+    $page = 'index';
+}
+$special = $view->get('special')->search($page);
 
-Objects::each($special, function($item) use ($assets, $place){
-	$val = $place . ':' . $item;
-	return !empty($assets[$val]) ? $assets[$val] : null;
+Objects::each($special, function ($item) use ($assets, $place) {
+    $val = $place . ':' . $item;
+    return !empty($assets[$val]) ? $assets[$val] : null;
 });
 
 if (System::typeIterable($special)) {
-	$array = Objects::add($array ? $array : [], Objects::combine($special));
+    $array = Objects::add($array ? $array : [], Objects::combine($special));
 }
 
-if (!System::typeIterable($array)) { return; }
+if (!System::typeIterable($array)) {
+    return;
+}
 
 $array = Objects::clear($array, true);
 
@@ -60,11 +58,11 @@ $print = null;
 $fonts = null;
 
 foreach ($array as $item) {
-	$item = Strings::pairs($item);
-	$print .= $view -> get('render') -> launch($item[0], $item[1]);
-	if ($item[0] === 'fonts') {
-		$fonts = true;
-	}
+    $item = Strings::pairs($item);
+    $print .= $view->get('render')->launch($item[0], $item[1]);
+    if ($item[0] === 'fonts') {
+        $fonts = true;
+    }
 }
 unset($item);
 
@@ -74,7 +72,7 @@ unset($item);
 <?php
 
 if ($fonts) {
-	echo '<link rel="preconnect" href="https://fonts.gstatic.com">';
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com">';
 }
 
 echo $print;

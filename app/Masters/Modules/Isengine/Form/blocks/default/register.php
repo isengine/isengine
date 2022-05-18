@@ -10,10 +10,6 @@ $element = $item[0];
 $item = $item[1];
 $data = $item['options'];
 
-$name = 'ehop-form-login-' . $item['name'];
-
-$element -> addId($name);
-
 ?>
 <div class="mb-05">
 	<div>
@@ -22,5 +18,5 @@ $element -> addId($name);
 			(<?= $data['description']; ?>)
 		</span>
 	</div>
-	<?php $element -> print(); ?>
+	<?php $element->print(); ?>
 </div>

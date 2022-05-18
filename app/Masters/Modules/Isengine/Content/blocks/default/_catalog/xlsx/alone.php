@@ -12,16 +12,16 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 /*
-$sets = &$this -> settings;
-$instance = &$this -> instance;
+$sets = &$this->settings;
+$instance = &$this->instance;
 
 System::debug($item, '!q');
 ?>
 <div class="<?= Strings::join($sets['classes'], ' '); ?>">
-	<?= $view -> get('lang|title'); ?>
+	<?= $view->get('lang|title'); ?>
 	АДЫН АДЫН САПСЕМ АДЫН!
 </div>
 */
@@ -66,7 +66,7 @@ System::debug($item, '!q');
 		
 		<div class="item-info w-100">
 			<div class="item-image" is-data="image">
-				<?= $view -> get('tvars') -> launch($data['image']); ?>
+				<?= $view->get('tvars')->launch($data['image']); ?>
 			</div>
 		</div>
 		
@@ -96,7 +96,7 @@ System::debug($item, '!q');
 				</div>
 			<?php }); ?>
 			<div>
-				<a href="<?= $view -> get('state|url'); ?>#nav-tab" class="color-theme">
+				<a href="<?= $view->get('state|url'); ?>#nav-tab" class="color-theme">
 					Все характеристики
 				</a>
 			</div>

@@ -15,9 +15,9 @@ $view = View::getInstance();
 <div class="row">
 	<div class="col-12">
 		<div class="item-cost">
-			<h3 class="item-title title-bar-primary7"><?= $view -> get('lang|this:price'); ?></h3>
+			<h3 class="item-title title-bar-primary7"><?= $view->get('lang|this:price'); ?></h3>
 			<ul>
-				<?php Objects::each($this -> getData(), function($item, $key) { ?>
+				<?php Objects::each($this->getData(), function($item, $key) { ?>
 					<li><?= $key; ?><span><?= $item; ?></span></li>
 				<?php }); ?>
 			</ul>

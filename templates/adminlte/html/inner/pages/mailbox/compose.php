@@ -8,7 +8,7 @@ $view = View::getInstance();
 ?>
 <div class="container-fluid">
 <div class="row">
-	<?php $view -> get('block') -> launch('mail-nav'); ?>
+	<?php $view->get('block')->launch('mail-nav'); ?>
 	<div class="col-md-9">
 		<div class="card card-primary card-outline">
 			<div class="card-header">

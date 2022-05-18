@@ -24,12 +24,12 @@ if (!$collection) {
 	return;
 }
 
-$db -> collection($collection);
-$db -> launch();
+$db->collection($collection);
+$db->launch();
 
 // готовим родителей
 
-$parents = $db -> data -> map -> getData();
+$parents = $db->data->map->getData();
 
 function adminlteDbMap(&$array) {
 	foreach ($array as $key => &$item) {
@@ -47,8 +47,8 @@ function adminlteDbMap(&$array) {
 
 adminlteDbMap($parents);
 
-$view -> get('vars') -> set('collection', $collection);
-$view -> get('vars') -> set('parents', $parents);
+$view->get('vars')->set('collection', $collection);
+$view->get('vars')->set('parents', $parents);
 
 //System::debug($parents);
 unset($parents);
@@ -59,17 +59,17 @@ $parents = $_GET['parents'];
 //System::debug($parents);
 
 if ($parents) {
-	$db -> data -> addFilter('parents', '+' . Strings::replace($parents, ':', ':+'));
-	$db -> data -> filtration();
-	$db -> data -> leaveByList($db -> data -> getNames(), 'name');
+	$db->data->addFilter('parents', '+' . Strings::replace($parents, ':', ':+'));
+	$db->data->filtration();
+	$db->data->leaveByList($db->data->getNames(), 'name');
 }
 
-$view -> get('vars') -> set(
+$view->get('vars')->set(
 	'db',
-	Parser::toJson( Objects::reset($db -> data -> getData()) )
+	Parser::toJson( Objects::reset($db->data->getData()) )
 );
 
-//$v = $view -> get('vars') -> getData('db');
+//$v = $view->get('vars')->getData('db');
 //System::debug($v);
 
 // составляем все данные контента в формате json
@@ -78,9 +78,9 @@ $view -> get('vars') -> set(
 $content = [];
 $keys = [];
 
-Objects::each($db -> data -> getData(), function($item) use (&$content, &$keys, $collection) {
+Objects::each($db->data->getData(), function($item) use (&$content, &$keys, $collection) {
 	$data = [];
-	Objects::each($item -> getData(), function($i, $k) use (&$data, &$keys, $collection) {
+	Objects::each($item->getData(), function($i, $k) use (&$data, &$keys, $collection) {
 		$data['data-' . $k] = $i;
 		$keys['data-' . $k] = [
 			'name' => 'data-' . $k,
@@ -97,26 +97,26 @@ Objects::each($db -> data -> getData(), function($item) use (&$content, &$keys, 
 //System::debug($content);
 //System::debug($keys);
 
-$view -> get('vars') -> set('content', $content);
-$view -> get('vars') -> set('keys', Objects::values($keys));
+$view->get('vars')->set('content', $content);
+$view->get('vars')->set('keys', Objects::values($keys));
 
 /*
 $keys = [];
 
-Objects::each($db -> data -> getData(), function($item, $key) use (&$keys) {
-	$item = $item -> getData();
+Objects::each($db->data->getData(), function($item, $key) use (&$keys) {
+	$item = $item->getData();
 	if (System::typeOf($item, 'iterable')) {
 		//$keys = Objects::merge($keys, Objects::join(Objects::keys($item), null));
 		$keys = Objects::merge($keys, $item);
 	}
 });
 
-$view -> get('vars') -> set('keys', Objects::keys($keys));
+$view->get('vars')->set('keys', Objects::keys($keys));
 */
 
 // очищаем базу данных
 
-$db -> clear();
+$db->clear();
 
 // составляем массив колонок
 
@@ -184,6 +184,6 @@ $columns = '[
 	}
 ]';
 
-$view -> get('vars') -> set('columns', Parser::fromJson($columns));
+$view->get('vars')->set('columns', Parser::fromJson($columns));
 
 ?>

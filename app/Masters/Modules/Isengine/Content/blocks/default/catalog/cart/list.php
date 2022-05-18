@@ -35,7 +35,7 @@ $data = Objects::merge(
 		'tags' => null,
 		'link' => null
     ],
-    $item ? $item -> getData() : ['price' => true]
+    $item ? $item->getData() : ['price' => true]
 );
 
 ?>

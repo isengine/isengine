@@ -17,9 +17,9 @@ if (!$item) { return; }
 
 $globals = Globals::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
-$globals -> set('catalog', [ $item -> getKey('id') => [
+$globals->set('catalog', [ $item->getKey('id') => [
 	'title' => '<a href="' . $data['link'] . '">' . $data['title'] . '</a>',
 	'parents' => Strings::join(Objects::get(Objects::convert($data['name']), 1, 1, true), ', '),
 	'price' => $data['price'],

@@ -9,6 +9,4 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('module') -> launch('data', 'default:toasts');
-
-?>
+$view->get('module')->launch('data', 'default:toasts');

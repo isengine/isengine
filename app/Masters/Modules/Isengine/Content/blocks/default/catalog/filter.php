@@ -13,9 +13,9 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$sets = $this -> settings['filtration'];
+$sets = $this->settings['filtration'];
 
-$link = Strings::replace($this -> parents, ':', '/');
+$link = Strings::replace($this->parents, ':', '/');
 $link = '/' . ($link ? $link . '/' : null);
 
 ?>
@@ -40,11 +40,10 @@ $link = '/' . ($link ? $link . '/' : null);
 				'type' => 'service',
 				'readonly' => true,
 				'class' => 'none',
-				'value' => 
-					'parents:' . $this -> parents . 
-					'|page:' . $this -> navigate -> name_page . 
-					'|items:' . $this -> navigate -> name_items . 
-					'|sort:' . $this -> navigate -> name_sort
+				'value' =>  'parents:' . $this->parents
+					. '|page:' . $this->navigate->name_page
+					. '|items:' . $this->navigate->name_items
+					. '|sort:' . $this->navigate->name_sort
 				,
 				'options' => [
 					'default' => 'Принять',
@@ -66,7 +65,7 @@ $link = '/' . ($link ? $link . '/' : null);
 					$lang = $name;
 				}
 				
-				$get = $this -> filter -> getData('data:' . $name);
+				$get = $this->filter->getData('data:' . $name);
 				
 				if ($type === 'range') {
 					$get = Strings::split($get, '_');
@@ -83,7 +82,7 @@ $link = '/' . ($link ? $link . '/' : null);
 					'options' => [
 						'description' => $lang,
 						'block' => $item,
-						'value' => $this -> filter -> list[$name],
+						'value' => $this->filter->list[$name],
 						'data' => $get
 					]
 				];
@@ -105,7 +104,7 @@ $link = '/' . ($link ? $link . '/' : null);
 			// а не фильтров
 			// настройки rest здесь могут помочь задавать исключительно page, items, sort - т.е. навигацию
 			
-			$view -> get('module') -> launch('form', 'default:filter', '{"data":' . Parser::toJson($data) . '}');
+			$view->get('module')->launch('form', 'default:filter', '{"data":' . Parser::toJson($data) . '}');
 			
 		?>
 	</div>

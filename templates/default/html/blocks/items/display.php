@@ -9,8 +9,4 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-// код
-
-$view -> get('display') -> printBuffer();
-
-?>
+$view->get('display')->printBuffer();

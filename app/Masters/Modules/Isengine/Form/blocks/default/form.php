@@ -11,6 +11,6 @@ $item = $item[0];
 
 ?>
 <div class="mb-1">
-	<?php $item -> print(); ?>
+	<?php $item->print(); ?>
 	<div class="form-text"><?= $data['description']; ?></div>
 </div>

@@ -10,7 +10,7 @@ use is\Helpers\Prepare;
 ?>
 <form class="faq-question-box">
 	<div class="row">
-		<?php Objects::each($this -> getData(), function($item) { ?>
+		<?php Objects::each($this->getData(), function($item) { ?>
 		<div class="form-group <?= $item['class']; ?>">
 			<?php if ($item['type'] === 'select') { ?>
 				<select class="select2" name="<?= $item['name']; ?>" data-error="<?= $item['error']; ?>"<?= $item['required'] ? ' required' : null; ?>>

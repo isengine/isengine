@@ -10,21 +10,21 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-//$view -> get('block') -> launch('custom:toasts-demo');
+//$view->get('block')->launch('custom:toasts-demo');
 
-//$view -> get('block') -> launch('alerts');
-$view -> get('block') -> launch('panel');
-$view -> get('block') -> launch('top');
+//$view->get('block')->launch('alerts');
+$view->get('block')->launch('panel');
+$view->get('block')->launch('top');
 
 ?>
 <header class="header pt-05 pb-1" id="header">
-	<section class="container">
+    <section class="container">
 <?php
 
-//$view -> get('block') -> launch('header:one');
-$view -> get('block') -> launch('header:first');
-$view -> get('block') -> launch('header:second');
+//$view->get('block')->launch('header:one');
+$view->get('block')->launch('header:first');
+$view->get('block')->launch('header:second');
 
 ?>
-	</section>
+    </section>
 </header>

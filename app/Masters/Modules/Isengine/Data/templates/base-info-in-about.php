@@ -7,7 +7,7 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-Objects::each($this -> getData(), function($item) {
+Objects::each($this->getData(), function($item) {
 ?>
 	<div class="col-md-6 col-12">
 		<div class="about-box-layout4">

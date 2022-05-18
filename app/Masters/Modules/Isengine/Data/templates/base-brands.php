@@ -7,8 +7,8 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Local;
 
-$list = Local::search(DI . Strings::replace($this -> getData('path'), ':', DS) . DS, ['return' => 'files', 'merge' => true]);
-$path = Strings::replace($this -> getData('path'), ':', '/');
+$list = Local::list(DI . Strings::replace($this->getData('path'), ':', DS) . DS, ['return' => 'files', 'merge' => true]);
+$path = Strings::replace($this->getData('path'), ':', '/');
 $content = null;
 
 Objects::each($list, function($item) use (&$content, $path){

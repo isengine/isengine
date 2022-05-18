@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -14,22 +12,18 @@ use is\Components\Router;
 use is\Components\Config;
 use is\Masters\View;
 
-// читаем
-
 $router = Router::getInstance();
 $view = View::getInstance();
 
-$route = Strings::join($view -> get('state|path-to-page'), DS);
+$route = Strings::join($view->get('state|path-to-page'), DS);
 
 if (!$route) {
-	$config = Config::getInstance();
-	$index = $config -> get('router:index');
-	$route = $index ? $index : 'index';
-	unset($config, $index);
+    $config = Config::getInstance();
+    $index = $config->get('router:index');
+    $route = $index ? $index : 'index';
+    unset($config, $index);
 }
 
-if (!$view -> get('page') -> launch($route . '.' . $view -> get('state|lang'))) {
-	$view -> get('page') -> launch($route);
+if (!$view->get('page')->launch($route . '.' . $view->get('state|lang'))) {
+    $view->get('page')->launch($route);
 }
-
-?>

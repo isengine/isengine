@@ -24,7 +24,7 @@ class Editor extends Methods\Form {
 	
 	public function launch() {
 		
-		$data = $this -> getData();
+		$data = $this->getData();
 		
 		$names = ['ctime', 'mtime', 'dtime'];
 		
@@ -48,22 +48,22 @@ class Editor extends Methods\Form {
 		//System::debug($data);
 		
 		$db = Database::getInstance();
-		$db -> clear();
+		$db->clear();
 		
-		$db -> query('write');
-		$db -> collection($data['collection']);
-		$db -> driver -> setData($data);
-		$db -> launch();
+		$db->query('write');
+		$db->collection($data['collection']);
+		$db->driver->setData($data);
+		$db->launch();
 		
-		$result = $db -> driver -> success();
-		$error = $db -> driver -> getError();
+		$result = $db->driver->success();
+		$error = $db->driver->getError();
 		
-		$db -> clear();
+		$db->clear();
 		unset($db);
 		
 		if ($result) {
 			$path = '/adminlte/editor/?collection=' . $data['collection'] . '&parents=' . Strings::join($data['parents'], ':') . '&name=' . Strings::join($data['name'], ':');
-			$this -> reload($fields);
+			$this->reload($fields);
 		}
 		
 		System::debug($error);

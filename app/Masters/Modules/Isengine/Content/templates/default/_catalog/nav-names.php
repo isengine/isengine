@@ -8,15 +8,15 @@ use is\Helpers\Objects;
 use is\Masters\View;
 
 $view = View::getInstance();
-$instance = Strings::after($this -> instance, ':', null, true);
+$instance = Strings::after($this->instance, ':', null, true);
 
 $map = [];
-$exclude = $this -> get('settings')['exclude'];
+$exclude = $this->get('settings')['exclude'];
 
-$this -> getData() -> iterate(function($item) use (&$map, $exclude){
+$this->getData()->iterate(function($item) use (&$map, $exclude){
 	
-	$key = Strings::join($item -> getData('group'), ':');
-	$val = Strings::join($item -> getData('folder'), ' ');
+	$key = Strings::join($item->getData('group'), ':');
+	$val = Strings::join($item->getData('folder'), ' ');
 	
 	if (
 		$exclude &&

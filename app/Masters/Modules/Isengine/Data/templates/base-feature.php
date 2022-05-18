@@ -12,6 +12,6 @@ use is\Masters\View;
 $view = View::getInstance(); 
 
 ?>
-<?php Objects::each($this -> getData(), function($item) { ?>
+<?php Objects::each($this->getData(), function($item) { ?>
 	<li><?= $item; ?></li>
 <?php }); ?>

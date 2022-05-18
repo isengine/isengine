@@ -11,5 +11,5 @@ $view = View::getInstance();
 
 ?>
 <div class="header-line mt-3 block relative">
-	<div class="header-point block relative w-0 h-0 ax"></div>
+    <div class="header-point block relative w-0 h-0 ax"></div>
 </div>

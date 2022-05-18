@@ -10,6 +10,6 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('module') -> launch('content', 'default:catalog:inner|default:catalog:cart', '{"id" : "cart"}', null);
+$view->get('module')->launch('content', 'default:catalog:inner|default:catalog:cart', '{"id" : "cart"}', null);
 
 ?>

@@ -11,45 +11,47 @@ $view = View::getInstance();
 
 // то, что мы убираем в любом случае из меню
 $exclude = [
-	'cart',
-	'catalog',
-	'create',
-	'login',
-	'profile',
-	'register',
-	'reset'
+    'cart',
+    'catalog',
+    'create',
+    'login',
+    'profile',
+    'register',
+    'reset'
 ];
 
 // то, что мы оставляем во втором столбце нижнего меню
 // это же убираем из верхнего меню
 // и из первого столбца нижнего меню
 $second = [
-	'covid',
-	'agreement',
-	'privacy',
-	'terms'
+    'covid',
+    'agreement',
+    'privacy',
+    'terms'
 ];
 
 // дальше код
 
 $result = [];
-$lang = $view -> get('lang|nav');
+$lang = $view->get('lang|nav');
 
-Objects::each($view -> get('state|structure'), function($item, $key) use ($lang, $exclude, &$result) {
-	if (!Objects::match($exclude, $key)) {
-		$result[$key] = $lang[$key];
-	}
+Objects::each($view->get('state|structure'), function ($item, $key) use ($lang, $exclude, &$result) {
+    if (
+        !Objects::match($exclude, $key)
+        && !empty($lang[$key])
+    ) {
+        $result[$key] = $lang[$key];
+        //$result[$key] = !empty($lang[$key]) ? $lang[$key] : $key;
+    }
 }, true);
 
 $first = Objects::removeByIndex($result, $second);
 $second = Objects::removeByIndex($result, Objects::keys($first));
 
-$view -> get('vars') -> set('nav', [
-	$result,
-	$first,
-	$second
+$view->get('vars')->set('nav', [
+    $result,
+    $first,
+    $second
 ]);
 
-//System::debug($view -> get('vars'));
-
-?>
+//System::debug($view->get('vars'));

@@ -11,5 +11,4 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$this -> printForm();
-?>
+$this->printForm();

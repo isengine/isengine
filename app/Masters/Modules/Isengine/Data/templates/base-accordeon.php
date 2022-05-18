@@ -11,7 +11,7 @@ $class = ['One', 'Two', 'Three', 'Four', 'Five'];
 
 ?>
 <div class="panel-group" id="accordion">
-	<?php Objects::each($this -> getData(), function($item, $key, $pos) use ($class) { ?>
+	<?php Objects::each($this->getData(), function($item, $key, $pos) use ($class) { ?>
 	<div class="panel panel-default">
 		<div class="panel-heading<?= $pos === 'first' || $pos === 'alone' ? ' active' : null; ?>">
 			<div class="panel-title">

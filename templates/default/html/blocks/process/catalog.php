@@ -9,9 +9,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-if (Objects::match($view -> get('vars|special'), 'catalog')) {
-	// объединяем информацию из двух баз данных
-	$view -> get('module') -> launch('content', 'default:catalog:xlsx|default:catalog:combine');
+if (Objects::match($view->get('vars|special'), 'catalog')) {
+    // объединяем информацию из двух баз данных
+    $view->get('module')->launch('content', 'default:catalog:xlsx|default:catalog:combine');
 }
-
-?>

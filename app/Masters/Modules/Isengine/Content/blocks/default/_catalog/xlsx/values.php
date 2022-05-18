@@ -11,11 +11,11 @@ use is\Helpers\Paths;
 
 if (!$item) { return; }
 
-$data = $item -> getData();
+$data = $item->getData();
 
-$name = $item -> getEntryKey('name');
-$parents = Strings::join($item -> getEntryKey('parents'), '/');
-$id = ($parents ? Strings::join($item -> getEntryKey('parents'), ':') . ':' : null) . $name;
+$name = $item->getEntryKey('name');
+$parents = Strings::join($item->getEntryKey('parents'), '/');
+$id = ($parents ? Strings::join($item->getEntryKey('parents'), ':') . ':' : null) . $name;
 $val = Sessions::getCookie(Prepare::urlencode($id));
 
 $data['price'] = System::set($data['price']) ? Objects::sort($data['price']) : [];
@@ -39,7 +39,7 @@ $image = '/content/catalog/' . Objects::first($data['folder'], 'value') . '/' . 
 // в системе все четко, проблема с загрузкой картинок на самом деле
 // в библиотеке lazy, которая непонятно интерпретирует и загружает файл по ссылке
 
-$item -> setData([
+$item->setData([
 	'id' => $id,
 	'title' => $data['title'] . ($data['description'] ? ', ' . $data['description'] : null),
 	'img' => $image,

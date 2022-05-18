@@ -7,14 +7,14 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$len = Objects::len($this -> getData());
+$len = Objects::len($this->getData());
 $len = $len ? round(12 / $len) : 12;
 
 ?>
 <section class="call-to-action-wrap-layout3">
 	<div class="container">
 		<div class="row">
-			<?php Objects::each($this -> getData(), function($item) use ($len) { ?>
+			<?php Objects::each($this->getData(), function($item) use ($len) { ?>
 				<div class="col-lg-<?= $len; ?> col-12">
 					<div class="call-to-action-box-layout3">
 						<div class="single-item">

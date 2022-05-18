@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,11 +10,7 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
-
-// код
 
 /*
 media="(orientation: portrait)"
@@ -25,13 +19,15 @@ media="print" для печати и для режима "для слабови�
 */
 
 $counters = [
-	$view -> get('state|settings:webmaster:google:ga-analytics'),
-	$view -> get('state|settings:webmaster:google:aw-ads'),
-	$view -> get('state|settings:webmaster:google:dc-floodlight')
+    $view->get('state|settings:webmaster:google:ga-analytics'),
+    $view->get('state|settings:webmaster:google:aw-ads'),
+    $view->get('state|settings:webmaster:google:dc-floodlight')
 ];
 $counters = Objects::clear($counters);
 
-if (!System::typeIterable($counters)) { return; }
+if (!System::typeIterable($counters)) {
+    return;
+}
 
 $counter = Objects::first($counters, 'value');
 
@@ -40,15 +36,15 @@ $counter = Objects::first($counters, 'value');
 <!-- Global site tag (gtag.js) - Google Analytics, Ads and Floodlight -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $counter; ?>"></script>
 <script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    
 <?php
 foreach ($counters as $item) {
-?>
-	gtag('config', '<?= $item; ?>');
-<?php
+    ?>
+    gtag('config', '<?= $item; ?>');
+    <?php
 }
 unset($item);
 ?>

@@ -21,30 +21,30 @@ $view = View::getInstance();
 $state = State::getInstance();
 $config = Config::getInstance();
 
-$lang = $view -> get('state|lang');
-$real = $view -> get('state|real');
-$previuos = $view -> get('state|previous');
-$mail = $view -> get('lang|information:email:0');
+$lang = $view->get('state|lang');
+$real = $view->get('state|real');
+$previuos = $view->get('state|previous');
+$mail = $view->get('lang|information:email:0');
 
 $error = [
-	'name' => Sessions::code($state -> get('error')),
-	'code' => $state -> get('error'),
-	'lang' => Prepare::upperFirst($view -> get('lang|common:error'))
+	'name' => Sessions::code($state->get('error')),
+	'code' => $state->get('error'),
+	'lang' => Prepare::upperFirst($view->get('lang|common:error'))
 ];
 
 require_once $real . 'html' . DS . 'blocks' . DS . 'prepare.php';
 
-$view -> get('block') -> launch('items:html', 'default', null);
+$view->get('block')->launch('items:html', 'default', null);
 
 ?>
 <head>
 <?php
 	
-	$view -> get('block') -> launch('meta:default', 'default', null);
-	$view -> get('block') -> launch('items:assets', 'default', null);
+	$view->get('block')->launch('meta:default', 'default', null);
+	$view->get('block')->launch('items:assets', 'default', null);
 	
 ?>
-	<title><?= $view -> get('lang|title') . ' | ' . $error['lang'] . ' ' . $error['code']; ?></title>
+	<title><?= $view->get('lang|title') . ' | ' . $error['lang'] . ' ' . $error['code']; ?></title>
 </head>
 <body>
 
@@ -60,7 +60,7 @@ $view -> get('block') -> launch('items:html', 'default', null);
 	
 </div>
 
-<!-- <?= $state -> get('reason'); ?> -->
+<!-- <?= $state->get('reason'); ?> -->
 
 </body>
 </html>

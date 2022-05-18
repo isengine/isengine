@@ -14,12 +14,12 @@ $view = View::getInstance();
 ?>
 <hr>
 <div class="h3 py-1">
-	Оформление заказа
+    Оформление заказа
 </div>
 <?php
-$this -> printForm();
+$this->printForm();
 
-$view -> get('display') -> addBuffer('
+$view->get('display')->addBuffer('
 <script>
 
 $("#form-order .item-store").each(function(i){

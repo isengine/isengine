@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,21 +11,19 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
-
-// код
 
 // делаем прелоад
 
-$array = $view -> get('state|settings:preload');
+$array = $view->get('state|settings:preload');
 $print = null;
 
-if (!System::typeIterable($array)) { return; }
+if (!System::typeIterable($array)) {
+    return;
+}
 
 foreach ($array as $item) {
-	$print .= $view -> get('render') -> launch('preload', $item);
+    $print .= $view->get('render')->launch('preload', $item);
 }
 unset($item);
 

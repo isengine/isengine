@@ -11,10 +11,10 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$button = $view -> get('lang|this:team:button:action');
+$button = $view->get('lang|this:team:button:action');
 $content = null;
 
-Objects::each($this -> getData(), function($item) use (&$content, $button){
+Objects::each($this->getData(), function($item) use (&$content, $button){
 	$content .= '
 		<div class="team-box-layout4">
 			<div class="item-img">
@@ -44,8 +44,8 @@ Objects::each($this -> getData(), function($item) use (&$content, $button){
 	<img class="right-img img-fluid" src="/img/team/figure-bottom-right.png" alt="figure">
 	<div class="container">
 		<div class="section-heading heading-dark text-left heading-layout1">
-			<h2><?= $view -> get('lang|this:team:title'); ?></h2>
-			<p><?= $view -> get('lang|this:team:description'); ?></p>
+			<h2><?= $view->get('lang|this:team:title'); ?></h2>
+			<p><?= $view->get('lang|this:team:description'); ?></p>
 			<div id="owl-nav2" class="owl-nav-layout1">
 				<span class="rt-prev">
 					<i class="fas fa-chevron-left"></i>

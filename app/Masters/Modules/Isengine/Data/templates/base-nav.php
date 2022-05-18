@@ -10,13 +10,13 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$lang = $view -> get('lang|this:nav');
+$lang = $view->get('lang|this:nav');
 
 ?>
 <nav id="dropdown">
 	<ul>
 		<?php
-			Objects::each($this -> getData(), function($item, $key) use ($lang) {
+			Objects::each($this->getData(), function($item, $key) use ($lang) {
 				$it = System::typeOf($item, 'iterable');
 		?>
 			

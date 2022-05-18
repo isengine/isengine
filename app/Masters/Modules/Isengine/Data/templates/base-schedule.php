@@ -11,17 +11,17 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$button = $this -> getData()['button'];
-$table = $this -> getData()['table'];
-$build = $this -> getData()['build'];
-$cset = $this -> getData()['content'];
+$button = $this->getData()['button'];
+$table = $this->getData()['table'];
+$build = $this->getData()['build'];
+$cset = $this->getData()['content'];
 
-$x_count = $this -> getData()['table']['x']['count'];
-if ( $this -> getData()['table']['y'] ) {
+$x_count = $this->getData()['table']['x']['count'];
+if ( $this->getData()['table']['y'] ) {
 	$x_count++;
 }
 
-$y_count = $this -> getData()['table']['y']['count'];
+$y_count = $this->getData()['table']['y']['count'];
 
 $head = null;
 $content = null;
@@ -95,8 +95,8 @@ while ($y < $y_count) {
 <section class="class-schedule1">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2><?= $view -> get('lang|this:schedule:title'); ?></h2>
-			<p><?= $view -> get('lang|this:schedule:description'); ?></p>
+			<h2><?= $view->get('lang|this:schedule:title'); ?></h2>
+			<p><?= $view->get('lang|this:schedule:description'); ?></p>
 		</div>
 		<div class="row">
 			<div class="col-lg-12 col-md-12 col-sm-12">

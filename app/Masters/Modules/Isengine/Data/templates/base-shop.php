@@ -13,10 +13,10 @@ $view = View::getInstance();
 
 $content = null;
 
-$this -> reverseData();
-$this -> reduceData(0, 10);
+$this->reverseData();
+$this->reduceData(0, 10);
 
-Objects::each($this -> getData(), function($item) use (&$content){
+Objects::each($this->getData(), function($item) use (&$content){
 	$data = $item['data'];
 	$rating = Strings::multiply('<div class="rate-item"><i class="fas fa-star"></i></div>', $data['rating'] + 1);
 	$content .= '
@@ -57,8 +57,8 @@ Objects::each($this -> getData(), function($item) use (&$content){
 <section class="shop-wrap-layout1 bg-light-primary100">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2 class="item-title"><?= $view -> get('lang|this:shop:title'); ?></h2>
-			<p><?= $view -> get('lang|this:shop:description'); ?></p>
+			<h2 class="item-title"><?= $view->get('lang|this:shop:title'); ?></h2>
+			<p><?= $view->get('lang|this:shop:description'); ?></p>
 		</div>
 		<div class="rc-carousel dot-control-layout3"
 			data-loop="true"

@@ -9,7 +9,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$map = $this -> getData() -> map -> parents['catalog'];
+$map = $this->getData()->map->parents['catalog'];
 
 if (!System::typeOf($map, 'iterable')) {
 	return;

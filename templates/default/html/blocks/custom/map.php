@@ -12,14 +12,14 @@ $view = View::getInstance();
 ?>
 
 <h3 class="color-second align-center mt-3 mb-2 text-uppercase">
-	НАШ АДРЕС
+    НАШ АДРЕС
 </h3>
 
 <p class="fs-1 align-center mb-2">
-	<?= $view -> get('lang|information:address'); ?>
+    <?= $view->get('lang|information:address'); ?>
 </p>
 
 <div style="height: 500px;">
-	<?php $view -> get('module') -> launch('map', 'default:map'); ?>
+    <?php $view->get('module')->launch('map', 'default:map'); ?>
 </div>
 

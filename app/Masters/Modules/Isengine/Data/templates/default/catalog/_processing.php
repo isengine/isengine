@@ -11,34 +11,32 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$this -> data = isMenuProcessing($this -> data);
+$this->data = isMenuProcessing($this->data);
 
-function isMenuProcessing($menu) {
-	Objects::each($menu, function($value, $key) {
-		
-		$name = System::typeOf($value, 'iterable') ? $key : $value;
-		$data = null;
-		
-		if (System::typeOf($value, 'iterable')) {
-			$data = isMenuProcessing($value);
-		}
-		
-		$array = [
-			'title' => $name,
-			'link' => true,
-			'data' => $data
-		];
-		
-		return $array;
-		
-	});
-	return Objects::reset($menu);
+function isMenuProcessing($menu)
+{
+    Objects::each($menu, function ($value, $key) {
+
+        $name = System::typeOf($value, 'iterable') ? $key : $value;
+        $data = null;
+
+        if (System::typeOf($value, 'iterable')) {
+            $data = isMenuProcessing($value);
+        }
+
+        $array = [
+            'title' => $name,
+            'link' => true,
+            'data' => $data
+        ];
+
+        return $array;
+    });
+    return Objects::reset($menu);
 }
 
-$view -> get('module') -> launch(
-	'data',
-	'default:menu:null|default:menu:menu',
-	Parser::toJson($this -> data)
+$view->get('module')->launch(
+    'data',
+    'default:menu:null|default:menu:menu',
+    Parser::toJson($this->data)
 );
-
-?>

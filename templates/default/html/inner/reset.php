@@ -10,11 +10,9 @@ use is\Masters\View;
 
 $user = User::getInstance();
 
-if ($user -> isset()) {
-	return;
+if ($user->isset()) {
+    return;
 } else {
-	$view = View::getInstance();
-	$view -> get('module') -> launch('form', 'default:reset');
+    $view = View::getInstance();
+    $view->get('module')->launch('form', 'default:reset');
 }
-
-?>

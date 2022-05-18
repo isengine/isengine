@@ -9,7 +9,5 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('module') -> launch('breadcrumbs', 'default:breadcrumbs', null);
-$view -> get('block') -> launch('custom:title', null, null);
-
-?>
+$view->get('module')->launch('breadcrumbs', 'default:breadcrumbs', null);
+$view->get('block')->launch('custom:title', null, null);

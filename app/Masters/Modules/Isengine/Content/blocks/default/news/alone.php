@@ -13,7 +13,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 ?>
 
@@ -43,14 +43,14 @@ $data = $item -> getData();
 </div>
 
 <?php
-$path = DI . 'content' . DS . Strings::replace($this -> navigate -> current, ':', DS) . DS;
+$path = DI . 'content' . DS . Strings::replace($this->navigate->current, ':', DS) . DS;
 if (Local::matchFolder($path)) {
 ?>
 <div class="col-12 pt-1">
 	<h3 class="pb-05">Галерея</h3>
 	<?php
-		$view -> get('module') -> launch('media', 'default', '{
-			"folder" : "content:' . $this -> navigate -> current . '",
+		$view->get('module')->launch('media', 'default', '{
+			"folder" : "content:' . $this->navigate->current . '",
 			"slider" : { "enable" : false },
 			"slideshow" : { "enable" : false },
 			"gallery" : { "enable" : true }
@@ -61,21 +61,21 @@ if (Local::matchFolder($path)) {
 
 <div class="col-12 pt-1">
 	<h3 class="pb-05">Навигация</h3>
-	<?php $this -> block('default:news:nav'); ?>
+	<?php $this->block('default:news:nav'); ?>
 </div>
 
 <?php
 $count = 2;
-if ($this -> navigate -> all > $count) {
+if ($this->navigate->all > $count) {
 ?>
 <div class="col-12 pt-1">
 	<h3 class="pb-05">Похожие</h3>
 	<div class="row">
 	<?php
-		$view -> get('module') -> launch('content', 'default:news:inner', '{
-			"parents" : "' . $this -> parents . '",
+		$view->get('module')->launch('content', 'default:news:inner', '{
+			"parents" : "' . $this->parents . '",
 			"exclude" : [
-				"' . $this -> navigate -> current . '"
+				"' . $this->navigate->current . '"
 			]
 		}');
 	?>

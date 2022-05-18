@@ -10,7 +10,7 @@ use is\Helpers\Prepare;
 $content = null;
 $images = null;
 
-Objects::each($this -> getData(), function($item) use (&$content, &$images){
+Objects::each($this->getData(), function($item) use (&$content, &$images){
 	
 	$images .= '
 		<div class="nav-item"><img src="' . $item['image'] . '" alt="brand" class="img-fluid"></div>

@@ -18,9 +18,9 @@ $globals = Globals::getInstance();
 		
 		<div class="row">
 		<?php
-			$this -> iterate([
+			$this->iterate([
 				'default:catalog:values',
-				$this -> type === 'alone' ? 'default:catalog:showroom:alone' : 'default:catalog:table'
+				$this->type === 'alone' ? 'default:catalog:showroom:alone' : 'default:catalog:table'
 			]);
 		?>
 		</div>
@@ -30,11 +30,11 @@ $globals = Globals::getInstance();
 </div>
 <?php
 
-if ($this -> type === 'alone') {
+if ($this->type === 'alone') {
 	return;
 }
 
-$globals -> set('catalog-settings', '[
+$globals->set('catalog-settings', '[
 	{
 		"name" : "title",
 		"title" : "Название",

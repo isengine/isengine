@@ -6,7 +6,7 @@ use is\Masters\View;
 $view = View::getInstance();
 
 ?>
-<nav class="main-header navbar navbar-expand <?= $view -> get('vars|adminlte:layout:darkmode') ? 'navbar-dark' : 'navbar-white navbar-light'; ?>">
+<nav class="main-header navbar navbar-expand <?= $view->get('vars|adminlte:layout:darkmode') ? 'navbar-dark' : 'navbar-white navbar-light'; ?>">
 	
 	<ul class="navbar-nav">
 		<li class="nav-item">
@@ -19,7 +19,7 @@ $view = View::getInstance();
 			<a href="/" class="nav-link">Site</a>
 		</li>
 		<li class="nav-item d-none d-sm-inline-block">
-			<a href="/api/eshop/logout/" class="nav-link">Logout</a>
+			<a href="/api/defaults/logout/" class="nav-link">Logout</a>
 		</li>
 	</ul>
 
@@ -140,7 +140,7 @@ $view = View::getInstance();
 			</a>
 		</li>
 		
-		<?php if ($view -> get('vars|adminlte:customizable')) { ?>
+		<?php if ($view->get('vars|adminlte:customizable')) { ?>
 		<li class="nav-item">
 			<a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
 				<i class="fas fa-th-large"></i>

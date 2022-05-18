@@ -10,7 +10,7 @@ $view = View::getInstance();
         <!-- row -->
         <div class="row">
           <div class="col-12">
-			<?php $view -> get('block') -> launch('widgets:charts:inline:jquery-knob'); ?>
+			<?php $view->get('block')->launch('widgets:charts:inline:jquery-knob'); ?>
           </div>
           <!-- /.col -->
         </div>
@@ -18,7 +18,7 @@ $view = View::getInstance();
 
         <div class="row">
           <div class="col-12">
-			<?php $view -> get('block') -> launch('widgets:charts:inline:jquery-knob-different-sizes'); ?>
+			<?php $view->get('block')->launch('widgets:charts:inline:jquery-knob-different-sizes'); ?>
           </div>
           <!-- /.col -->
         </div>

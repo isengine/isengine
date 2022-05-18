@@ -23,7 +23,7 @@ class Getitems extends Methods\Form {
 	
 	public function launch() {
 		
-		$path = $this -> getData('path');
+		$path = $this->getData('path');
 		
 		if (!$path) {
 			exit;
@@ -32,7 +32,7 @@ class Getitems extends Methods\Form {
 		$real = DI . Paths::toReal($path) . DS;
 		$url = '/' . Paths::toUrl($path) . '/';
 		
-		$local = Local::search($real, [
+		$local = Local::list($real, [
 			'merge' => true,
 			'subfolders' => false
 		]);

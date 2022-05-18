@@ -12,5 +12,5 @@ $view = View::getInstance();
 
 ?>
 <section class="cart row">
-<?php $view -> get('module') -> launch('content', 'default:catalog:inner|default:catalog:cart', '{"id" : "order"}', null); ?>
+<?php $view->get('module')->launch('content', 'default:catalog:inner|default:catalog:cart', '{"id" : "order"}', null); ?>
 </section>

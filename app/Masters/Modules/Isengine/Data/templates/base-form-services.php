@@ -9,7 +9,7 @@ use is\Helpers\Prepare;
 
 ?>
 <form>
-	<?php Objects::each($this -> getData(), function($item) { ?>
+	<?php Objects::each($this->getData(), function($item) { ?>
 	<div class="form-group">
 		<?php if ($item['icon']) { ?>
 			<i class="<?= $item['icon']; ?>"></i>

@@ -11,15 +11,15 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$button = $view -> get('lang|this:services:button:carousel');
+$button = $view->get('lang|this:services:button:carousel');
 
 ?>
 <section class="departments-wrap-layout2 bg-light-secondary100">
 	<img class="left-img img-fluid" src="/img/services/background-carousel.png" alt="figure">
 	<div class="container">
 		<div class="section-heading heading-dark text-left heading-layout1">
-			<h2><?= $view -> get('lang|this:services:title'); ?></h2>
-			<p><?= $view -> get('lang|this:services:description'); ?></p>
+			<h2><?= $view->get('lang|this:services:title'); ?></h2>
+			<p><?= $view->get('lang|this:services:description'); ?></p>
 			<div id="owl-nav1" class="owl-nav-layout1">
 				<span class="rt-prev">
 					<i class="fas fa-chevron-left"></i>
@@ -59,7 +59,7 @@ $button = $view -> get('lang|this:services:button:carousel');
 			data-r-extra-large-nav="false"
 			data-r-extra-large-dots="false"
 		>
-		<?php Objects::each($this -> getData(), function($item) use ($button) { ?>
+		<?php Objects::each($this->getData(), function($item) use ($button) { ?>
 			<div class="departments-box-layout2">
 				<span class="departments-sl"><?= $item['number']['value']; ?></span>
 				<div class="item-icon">

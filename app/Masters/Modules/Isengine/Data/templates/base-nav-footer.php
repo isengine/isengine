@@ -10,10 +10,10 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$lang = $view -> get('lang|this:nav:footer');
+$lang = $view->get('lang|this:nav:footer');
 
 ?>
-<?php Objects::each($this -> getData(), function($item, $key) use ($lang) { ?>
+<?php Objects::each($this->getData(), function($item, $key) use ($lang) { ?>
 	<div class="single-item col-lg-3 col-md-6 col-12">
 		<div class="footer-box">
 			<div class="footer-header">

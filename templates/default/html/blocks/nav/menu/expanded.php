@@ -11,5 +11,5 @@ $view = View::getInstance();
 
 ?>
 <ul class="navbar nav m-0 p-0">
-	<?php $view -> get('block') -> launch('nav:menu:items'); ?>
+    <?php $view->get('block')->launch('nav:menu:items'); ?>
 </ul>

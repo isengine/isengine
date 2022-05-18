@@ -13,7 +13,7 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$data = $item -> getData();
+$data = $item->getData();
 
 ?>
 
@@ -42,7 +42,7 @@ $data = $item -> getData();
 			</div>
 			
 			<div class="col-auto">
-				<?php $this -> block('default:catalog:navigate:alone'); ?>
+				<?php $this->block('default:catalog:navigate:alone'); ?>
 			</div>
 			
 		</div>
@@ -101,7 +101,7 @@ $data = $item -> getData();
 				Характеристики
 			</div>
 			
-			<?php Objects::each(Objects::get($this -> settings['filtration']['lang'], 0, 3), function($item, $key) use ($data) { ?>
+			<?php Objects::each(Objects::get($this->settings['filtration']['lang'], 0, 3), function($item, $key) use ($data) { ?>
 			<div class="pb-025">
 				<span class="color-gray-6 pr-025">
 					<?= $item; ?>:
@@ -111,7 +111,7 @@ $data = $item -> getData();
 			<?php }); ?>
 			
 			<div>
-				<a href="<?= $view -> get('state|url'); ?>#nav-tab" class="color-theme">
+				<a href="<?= $view->get('state|url'); ?>#nav-tab" class="color-theme">
 					Все характеристики
 				</a>
 			</div>
@@ -200,7 +200,7 @@ $data = $item -> getData();
 			aria-labelledby="nav-tab-1">
 				
 				<div class="container">
-				<?php Objects::each($this -> settings['filtration']['lang'], function($item, $key) use ($data) { ?>
+				<?php Objects::each($this->settings['filtration']['lang'], function($item, $key) use ($data) { ?>
 					<div class="row pb-025">
 						<div class="col-6 md-col-4">
 							<span class="color-gray-6">
@@ -223,7 +223,7 @@ $data = $item -> getData();
 				
 				<?php
 					Objects::each($data['gallery'], function($item) use ($view, $data) {
-						echo $view -> get('tvars') -> launch( '{img|' . $item . ':/content/items/default.jpg:lazyload width-100 align-image-contain my-1:' . $data['title'] . '}' );
+						echo $view->get('tvars')->launch( '{img|' . $item . ':/content/items/default.jpg:lazyload width-100 align-image-contain my-1:' . $data['title'] . '}' );
 					});
 				?>
 				
@@ -247,14 +247,14 @@ $data = $item -> getData();
 
 <div class="row">
 	<?php
-		$path = DI . 'content' . DS . Strings::replace($this -> navigate -> current, ':', DS) . DS;
+		$path = DI . 'content' . DS . Strings::replace($this->navigate->current, ':', DS) . DS;
 		if (Local::matchFolder($path)) {
 	?>
 	<div class="col-12 pt-1">
 		<h3 class="pb-05">Галерея</h3>
 		<?php
-			$view -> get('module') -> launch('media', 'default', '{
-				"folder" : "content:' . $this -> navigate -> current . '",
+			$view->get('module')->launch('media', 'default', '{
+				"folder" : "content:' . $this->navigate->current . '",
 				"slider" : { "enable" : false },
 				"slideshow" : { "enable" : false },
 				"gallery" : { "enable" : true }
@@ -271,16 +271,16 @@ $data = $item -> getData();
 <div class="row">
 	<?php
 		$count = 4;
-		if ($this -> navigate -> all > $count) {
+		if ($this->navigate->all > $count) {
 	?>
 	<div class="col-12 pt-1">
 		<h3 class="pb-05">Похожие</h3>
 		<div class="row">
 		<?php
-			$view -> get('module') -> launch('content', 'default:catalog:inner|default:catalog:view:inner', '{
-				"parents" : "' . $this -> parents . '",
+			$view->get('module')->launch('content', 'default:catalog:inner|default:catalog:view:inner', '{
+				"parents" : "' . $this->parents . '",
 				"exclude" : [
-					"' . $this -> navigate -> current . '"
+					"' . $this->navigate->current . '"
 				],
 				"limit" : ' . $count . ',
 				"sort" : "random"

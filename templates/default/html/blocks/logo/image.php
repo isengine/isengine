@@ -11,5 +11,5 @@ $view = View::getInstance();
 
 ?>
 <a href="/">
-	<img class="xs-h-5 h-max-5 w-auto width-max-100" src="<?= $view -> get('lang|logo:0'); ?>" alt="<?= $view -> get('lang|title'); ?>">
+    <img class="xs-h-5 h-max-5 w-auto width-max-100" src="<?= $view->get('lang|logo:0'); ?>" alt="<?= $view->get('lang|title'); ?>">
 </a>

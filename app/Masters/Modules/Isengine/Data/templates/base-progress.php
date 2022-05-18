@@ -22,10 +22,10 @@ $view = View::getInstance();
 				<div class="row justify-content-end">
 					<div class="col-lg-6 col-sm-12 col-12">
 						<div class="item-content-inner inner-title-dark">
-							<h2 class="item-title"><?= $view -> get('lang|this:progress:title'); ?></h2>
-							<p><?= $view -> get('lang|this:progress:description'); ?></p>
+							<h2 class="item-title"><?= $view->get('lang|this:progress:title'); ?></h2>
+							<p><?= $view->get('lang|this:progress:description'); ?></p>
 							<div class="skill-layout1">
-								<?php Objects::each($this -> getData(), function($item, $key) { ?>
+								<?php Objects::each($this->getData(), function($item, $key) { ?>
 									<div class="progress">
 										<div class="lead"><?= $item['title']; ?></div>
 										<div style="width: <?= $item['value']; ?>%; visibility: visible; animation-duration: 1.5s; animation-delay: 0.<?= $key++; ?>s;" data-progress="<?= $item['value']; ?>%" class="progress-bar progress-bar-striped wow fadeInLeft animated">

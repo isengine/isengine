@@ -11,6 +11,6 @@ $view = View::getInstance();
 
 ?>
 <a href="/">
-	<div class="block h-auto xs-h-5 h-max-5 width-100 align-bg-contain align-bg-left" style="background-image:url('<?= $view -> get('lang|logo:0'); ?>');">
-	</div>
+    <div class="block h-auto xs-h-5 h-max-5 width-100 align-bg-contain align-bg-left" style="background-image:url('<?= $view->get('lang|logo:0'); ?>');">
+    </div>
 </a>

@@ -12,12 +12,12 @@ use is\Masters\View;
 $view = View::getInstance();
 
 $content = null;
-$author = $view -> get('lang|this:news:author');
+$author = $view->get('lang|this:news:author');
 
-$this -> reverseData();
-$this -> reduceData(0, 2);
+$this->reverseData();
+$this->reduceData(0, 2);
 
-Objects::each($this -> getData(), function($item) use (&$content, $author){
+Objects::each($this->getData(), function($item) use (&$content, $author){
 	$data = $item['data'];
 	$content .= '
 		<div class="blog-box-layout1">
@@ -32,7 +32,7 @@ Objects::each($this -> getData(), function($item) use (&$content, $author){
 
 ?>
 <div class="section-heading heading-dark heading-layout5">
-	<h2><?= $view -> get('lang|this:news:title'); ?></h2>
+	<h2><?= $view->get('lang|this:news:title'); ?></h2>
 </div>
 <?= $content; ?>
-<a class="blog-btn" href="/news1/"><?= $view -> get('lang|this:news:button:all'); ?></a>
+<a class="blog-btn" href="/news1/"><?= $view->get('lang|this:news:button:all'); ?></a>

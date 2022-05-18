@@ -7,17 +7,17 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$instance = $this -> get('instance');
+$instance = $this->get('instance');
 
 $tags = null;
 $content = null;
 
-Objects::each($this -> settings['tags'], function($item, $key, $position) use (&$tags, $instance){
+Objects::each($this->settings['tags'], function($item, $key, $position) use (&$tags, $instance){
 	$key = $position === 'first' ? '*' : '.' . $key;
 	$tags .= '<a href="#" class="' . ($position === 'first' ? 'current ' : null) . 'nav-item" data-filter="' . $key . '">' . $item . '</a>';
 });
 
-Objects::each($this -> getData(), function($item) use (&$content){
+Objects::each($this->getData(), function($item) use (&$content){
 	$content .= '
 		<div class="col-lg-4 col-md-6 col-12 ' . $item['tags'] . '">
 			<div class="gallery-box-layout1">

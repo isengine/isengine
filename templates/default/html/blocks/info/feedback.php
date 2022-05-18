@@ -11,5 +11,5 @@ $view = View::getInstance();
 
 ?>
 <a class="color-gray-8 color-gray-6-hover" data-bs-toggle="modal" href="#feedback" role="button">
-	<?= $view -> get('lang|common:feedback', 'upperFirst'); ?>
+    <?= $view->get('lang|common:feedback', 'upperFirst'); ?>
 </a>

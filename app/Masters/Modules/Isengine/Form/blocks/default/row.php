@@ -23,7 +23,7 @@ $item = $item[0];
 			<div class="form-text fs-1"><?= $data['description']; ?></div>
 		</div>
 		<div class="col pl-0">
-			<?php $item -> print(); ?>
+			<?php $item->print(); ?>
 		</div>
 	</div>
 </div>

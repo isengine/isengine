@@ -14,11 +14,11 @@ $view = View::getInstance();
 ?>
 <section class="both-side-half-bg">
 	<div class="single-item">
-		<?php $view -> get('module') -> launch('data', 'base-news|base-news-in-testimonials'); ?>
+		<?php $view->get('module')->launch('data', 'base-news|base-news-in-testimonials'); ?>
 	</div>
 	<div class="single-item bg-common" data-bg-image="/img/testimonial/background.jpg">
 		<div class="section-heading heading-light heading-layout5">
-			<h2><?= $view -> get('lang|this:testimonials:title'); ?></h2>
+			<h2><?= $view->get('lang|this:testimonials:title'); ?></h2>
 			<div id="owl-nav3" class="owl-nav-layout2">
 				<span class="rt-prev">
 					<i class="fas fa-chevron-left"></i>
@@ -58,7 +58,7 @@ $view = View::getInstance();
 			data-r-extra-large-nav="false"
 			data-r-extra-large-dots="false"
 		>
-			<?php Objects::each($this -> getData(), function($item) { ?>
+			<?php Objects::each($this->getData(), function($item) { ?>
 				<div class="item">
 					<div class="testmonial-box-layout2">
 						<h4 class="item-title"><?= $item['name']; ?> <span>/ <?= $item['sub']; ?></span></h4>

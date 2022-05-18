@@ -32,7 +32,7 @@ $(function () {
 		$(this).bootstrapSwitch('state', $(this).prop('checked'));
 	});
 	
-	var content = <?= Parser::toJson($view -> get('vars|content')); ?>;
+	var content = <?= Parser::toJson($view->get('vars|content')); ?>;
 	//console.log(collection);
 	
 	//var db = {
@@ -123,7 +123,7 @@ $(function () {
 			
 		},
 		
-		fields: <?= Parser::toJson(Objects::add($view -> get('vars|columns'), $view -> get('vars|keys'))); ?>
+		fields: <?= Parser::toJson(Objects::add($view->get('vars|columns'), $view->get('vars|keys'))); ?>
 		/*
 		data: db.clients,
 		controller: db,

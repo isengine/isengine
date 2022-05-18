@@ -11,14 +11,14 @@ $item = $item[0];
 
 $data = $options['data'];
 
-$item -> setTag('input');
-$item -> setClass('form-control');
-$item -> addCustom('value', $data);
+$item->setTag('input');
+$item->setClass('form-control');
+$item->addCustom('value', $data);
 
 ?>
 <div class="mb-05">
 	<div class="color-gray-6 py-05">
 		<?= $options['description']; ?>
 	</div>
-	<?php $item -> print(); ?>
+	<?php $item->print(); ?>
 </div>

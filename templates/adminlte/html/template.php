@@ -11,14 +11,14 @@ $view = View::getInstance();
 
 // код
 
-$view -> get('block') -> launch('variables', null, null);
+$view->get('block')->launch('variables', null, null);
 
-//$view -> get('block') -> launch('items:opening', 'default', null);
-$view -> get('block') -> launch('opening', null, null);
+//$view->get('block')->launch('items:opening', 'default', null);
+$view->get('block')->launch('opening', null, null);
 
-$view -> get('block') -> launch('items:routing', 'default', null);
+$view->get('block')->launch('items:routing', 'default', null);
 
-//$view -> get('block') -> launch('items:ending', 'default', null);
-$view -> get('block') -> launch('ending', null, null);
+//$view->get('block')->launch('items:ending', 'default', null);
+$view->get('block')->launch('ending', null, null);
 
 ?>

@@ -13,11 +13,11 @@ $data = $item['options'];
 
 $name = 'adminlte-form-editor-' . Strings::replace($item['name'], ['[', ']'], '_');
 
-$element -> addId($name);
+$element->addId($name);
 
 if ($item['value']) {
-	//$element -> addCustom('value', date('d.m.Y H:i:s', $item['value']));
-	$element -> addCustom(
+	//$element->addCustom('value', date('d.m.Y H:i:s', $item['value']));
+	$element->addCustom(
 		'value',
 		Datetimes::convert(
 			$item['value'],
@@ -37,6 +37,6 @@ if ($item['value']) {
 		<label for="<?= $name; ?>" class="col-form-label"><?= $data['title']; ?></label>
 	</div>
 	<div class="col d-table-cell">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,27 +10,23 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
+$h1 = $view->get('seo|h1');
+if (!$h1) {
+    return;
+}
 
-$h1 = $view -> get('seo|h1');
-if (!$h1) { return; }
-
-$class = $view -> get('state|settings:classes:h1');
-$style = $view -> get('state|settings:styles:h1');
+$class = $view->get('state|settings:classes:h1');
+$style = $view->get('state|settings:styles:h1');
 
 if ($h1 === true) {
-	$seo = $view -> get('seo|title');
-	$lang = $view -> get('lang|title');
-	$h1 = $seo . ($seo !== $lang ? ' ' . $lang : null);
-	unset($seo, $lang);
+    $seo = $view->get('seo|title');
+    $lang = $view->get('lang|title');
+    $h1 = $seo . ($seo !== $lang ? ' ' . $lang : null);
+    unset($seo, $lang);
 }
 
 echo '<h1' . ($class ? ' class="' . $class . '"' : null) . ($style ? ' style="' . $style . '"' : null) . '>' . $h1 . '</h1>';
 
 unset($class, $style, $h1);
-
-?>

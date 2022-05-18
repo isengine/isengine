@@ -11,8 +11,8 @@ $view = View::getInstance();
 
 ?>
 <div class="none md-block">
-	<?php $view -> get('block') -> launch('nav:menu:expanded'); ?>
+    <?php $view->get('block')->launch('nav:menu:expanded'); ?>
 </div>
 <div class="block md-none">
-	<?php $view -> get('block') -> launch('nav:menu:collapsed'); ?>
+    <?php $view->get('block')->launch('nav:menu:collapsed'); ?>
 </div>

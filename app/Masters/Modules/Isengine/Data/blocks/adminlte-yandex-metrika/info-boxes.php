@@ -6,8 +6,8 @@ use is\Helpers\System;
 use is\Helpers\Strings;
 use is\Helpers\Objects;
 
-$week = $this -> getData('week');
-$info = $this -> getData('info');
+$week = $this->getData('week');
+$info = $this->getData('info');
 
 ?>
 <div class="row">

@@ -6,7 +6,7 @@ use is\Helpers\System;
 use is\Helpers\Objects;
 use is\Helpers\Strings;
 
-$week = $this -> getData('week');
+$week = $this->getData('week');
 
 // общая статистика
 
@@ -18,11 +18,11 @@ Objects::each($week, function($item, $key, $pos) use (&$params) {
 });
 
 $ch = curl_init('https://api-metrika.yandex.net/stat/v1/data?' . urldecode(http_build_query([
-	'ids'        => $this -> getData('id'),
+	'ids'        => $this->getData('id'),
 	'metrics'    => $params,
 	'filters'    => 'ym:s:isRobot==\'No\''
 ])));
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $this -> getData('token')));
+curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: OAuth ' . $this->getData('token')));
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_HEADER, false);
@@ -53,6 +53,6 @@ Objects::each($res, function($val, $key) use (&$week) {
 	
 });
 
-$this -> setData('week', $week);
+$this->setData('week', $week);
 
 ?>

@@ -11,11 +11,11 @@ use is\Components\State;
 
 $state = State::getInstance();
 
-$cart = Parser::fromJson($state -> get('cart'));
+$cart = Parser::fromJson($state->get('cart'));
 
 $data = Objects::keys($cart);
-$this -> data -> leaveByList($data, 'name');
+$this->data->leaveByList($data, 'name');
 
-$this -> iterate(['default:catalog:xlsx:values', 'default:api']);
+$this->iterate(['default:catalog:xlsx:values', 'default:api']);
 
 ?>

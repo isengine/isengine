@@ -9,13 +9,13 @@ use is\Helpers\Sessions;
 use is\Helpers\Prepare;
 use is\Components\Globals;
 
-$data = $item ? $item -> getData() : ['price' => true];
+$data = $item ? $item->getData() : ['price' => true];
 
 $globals = Globals::getInstance();
 
-$total = $globals -> get('total');
+$total = $globals->get('total');
 $total += $data['total'];
-$globals -> set('total', $total);
-$globals -> set('order', [$data['name'] => $data]);
+$globals->set('total', $total);
+$globals->set('order', [$data['name'] => $data]);
 
 ?>

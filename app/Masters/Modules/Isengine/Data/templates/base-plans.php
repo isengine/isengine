@@ -11,11 +11,11 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$button = $view -> get('lang|this:plans:button');
+$button = $view->get('lang|this:plans:button');
 
 ?>
 <div class="row gutters-20">
-	<?php Objects::each($this -> getData(), function($item) use ($button) { ?>
+	<?php Objects::each($this->getData(), function($item) use ($button) { ?>
 		<div class="col-xl-3 col-lg-6 col-md-6 col-12">
 			<div class="pricing-box-layout1">
 				<h3><?= $item['title']; ?></h3>

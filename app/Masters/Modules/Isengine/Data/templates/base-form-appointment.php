@@ -10,7 +10,7 @@ use is\Helpers\Prepare;
 ?>
 <form>
 	<div class="row gutters-15">
-		<?php Objects::each($this -> getData(), function($item) { ?>
+		<?php Objects::each($this->getData(), function($item) { ?>
 		<div class="<?= $item['class-group']; ?> form-group">
 			<?php if ($item['icon']) { ?>
 				<i class="<?= $item['icon']; ?>"></i>

@@ -10,6 +10,6 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('vars') -> set('adminlte', $this -> getData());
+$view->get('vars')->set('adminlte', $this->getData());
 
 ?>

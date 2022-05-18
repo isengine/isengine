@@ -13,10 +13,10 @@ $view = View::getInstance();
 
 $content = null;
 
-$this -> reverseData();
-$this -> reduceData(0, 3);
+$this->reverseData();
+$this->reduceData(0, 3);
 
-Objects::each($this -> getData(), function($item) use (&$content){
+Objects::each($this->getData(), function($item) use (&$content){
 	$data = $item['data'];
 	$content .= '
 		<div class="single-item col-lg-4 col-md-12 col-12">
@@ -59,8 +59,8 @@ Objects::each($this -> getData(), function($item) use (&$content){
 <section class="blog-wrap-layout4 bg-light-secondary100">
 	<div class="container">
 		<div class="section-heading heading-dark text-center heading-layout1">
-			<h2><?= $view -> get('lang|this:news:title'); ?></h2>
-			<p><?= $view -> get('lang|this:news:description'); ?></p>
+			<h2><?= $view->get('lang|this:news:title'); ?></h2>
+			<p><?= $view->get('lang|this:news:description'); ?></p>
 		</div>
 		<div class="row">
 			<?= $content; ?>

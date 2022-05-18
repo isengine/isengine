@@ -8,6 +8,4 @@ use is\Helpers\Strings;
 
 //System::debug($this);
 
-$this -> printForm();
-
-?>
+$this->printForm();

@@ -10,25 +10,25 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-// System::debug($this -> navigate);
+// System::debug($this->navigate);
 // /news/page/2/
 // /news/page/2/items/15
 // /news/2/15
 // /news/?page=2&items=15
 
-$current = $this -> navigate -> current;
+$current = $this->navigate->current;
 
-$first = $this -> navigate -> first;
-$prev = $this -> navigate -> prev;
-$next = $this -> navigate -> next;
-$last = $this -> navigate -> last;
+$first = $this->navigate->first;
+$prev = $this->navigate->prev;
+$next = $this->navigate->next;
+$last = $this->navigate->last;
 
-$link = Objects::convert($this -> parents);
+$link = Objects::convert($this->parents);
 
 $query = null;
 $array = null;
-$page = $this -> navigate -> page;
-$rest = $this -> navigate -> rest;
+$page = $this->navigate->page;
+$rest = $this->navigate->rest;
 
 if ($rest) {
 	
@@ -46,15 +46,15 @@ if ($rest) {
 		$link[] = $rest;
 	}
 	
-	if ($this -> navigate -> keys) {
-		$link[] = $this -> navigate -> name_page;
+	if ($this->navigate->keys) {
+		$link[] = $this->navigate->name_page;
 	}
 	
 	$link[] = $page;
 	$array = Strings::join($link, '/');
 	
 } else {
-	$query = '?' . $this -> navigate -> name_page . '=' . $page;
+	$query = '?' . $this->navigate->name_page . '=' . $page;
 }
 
 $list = '/' . ($array ? $array . '/' : null) . '#' . Strings::replace($current, [':', ' '], ['-', '_']) . $query;

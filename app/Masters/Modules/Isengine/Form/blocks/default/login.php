@@ -10,9 +10,9 @@ $element = $item[0];
 $item = $item[1];
 $data = $item['options'];
 
-$name = 'ehop-form-login-' . $item['name'];
+$name = 'form-login-' . $item['name'];
 
-$element -> addId($name);
+$element->addId($name);
 
 ?>
 <div class="row justify-content-between align-items-center py-025">
@@ -20,6 +20,6 @@ $element -> addId($name);
 		<label for="<?= $name; ?>" class="col-form-label"><?= $data['description']; ?></label>
 	</div>
 	<div class="col xs-col-auto">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

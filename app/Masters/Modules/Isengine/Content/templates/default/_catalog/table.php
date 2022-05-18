@@ -9,16 +9,16 @@ use is\Helpers\Parser;
 use is\Masters\View;
 
 $view = View::getInstance();
-//$instance = Strings::after($this -> instance, ':', null, true);
+//$instance = Strings::after($this->instance, ':', null, true);
 
-//$data = $this -> getData() -> getData();
+//$data = $this->getData()->getData();
 //System::debug($data);
 
-if ($this -> type === 'alone') {
+if ($this->type === 'alone') {
 ?>
 <div class="col-12">
-	<div class="container-fluid <?= $this -> type; ?>" id="catalog">
-		<?php $this -> iterate(['default:catalog:xlsx:values', 'default:catalog:xlsx:' . $this -> type]); ?>
+	<div class="container-fluid <?= $this->type; ?>" id="catalog">
+		<?php $this->iterate(['default:catalog:xlsx:values', 'default:catalog:xlsx:' . $this->type]); ?>
 	</div>
 </div>
 <?php
@@ -61,13 +61,13 @@ $set = [
 $catalog = [];
 $image = '<img src="/content/catalog/default.jpg" class="lazyload w-100 align-image-contain">';
 
-Objects::each($this -> getData() -> getData(), function($item, $key) use (&$catalog, $image){
+Objects::each($this->getData()->getData(), function($item, $key) use (&$catalog, $image){
 	
-	$data = $item -> getData();
+	$data = $item->getData();
 	
-	$name = $item -> get('name');
-	$parents = $item -> get('parents');
-	$id = ($parents ? Strings::join($item -> getEntryKey('parents'), ':') . ':' : null) . $name;
+	$name = $item->get('name');
+	$parents = $item->get('parents');
+	$id = ($parents ? Strings::join($item->getEntryKey('parents'), ':') . ':' : null) . $name;
 	if (
 		System::typeOf($parents, 'iterable') &&
 		Objects::len($parents)
@@ -103,9 +103,9 @@ Objects::each($this -> getData() -> getData(), function($item, $key) use (&$cata
 	
 });
 
-//$view -> get('vars') -> set('json', Parser::toJson($json));
-$view -> get('vars') -> set('catalog', Parser::toJson($catalog));
-$view -> get('vars') -> set('catalog-settings', Parser::toJson($set));
+//$view->get('vars')->set('json', Parser::toJson($json));
+$view->get('vars')->set('catalog', Parser::toJson($catalog));
+$view->get('vars')->set('catalog-settings', Parser::toJson($set));
 
 ?>
 <div id="jsGrid"></div>

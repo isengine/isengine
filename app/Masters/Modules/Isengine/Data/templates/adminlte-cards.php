@@ -10,7 +10,7 @@ use is\Helpers\Prepare;
 ?>
 <div class="row">
 	<?php
-		Objects::each($this -> getData(), function($item) {
+		Objects::each($this->getData(), function($item) {
 			$f_refresh = null;
 			$f_maximize = null;
 			$f_collapse = null;

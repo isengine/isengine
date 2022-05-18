@@ -12,7 +12,7 @@ $data = $item['options'];
 
 $name = 'form-login-' . $item['name'];
 
-$element -> addId($name);
+$element->addId($name);
 
 ?>
 <div class="row justify-content-between align-items-center py-025">
@@ -22,6 +22,6 @@ $element -> addId($name);
 			<?= $data['description']; ?>
 		</label>
 		<?php } ?>
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

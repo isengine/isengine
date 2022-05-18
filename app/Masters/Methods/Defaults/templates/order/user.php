@@ -5,7 +5,6 @@ namespace is\Masters\Methods\Defaults;
 use is\Helpers\System;
 use is\Helpers\Strings;
 use is\Helpers\Objects;
-
 use is\Components\Globals;
 use is\Components\Language;
 
@@ -14,13 +13,18 @@ use is\Components\Language;
 $globals = Globals::getInstance();
 $lang = Language::getInstance();
 
-$message = $this -> message;
-$this -> message = null;
+$logo = $lang->get('logo:0');
+if (Strings::get($logo, 0, 1) === '/') {
+    $logo = System::server('domain') . $logo;
+}
+
+$message = $this->message;
+$this->message = null;
 
 $content = '<table class="order"><tbody>';
 
-Objects::each($globals -> get('order'), function($item) use (&$content){
-	$content .= '<tr style="border-bottom: solid 1px #d7d7d7;">
+Objects::each($globals->get('order'), function ($item) use (&$content) {
+    $content .= '<tr style="border-bottom: solid 1px #d7d7d7;">
 	<td><a target="blank" rel="noopener noreferrer" href="' . System::server('domain') . $item['link'] . '">' . $item['title'] . '</a></td>
 	<td>' . $item['value'] . '&nbsp;' . $item['units'] . '</td>
 	<td>' . $item['total'] . '&nbsp;руб</td>
@@ -35,18 +39,18 @@ $content .= '</tbody></table>
 			К оплате:
 		</td>
 		<td>
-			' . $globals -> get('total') . '&nbsp;руб.
+			' . $globals->get('total') . '&nbsp;руб.
 		</td>
 	</tr>
 </tbody></table>';
 
 $social = null;
 
-Objects::each($lang -> get('social'), function($item) use (&$social){
-	$social .= '<a href="' . $item['url'] . '" target="blank" rel="noopener noreferrer"><span>' . $item['name'] . '</span></a> ';
+Objects::each($lang->get('social'), function ($item) use (&$social) {
+    $social .= '<a href="' . $item['url'] . '" target="blank" rel="noopener noreferrer"><span>' . $item['name'] . '</span></a> ';
 });
 
-$this -> message = '<html>
+$this->message = '<html>
 <head>
 	<style>
 		img { display: block; width: 100%; border: 0; }
@@ -84,9 +88,9 @@ $this -> message = '<html>
 <div style="padding-bottom: 30px;">
 	<a href="' . System::server('domain') . ' " target="blank" rel="noopener noreferrer">
 		<img
-			src="' . $lang -> get('logo:0') . '"
-			alt="' . $lang -> get('title') . '"
-			title="' . $lang -> get('title') . '"
+			src="' . $logo . '"
+			alt="' . $lang->get('title') . '"
+			title="' . $lang->get('title') . '"
 			style="max-width: 30%;"
 		>
 	</a>
@@ -98,7 +102,7 @@ $this -> message = '<html>
 
 <div style="line-height: 1.5em;">
 	Благодарим Вас за заказ с сайта ' . System::server('host') . '<br>
-	Ваш заказ ' . $globals -> get('id') . ' принят в обработку.
+	Ваш заказ ' . $globals->get('id') . ' принят в обработку.
 </div>
 
 <div>
@@ -109,7 +113,7 @@ $this -> message = '<html>
 			Номер&nbsp;заказа:
 		</td>
 		<td>
-			' . $globals -> get('id') . '
+			' . $globals->get('id') . '
 		</td>
 	</tr>
 	<tr>
@@ -179,7 +183,7 @@ $this -> message = '<html>
 		<a href="' . System::server('domain') . '" target="blank" rel="noopener noreferrer">
 		<span>' . System::server('host') . '</span></a>. Данное письмо не требует ответа. 
 		<br>
-		' . $lang -> get('information:formname:0') . ' ' . $lang -> get('information:company') . '; ' . $lang -> get('information:postcode') . ', ' . $lang -> get('information:address') . '; ОГРН ' . $lang -> get('information:ogrn') . '.
+		' . $lang->get('information:formname:0') . ' ' . $lang->get('information:company') . '; ' . $lang->get('information:postcode') . ', ' . $lang->get('information:address') . '; ОГРН ' . $lang->get('information:ogrn') . '.
 		<p>
 			<a href="' . System::server('domain') . '/privacy/" target="blank" rel="noopener noreferrer">
 				<span>Политика конфиденциальности в отношении обработки персональных данных</span>
@@ -197,7 +201,7 @@ $this -> message = '<html>
 		</p>
 		<p>
 			<a href="' . System::server('domain') . '/contacts/" target="blank" rel="noopener noreferrer">
-				<span>Обратная вязь</span>
+				<span>Обратная связь</span>
 			</a>
 		</p>
 		<p>
@@ -211,5 +215,3 @@ $this -> message = '<html>
 </div>
 </body>
 </html>';
-
-?>

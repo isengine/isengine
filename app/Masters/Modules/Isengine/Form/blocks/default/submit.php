@@ -10,11 +10,7 @@ $element = $item[0];
 $item = $item[1];
 $data = $item['options'];
 
-$name = 'ehop-form-login-' . $item['name'];
-
-$element -> addId($name);
-
-$instance = Strings::after(Strings::after($this -> instance, ':', null, true), '-', null, true);
+$instance = Strings::after(Strings::after($this->instance, ':', null, true), '-', null, true);
 
 $forms = [
 	'login' => 'Войти',
@@ -40,6 +36,6 @@ $forms = [
 		</div>
 	</div>
 	<div class="col-auto">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

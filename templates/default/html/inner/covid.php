@@ -10,6 +10,4 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-$view -> get('block') -> launch('documents:covid');
-
-?>
+$view->get('block')->launch('documents:covid');

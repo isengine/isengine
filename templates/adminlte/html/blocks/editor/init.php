@@ -28,34 +28,38 @@ if (!$collection || !$name) {
 
 // читаем материал
 
-$db -> collection($collection);
+$db->collection($collection);
 if ($parents) {
-	$db -> driver -> filter -> addFilter('parents', '+' . Strings::replace($parents, ':', ':+'));
+	$db->driver->filter->addFilter('parents', '+' . Strings::replace($parents, ':', ':+'));
 }
-$db -> driver -> filter -> addFilter('name', $name);
-$db -> launch();
+$db->driver->filter->addFilter('name', $name);
+$db->launch();
 
-$view -> get('vars') -> set('collection', $collection);
-$view -> get('vars') -> set('parents', $parents);
+$view->get('vars')->set('collection', $collection);
+$view->get('vars')->set('parents', $parents);
 
-$content = $db -> data -> getData();
+$content = $db->data->getData();
 
-$view -> get('vars') -> set('db', $content);
-$view -> get('vars') -> set('content', Parser::toJson($content));
+$view->get('vars')->set('db', $content);
+$view->get('vars')->set('content', Parser::toJson($content));
 
-$db -> clear();
+$db->clear();
 
 // читаем настройки
 
-$db -> collection('adminlte');
-$db -> driver -> filter -> addFilter(
+$db->collection('adminlte');
+$db->driver->filter->addFilter(
 	'parents',
-	'+' . $collection . 
-	($parents ? ':+' . Strings::replace($parents, ':', ':+') : null)
+	'+' . $collection
+        . (
+            $parents
+            ? ':+' . Strings::replace($parents, ':', ':+')
+            : null
+        )
 );
 
-$db -> driver -> filter -> addFilter('name', 'settings');
-$db -> launch();
+$db->driver->filter->addFilter('name', 'settings');
+$db->launch();
 
 // сюда нужно добавить логику, которая будет работать так
 // читаем все настройки для коллекции
@@ -64,8 +68,8 @@ $db -> launch();
 // т.е. фильтруем по предыдущему родителю
 // и так до самого верха
 
-$view -> get('vars') -> set('columns', $db -> data -> getFirstData());
+$view->get('vars')->set('columns', $db->data->getFirstData());
 
-$db -> clear();
+$db->clear();
 
 ?>

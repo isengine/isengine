@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -12,18 +10,14 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
-
-// код
 
 ?>
 
 <!-- Twitter Card -->
 <!-- https://dev.twitter.com/docs/cards/validation/validator -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="<?= $view -> get('seo|title'); ?>" />
-<meta name="twitter:description" content="<?= $view -> get('seo|description'); ?>" />
-<meta name="twitter:url" content="<?= $view -> get('state|url'); ?>" />
-<meta name="twitter:image" content="<?= $view -> get('seo|image'); ?>" />
+<meta name="twitter:title" content="<?= $view->get('seo|title'); ?>" />
+<meta name="twitter:description" content="<?= $view->get('seo|description'); ?>" />
+<meta name="twitter:url" content="<?= $view->get('state|url'); ?>" />
+<meta name="twitter:image" content="<?= $view->get('seo|image'); ?>" />

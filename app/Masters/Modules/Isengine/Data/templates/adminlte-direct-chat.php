@@ -7,10 +7,10 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$classes = $this -> getData('classes');
-$user = $this -> getData('user');
-$contacts = $this -> getData('contacts');
-$chat = $this -> getData('chat');
+$classes = $this->getData('classes');
+$user = $this->getData('user');
+$contacts = $this->getData('contacts');
+$chat = $this->getData('chat');
 
 ?>
 <div class="card direct-chat <?= $classes['common']; ?>">

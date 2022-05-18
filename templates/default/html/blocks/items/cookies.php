@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,13 +11,7 @@ use is\Components\Display;
 use is\Components\Log;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 
-// код
-
-$view -> get('module') -> launch('data', 'cookie', null, null);
-//$view -> get('module') -> launch('data', 'modal', null, null);
-
-?>
+$view->get('module')->launch('data', 'cookie', null, null);
+//$view->get('module')->launch('data', 'modal', null, null);

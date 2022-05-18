@@ -7,7 +7,7 @@ use is\Helpers\Strings;
 use is\Helpers\Objects;
 use is\Helpers\Prepare;
 
-$map = $this -> getData();
+$map = $this->getData();
 
 if (!System::typeOf($map, 'iterable')) {
 	return;

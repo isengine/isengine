@@ -1,7 +1,5 @@
 <?php
 
-// Рабочее пространство имен
-
 namespace is;
 
 use is\Helpers\System;
@@ -13,50 +11,46 @@ use is\Components\Log;
 use is\Components\Uri;
 use is\Masters\View;
 
-// читаем
-
 $view = View::getInstance();
 $uri = Uri::getInstance();
 
-// код
-
-$data = $uri -> getData();
+$data = $uri->getData();
 $data_is = System::typeIterable($data);
 
-$lang = $view -> get('state|langs:others');
+$lang = $view->get('state|langs:others');
 $lang_is = System::typeIterable($lang);
 
-$domain = $view -> get('state|domain');
-$path = $uri -> path['string'];
+$domain = $view->get('state|domain');
+$path = $uri->path['string'];
 
 ?>
 
 <!-- Search manage links -->
 <?php
-if (Objects::len($view -> get('state|langs:list'))) {
-?>
+if (Objects::len($view->get('state|langs:list'))) {
+    ?>
 <link rel="canonical" href="<?= $domain . $path; ?>">
-<?php
-	if ($lang_is) {
-		foreach ($lang as $key => $item) {
-?>
+    <?php
+    if ($lang_is) {
+        foreach ($lang as $key => $item) {
+            ?>
 <link rel="alternate" href="<?= $domain . $key . '/' . $path; ?>" hreflang="<?= $key; ?>">
-<?php
-		}
-		unset($key, $item);
-	}
-?>
+            <?php
+        }
+        unset($key, $item);
+    }
+    ?>
 <link rel="alternate" href="<?= $domain . $path; ?>" hreflang="x-default" />
-<?php
+    <?php
 } elseif ($data_is) {
-?>
-<link rel="canonical" href="<?= $domain . $view -> get('state|path'); ?>">
-<?php
+    ?>
+<link rel="canonical" href="<?= $domain . $view->get('state|path'); ?>">
+    <?php
 }
 if ($data_is) {
-?>
+    ?>
 <meta name="robots" content="noindex">
-<?php
+    <?php
 }
 ?>
 <meta name="referrer" content="origin">

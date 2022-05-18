@@ -10,10 +10,10 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$button = $view -> get('lang|common:readmore', 'upper') . '<i class="fas fa-chevron-right"></i>';
+$button = $view->get('lang|common:readmore', 'upper') . '<i class="fas fa-chevron-right"></i>';
 
 ?>
-<?php Objects::each($this -> getData(), function($item) use ($button) { ?>
+<?php Objects::each($this->getData(), function($item) use ($button) { ?>
 <div class="widget widget-ad-area">
 	<div class="ad-wrap">
 		<img src="<?= $item['image']; ?>" alt="ad">

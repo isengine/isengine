@@ -12,8 +12,8 @@ $data = $item['options'];
 
 $name = 'adminlte-form-editor-' . Strings::replace($item['name'], ['[', ']'], '_');
 
-$element -> addId($name);
-$element -> addCustom('type', 'adminlte-form-editor-array');
+$element->addId($name);
+$element->addCustom('type', 'adminlte-form-editor-array');
 
 ?>
 <div class="row justify-content-between align-items-center d-table-row">
@@ -21,7 +21,7 @@ $element -> addCustom('type', 'adminlte-form-editor-array');
 		<label for="<?= $name; ?>" class="col-form-label"><?= $data['title']; ?></label>
 	</div>
 	<div class="col d-table-cell">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 		<button for="<?= $name; ?>" class="btn btn-secondary btn-sm mt-1 adminlte-form-editor-array-add" type="button">
 			<i class="fas fa-plus"></i>
 			Добавить

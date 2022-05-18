@@ -11,14 +11,14 @@ $view = View::getInstance();
 
 ?>
 <section class="top block fs-075 py-025" id="top">
-	<div class="container">
-		<div class="row align-items-center">
-			<div class="col">
-				<?php $view -> get('block') -> launch('nav:structure:line'); ?>
-			</div>
-			<div class="col-auto">
-				<?php $view -> get('block') -> launch('nav:contacts'); ?>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col">
+                <?php $view->get('block')->launch('nav:structure:line'); ?>
+            </div>
+            <div class="col-auto">
+                <?php $view->get('block')->launch('nav:contacts'); ?>
+            </div>
+        </div>
+    </div>
 </section>

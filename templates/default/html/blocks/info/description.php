@@ -11,5 +11,5 @@ $view = View::getInstance();
 
 ?>
 <span class="color-black fs-09">
-	<?= $view -> get('lang|description'); ?>
+    <?= $view->get('lang|description'); ?>
 </span>

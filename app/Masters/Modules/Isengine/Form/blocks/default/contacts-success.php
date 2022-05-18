@@ -20,7 +20,7 @@ $view = View::getInstance();
 	<p>
 		<a
 			class="btn bg-theme btn-lg mt-15"
-			href="<?= $view -> get('state|domain') . $view -> get('state|path') . '#' . $this -> settings['form']['id']; ?>"
+			href="<?= $view->get('state|domain') . $view->get('state|path') . '#' . $this->settings['form']['id']; ?>"
 			role="button"
 		>Написать</a>
 	</p>

@@ -11,11 +11,11 @@ $view = View::getInstance();
 
 ?>
 <span class="color-gray-6">
-	<?= $view -> get('lang|common:work', 'upperFirst'); ?>
+    <?= $view->get('lang|common:work', 'upperFirst'); ?>
 </span>
 <br>
 <?php
-	Objects::each($view -> get('lang|information:work'), function($item, $key){
-		echo ($key ? ', ' : null) . Strings::replace($item, ' ', '&nbsp;');
-	});
-?>
+    Objects::each($view->get('lang|information:work'), function ($item, $key) {
+        echo ($key ? ', ' : null) . Strings::replace($item, ' ', '&nbsp;');
+    });
+    ?>

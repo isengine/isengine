@@ -12,13 +12,13 @@ $view = View::getInstance();
 
 ?>
 <div class="row flex-column sm-flex-row align-items-center xs-align-items-end">
-	<div class="col-auto pl-0">
-		<?php $view -> get('block') -> launch('info:feedback'); ?>
-	</div>
-	<div class="col-auto pl-0">
-		<?php $view -> get('block') -> launch('info:phones'); ?>
-	</div>
-	<div class="col-auto pl-0">
-		<?php $view -> get('block') -> launch('info:social'); ?>
-	</div>
+    <div class="col-auto pl-0">
+        <?php $view->get('block')->launch('info:feedback'); ?>
+    </div>
+    <div class="col-auto pl-0">
+        <?php $view->get('block')->launch('info:phones'); ?>
+    </div>
+    <div class="col-auto pl-0">
+        <?php $view->get('block')->launch('info:social'); ?>
+    </div>
 </div>

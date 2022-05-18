@@ -23,7 +23,7 @@ class Putitems extends Methods\Form {
 	
 	public function launch() {
 		
-		$path = $this -> getData('path');
+		$path = $this->getData('path');
 		
 		if (!$path || empty($_FILES)) {
 			exit;
@@ -45,7 +45,7 @@ class Putitems extends Methods\Form {
 		
 		$url = '/' . Paths::toUrl($path) . '/';
 		
-		$local = Local::search($real, [
+		$local = Local::list($real, [
 			'merge' => true,
 			'subfolders' => false
 		]);

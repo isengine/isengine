@@ -9,7 +9,7 @@ use is\Helpers\Prepare;
 
 $content = null;
 
-Objects::each($this -> getData(), function($item, $key) use (&$content){
+Objects::each($this->getData(), function($item, $key) use (&$content){
 	
 	$content .= '
 		<div class="progress-box-layout2 col-md-4">

@@ -12,15 +12,15 @@ $view = View::getInstance();
 ?>
 
 <h3 class="color-second align-center pb-05">
-	Мы предоставляем нашим клиентам
-	<br>
-	услуги высочайшего уровня
+    Мы предоставляем нашим клиентам
+    <br>
+    услуги высочайшего уровня
 </h3>
 
 <p class="fs-15 align-center">
-	<?php $view -> get('block') -> launch('info:phones'); ?>
+    <?php $view->get('block')->launch('info:phones'); ?>
 </p>
 
 <p class="fs-15 align-center">
-	<?php $view -> get('block') -> launch('info:social'); ?>
+    <?php $view->get('block')->launch('info:social'); ?>
 </p>

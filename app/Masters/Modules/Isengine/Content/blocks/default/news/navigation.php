@@ -10,23 +10,23 @@ use is\Masters\View;
 
 $view = View::getInstance();
 
-// System::debug($this -> navigate);
+// System::debug($this->navigate);
 // /news/page/2/
 // /news/page/2/items/15
 // /news/2/15
 // /news/?page=2&items=15
 
-if ($this -> navigate -> pages < 2) {
+if ($this->navigate->pages < 2) {
 	return;
 }
 
-$link = Objects::convert($this -> parents);
+$link = Objects::convert($this->parents);
 $query = null;
 
-$page = $this -> navigate -> page;
-$pages = $this -> navigate -> pages;
+$page = $this->navigate->page;
+$pages = $this->navigate->pages;
 
-$rest = $this -> navigate -> rest;
+$rest = $this->navigate->rest;
 
 if ($rest) {
 	
@@ -44,12 +44,12 @@ if ($rest) {
 		$link[] = $rest;
 	}
 	
-	if ($this -> navigate -> keys) {
-		$link[] = $this -> navigate -> name_page;
+	if ($this->navigate->keys) {
+		$link[] = $this->navigate->name_page;
 	}
 	
 } else {
-	$query = '?' . $this -> navigate -> name_page . '=';
+	$query = '?' . $this->navigate->name_page . '=';
 }
 
 //<i class="bi bi-chevron-left fs-075"></i>

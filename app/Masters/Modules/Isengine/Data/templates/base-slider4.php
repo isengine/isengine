@@ -7,12 +7,12 @@ use is\Helpers\Objects;
 use is\Helpers\Strings;
 use is\Helpers\Prepare;
 
-$instance = $this -> get('instance');
+$instance = $this->get('instance');
 
 $images = null;
 $content = null;
 
-Objects::each($this -> getData(), function($item, $key) use (&$images, &$content, $instance){
+Objects::each($this->getData(), function($item, $key) use (&$images, &$content, $instance){
 	
 	$data = $item['data'];
 	$key++;

@@ -24,7 +24,7 @@ $view = View::getInstance();
 		</div>
 	</div>
 	<div class="card-body p-0">
-		<?php $view -> get('block') -> launch('database:settings:options'); ?>
-		<?php $view -> get('block') -> launch('database:settings:visible'); ?>
+		<?php $view->get('block')->launch('database:settings:options'); ?>
+		<?php $view->get('block')->launch('database:settings:visible'); ?>
 	</div>
 </div>

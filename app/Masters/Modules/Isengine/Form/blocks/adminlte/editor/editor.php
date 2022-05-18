@@ -12,11 +12,11 @@ $data = $item['options'];
 
 $name = 'adminlte-form-editor-' . Strings::replace($item['name'], ['[', ']'], '_');
 
-$element -> addId($name);
+$element->addId($name);
 
-$element -> addContent($item['value']);
-$element -> addCustom('value', null);
-$element -> addClass('summernote');
+$element->addContent($item['value']);
+$element->addCustom('value', null);
+$element->addClass('summernote');
 
 ?>
 <div class="row justify-content-between align-items-center px-2">
@@ -24,6 +24,6 @@ $element -> addClass('summernote');
 		<label for="<?= $name; ?>" class="col-form-label"><?= $data['title']; ?></label>
 	</div>
 	<div class="col-12">
-		<?php $element -> print(); ?>
+		<?php $element->print(); ?>
 	</div>
 </div>

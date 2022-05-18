@@ -10,17 +10,17 @@ use is\Helpers\Prepare;
 use is\Masters\View;
 
 $view = View::getInstance();
-$button = $view -> get('lang|this:team:button:action');
+$button = $view->get('lang|this:team:button:action');
 
-$this -> randomData();
-$this -> reduceData(0, 4);
+$this->randomData();
+$this->reduceData(0, 4);
 
 ?>
 <div class="item-specialist-wrap">
-	<h3 class="item-title title-bar-primary7"><?= $view -> get('lang|this:team:title'); ?></h3>
+	<h3 class="item-title title-bar-primary7"><?= $view->get('lang|this:team:title'); ?></h3>
 </div>
 <div class="row">
-	<?php Objects::each($this -> getData(), function($item) use ($button) { ?>
+	<?php Objects::each($this->getData(), function($item) use ($button) { ?>
 	<div class="col-xl-6 col-lg-12 col-12">
 		<div class="item-specialist">
 			<div class="media media-none--xs row">

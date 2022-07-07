@@ -13,13 +13,19 @@ use is\Masters\Database;
 $view = View::getInstance();
 
 ?>
-Данные пользователя<hr>
-<?php
-$user = User::getInstance();
-System::debug($user->getData());
-?>
-Права доступа к базе данных<hr>
-<?php
-$db = Database::getInstance();
-System::debug($db->driver->rights);
-?>
+Личный кабинет пользователя<hr>
+<p>
+    <a href="/profile/personal_data">
+        Данные пользователя
+    </a>
+</p>
+<p>
+    <a href="/profile/personal_rights">
+        Права доступа
+    </a>
+</p>
+<p>
+    <a href="/profile/creates">
+        Созданные заказы
+    </a>
+</p>

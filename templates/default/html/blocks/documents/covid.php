@@ -22,7 +22,7 @@ $url = $view->get('state|url');
 $url = '<a href="' . $url . '">' . $url . '</a>';
 
 $mail = $view->get('lang|information:email:0');
-$mail = $view->get('tvars')->launch('{mail|' . $mail . '}');
+$mail = $view->get('tvars')->launch('{email|' . $mail . '}');
 
 $company = $view->get('lang|information:formname:0') . ' ' . $view->get('lang|information:company');
 

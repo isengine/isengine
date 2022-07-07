@@ -13,5 +13,5 @@ Objects::each($view->get('lang|information:email'), function ($item, $key, $pos)
     if ($pos !== 'last' && $pos !== 'alone') {
         $item .= ',';
     }
-    echo $view->get('tvars')->launch('{mail|' . $item . ':col-auto color-gray-8 color-gray-6-hover pl-0 pr-05 pr-last}');
+    echo $view->get('tvars')->launch('{email|' . $item . ':col-auto color-gray-8 color-gray-6-hover pl-0 pr-05 pr-last}');
 });

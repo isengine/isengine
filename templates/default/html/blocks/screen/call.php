@@ -25,7 +25,7 @@ $view = View::getInstance();
         <a class="button button--email" data-bs-toggle="modal" href="#feedback" role="button">
             <i class="bi-envelope"></i>
         </a>
-        <?//= $view->get('tvars')->launch('{mail|{lang|information:email:0}:button button--email:<i class="bi-envelope"></i>:Вопрос с сайта {state|site}}'); ?>
+        <?//= $view->get('tvars')->launch('{email|{lang|information:email:0}:button button--email:<i class="bi-envelope"></i>:Вопрос с сайта {state|site}}'); ?>
         <?php
             Objects::each($view->get('lang|social'), function ($item) use ($view) {
                 echo $view->get('tvars')->launch('{url|' . Strings::replace($item['url'], ['http:', 'https:'], '') . ':button button--' . $item['name'] . ':<i class="' . $item['class'] . '"></i>}');

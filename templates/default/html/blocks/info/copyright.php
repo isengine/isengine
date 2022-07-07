@@ -10,6 +10,19 @@ use is\Masters\View;
 $view = View::getInstance();
 
 $year = $view->get('lang|information:year');
+$cyear = date('Y');
+
+if (!$year || $year === $cyear) {
+    $year = $cyear;
+} else {
+    $year .= ' – ' . $cyear;
+}
+
+$company = $view->get('lang|information:company');
+
+if (Strings::last($company) !== '.') {
+    $company .= '.';
+}
 
 ?>
-© <?= ($year ? $year . ' – ' : null) . date('Y') . ', ' . $view->get('lang|information:formname:0') . ' ' . $view->get('lang|information:company') . '.<br>' . $view->get('lang|common:copyrights'); ?>
+© <?= $year . ', ' . $view->get('lang|information:formname:0') . ' ' . $company . '<br>' . $view->get('lang|common:copyrights'); ?>

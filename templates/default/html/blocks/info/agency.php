@@ -22,4 +22,4 @@ $view = View::getInstance();
 <?= $view->get('lang|common:ph'); ?>: 
 <?= $view->get('tvars')->launch('{phone|{lang|agency:phone}:color-gray-8 color-gray-6-hover}'); ?>
 <br>
-<?= $view->get('tvars')->launch('{mail|{lang|agency:email}:color-gray-8 color-gray-6-hover}'); ?>
+<?= $view->get('tvars')->launch('{email|{lang|agency:email}:color-gray-8 color-gray-6-hover}'); ?>

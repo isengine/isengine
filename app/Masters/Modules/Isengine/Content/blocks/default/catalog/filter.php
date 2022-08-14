@@ -77,12 +77,14 @@ $link = '/' . ($link ? $link . '/' : null);
 				
 				//System::debug($get);
 				
+				$list = !empty($this->filter->list[$name]) ? $this->filter->list[$name] : [];
+				
 				$data[] = [
 					'name' => $key,
 					'options' => [
 						'description' => $lang,
 						'block' => $item,
-						'value' => $this->filter->list[$name],
+						'value' => $list,
 						'data' => $get
 					]
 				];
